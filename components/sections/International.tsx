@@ -61,7 +61,7 @@ export default function International() {
               className="flex gap-5 lg:gap-6 transition-transform duration-500 ease-out"
               style={{
                 transform: `translateX(calc(-${index} * (100% / ${VISIBLE}) - ${
-                  index * (VISIBLE === 1 ? 0 : 20 / VISIBLE)
+                  (index * 20) / VISIBLE
                 }px))`,
               }}
             >
