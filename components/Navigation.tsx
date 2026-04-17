@@ -14,7 +14,7 @@ const NAV_LINKS = [
 ];
 
 export default function Navigation() {
-  const [lang, setLang] = useState<"KR" | "JP">("KR");
+  const [lang, setLang] = useState<"KR" | "JP">("JP");
 
   return (
     <nav className="sticky top-0 w-full h-nav flex items-center justify-center border-b border-border-default bg-white/95 backdrop-blur-md z-[100]">
