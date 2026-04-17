@@ -51,7 +51,11 @@ export default function Navigation() {
                 : "border-border-default opacity-50 hover:opacity-100"
             }`}
           >
-            <span className="text-[1.2rem] leading-none">🇰🇷</span>
+            <img
+              src="https://flagcdn.com/w80/kr.png"
+              alt="KR"
+              className="w-full h-full object-cover"
+            />
           </button>
           <button
             onClick={() => setLang("JP")}
@@ -63,7 +67,11 @@ export default function Navigation() {
                 : "border-border-default opacity-50 hover:opacity-100"
             }`}
           >
-            <span className="text-[1.2rem] leading-none">🇯🇵</span>
+            <img
+              src="https://flagcdn.com/w80/jp.png"
+              alt="JP"
+              className="w-full h-full object-cover"
+            />
           </button>
         </div>
       </div>

@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     images: [OG_IMAGE],
   },
   icons: {
-    icon: "/logo_smps.png",
-    apple: "/logo_smps.png",
+    icon: "/expert.png",
+    apple: "/expert.png",
   },
 };
 
