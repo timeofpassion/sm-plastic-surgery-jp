@@ -40,23 +40,30 @@ export default function Navigation() {
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-[0.8rem] tracking-widest">
+        <div className="flex items-center gap-2.5">
           <button
             onClick={() => setLang("KR")}
-            className={`cursor-pointer transition-colors ${
-              lang === "KR" ? "text-text-main font-medium" : "text-gray-400"
+            aria-label="한국어"
+            title="한국어"
+            className={`w-8 h-8 rounded-full overflow-hidden border transition-all flex items-center justify-center ${
+              lang === "KR"
+                ? "border-brand ring-2 ring-brand/30 scale-110"
+                : "border-border-default opacity-50 hover:opacity-100"
             }`}
           >
-            KR
+            <span className="text-[1.2rem] leading-none">🇰🇷</span>
           </button>
-          <span className="text-gray-300">|</span>
           <button
             onClick={() => setLang("JP")}
-            className={`cursor-pointer transition-colors ${
-              lang === "JP" ? "text-text-main font-medium" : "text-gray-400"
+            aria-label="日本語"
+            title="日本語"
+            className={`w-8 h-8 rounded-full overflow-hidden border transition-all flex items-center justify-center ${
+              lang === "JP"
+                ? "border-brand ring-2 ring-brand/30 scale-110"
+                : "border-border-default opacity-50 hover:opacity-100"
             }`}
           >
-            JP
+            <span className="text-[1.2rem] leading-none">🇯🇵</span>
           </button>
         </div>
       </div>
