@@ -42,22 +42,6 @@ export default function Navigation() {
 
         <div className="flex items-center gap-2.5">
           <button
-            onClick={() => setLang("KR")}
-            aria-label="한국어"
-            title="한국어"
-            className={`w-8 h-8 rounded-full overflow-hidden border transition-all flex items-center justify-center ${
-              lang === "KR"
-                ? "border-brand ring-2 ring-brand/30 scale-110"
-                : "border-border-default opacity-50 hover:opacity-100"
-            }`}
-          >
-            <img
-              src="https://flagcdn.com/w80/kr.png"
-              alt="KR"
-              className="w-full h-full object-cover"
-            />
-          </button>
-          <button
             onClick={() => setLang("JP")}
             aria-label="日本語"
             title="日本語"
@@ -70,6 +54,22 @@ export default function Navigation() {
             <img
               src="https://flagcdn.com/w80/jp.png"
               alt="JP"
+              className="w-full h-full object-cover"
+            />
+          </button>
+          <button
+            onClick={() => setLang("KR")}
+            aria-label="한국어"
+            title="한국어"
+            className={`w-8 h-8 rounded-full overflow-hidden border transition-all flex items-center justify-center ${
+              lang === "KR"
+                ? "border-brand ring-2 ring-brand/30 scale-110"
+                : "border-border-default opacity-50 hover:opacity-100"
+            }`}
+          >
+            <img
+              src="https://flagcdn.com/w80/kr.png"
+              alt="KR"
               className="w-full h-full object-cover"
             />
           </button>
