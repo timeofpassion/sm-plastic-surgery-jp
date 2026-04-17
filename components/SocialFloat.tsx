@@ -76,13 +76,7 @@ export default function SocialFloat() {
           className="group relative w-11 h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-white shadow-lg shadow-black/15 transition-transform hover:scale-110 hover:shadow-xl"
           style={{ background: s.bg }}
         >
-          {s.icon ? (
-            s.icon
-          ) : (
-            <span className="font-bold text-[1.1rem] font-serif-display italic">
-              {s.label}
-            </span>
-          )}
+          {s.icon}
           <span className="absolute right-full mr-3 whitespace-nowrap bg-neutral-900/90 text-white text-[0.75rem] px-2.5 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
             {s.name}
           </span>
