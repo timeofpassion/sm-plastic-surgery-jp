@@ -2,11 +2,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center py-16 lg:py-0 bg-bg-base lg:bg-[linear-gradient(to_right,#ffffff_55%,#f5f6f8_55%)]"
+      className="relative lg:min-h-screen lg:flex lg:items-center lg:justify-center pt-10 pb-14 lg:py-0 bg-bg-base lg:bg-[linear-gradient(to_right,#ffffff_55%,#f5f6f8_55%)]"
     >
-      <div className="w-full max-w-content px-6 grid lg:grid-cols-2 gap-10 lg:gap-20 items-center relative z-[2]">
+      <div className="w-full max-w-content px-6 grid lg:grid-cols-2 gap-8 lg:gap-20 lg:items-center relative z-[2]">
         {/* Hero content */}
-        <div className="py-8 lg:py-16 opacity-0 animate-fade-up">
+        <div className="order-1 py-0 lg:py-16 opacity-0 animate-fade-up">
           <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-6">
             PREMIUM BREAST AUGMENTATION
           </span>
@@ -54,7 +54,7 @@ export default function Hero() {
         </div>
 
         {/* Hero Visual */}
-        <div className="relative h-[400px] sm:h-[500px] lg:h-[700px] w-full flex items-center justify-center opacity-0 animate-fade-left">
+        <div className="order-2 relative h-[420px] sm:h-[500px] lg:h-[700px] w-full flex items-center justify-center opacity-0 animate-fade-left">
           <div className="hidden lg:block absolute top-0 right-0 w-4/5 h-full border border-border-default translate-x-5 -translate-y-5 z-[1]" />
           <div className="relative w-full lg:w-[90%] h-full lg:h-[90%] z-[2] overflow-hidden shadow-2xl shadow-black/10">
             <img
