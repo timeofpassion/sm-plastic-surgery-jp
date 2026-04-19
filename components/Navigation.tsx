@@ -5,11 +5,11 @@ import { useState } from "react";
 const NAV_LINKS = [
   { label: "SMPS 철학", href: "#director" },
   { label: "가슴수술", href: "#procedures" },
+  { label: "Before&After", href: "#gallery" },
+  { label: "마케팅채널", href: "#media" },
   { label: "눈성형", href: "#eye" },
   { label: "피부·리프팅", href: "#skin" },
   { label: "안전마취센터", href: "#safety" },
-  { label: "Before&After", href: "#gallery" },
-  { label: "마케팅채널", href: "#media" },
 ];
 
 export default function Navigation() {
