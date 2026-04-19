@@ -4,16 +4,16 @@ export default function BrandStatement() {
       id="brand-statement"
       className="relative overflow-hidden bg-gradient-to-br from-[#eaf1fb] via-[#d8e6f5] to-[#a9c4e2]"
     >
-      {/* Right side doctor photo */}
+      {/* Left side doctor photo */}
       <div
-        className="absolute right-0 top-0 w-full lg:w-1/2 h-full bg-cover bg-center opacity-90 lg:opacity-100"
+        className="absolute left-0 top-0 w-full lg:w-1/2 h-full bg-cover bg-center opacity-90 lg:opacity-100"
         style={{
           backgroundImage: "url('/herosection.png')",
           backgroundPosition: "center top",
           maskImage:
-            "linear-gradient(to right, transparent 0%, black 30%, black 100%)",
+            "linear-gradient(to left, transparent 0%, black 30%, black 100%)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 30%, black 100%)",
+            "linear-gradient(to left, transparent 0%, black 30%, black 100%)",
         }}
       />
       {/* Mobile overlay for readability */}
@@ -32,7 +32,10 @@ export default function BrandStatement() {
         />
       </div>
 
-      <div className="relative z-10 max-w-content mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-[1.1fr_1fr] gap-10 items-center">
+      <div className="relative z-10 max-w-content mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-[1fr_1.1fr] gap-10 items-center">
+        {/* Left empty - image bleeds in via absolute bg above */}
+        <div className="hidden lg:block" />
+
         <div>
           <h2 className="font-serif-display font-bold text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] leading-[1.25] text-text-main keep-all mb-8">
             가슴성형을{" "}
@@ -62,9 +65,6 @@ export default function BrandStatement() {
             <span className="text-[1.1rem]">→</span>
           </a>
         </div>
-
-        {/* Right empty - image bleeds in via absolute bg above */}
-        <div className="hidden lg:block" />
       </div>
     </section>
   );
