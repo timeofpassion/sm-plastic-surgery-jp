@@ -49,7 +49,8 @@ export default function Location() {
                 </>
               }
             />
-            <InfoRow label="전화" value="+82-2-XXXX-XXXX" />
+            <InfoRow label="전화" value="0507-1324-3707" />
+            <InfoRow label="의료진" value="성형외과 전문의 1명" />
 
             <a
               href={MAP_LINK}
