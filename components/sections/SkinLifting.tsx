@@ -75,7 +75,7 @@ export default function SkinLifting() {
         <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">
           피부 · 리프팅
         </span>
-        <h2 className="font-serif-display text-[2.2rem] sm:text-[2.6rem] lg:text-[3.2rem] font-medium leading-[1.25] mb-8 keep-all">
+        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[3.2rem] font-medium leading-[1.3] mb-6 lg:mb-8 keep-all">
           수술 회복 기간에
           <br />
           더할 수 있는 피부관리

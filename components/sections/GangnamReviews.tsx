@@ -54,7 +54,7 @@ export default function GangnamReviews() {
             강남언니 리뷰
           </span>
         </div>
-        <h2 className="font-serif-display text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-10 keep-all">
+        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-10 keep-all">
           실제 환자들의 생생한 후기
         </h2>
 

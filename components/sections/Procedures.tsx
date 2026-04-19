@@ -37,7 +37,7 @@ export default function Procedures() {
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           가슴성형
         </span>
-        <h2 className="font-serif-display text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-16 keep-all">
+        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-16 keep-all">
           에스엠이 집중하는 세 가지{" "}
           <span className="inline-block bg-brand text-white px-3 py-1">
             가슴 수술

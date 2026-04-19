@@ -75,7 +75,7 @@ export default function EyeSurgery() {
         <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">
           눈성형
         </span>
-        <h2 className="font-serif-display text-[2.2rem] sm:text-[2.6rem] lg:text-[3.2rem] font-medium leading-[1.25] mb-6 keep-all">
+        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[3.2rem] font-medium leading-[1.3] mb-6 keep-all">
           에스엠성형외과는 가슴수술뿐만 아니라
           <br />
           대한민국에서{" "}

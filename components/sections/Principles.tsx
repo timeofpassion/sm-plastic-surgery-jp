@@ -26,7 +26,7 @@ export default function Principles() {
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           WHY SM — 에스엠의 세 가지 원칙
         </span>
-        <h2 className="font-serif-display text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-16 keep-all">
+        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-16 keep-all">
           일본인 환자가 에스엠을 고르는 이유
         </h2>
 

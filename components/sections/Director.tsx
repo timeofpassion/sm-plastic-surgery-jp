@@ -30,7 +30,7 @@ export default function Director() {
             <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-6">
               OUR PHILOSOPHY & DIRECTOR
             </span>
-            <h2 className="font-serif-display text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-6 keep-all">
+            <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-6 keep-all">
               한 병원, 한 원장.
               <br />
               12년째 같은 자리에서.

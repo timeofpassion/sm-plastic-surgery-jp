@@ -31,7 +31,7 @@ export default function Safety() {
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           안전마취센터
         </span>
-        <h2 className="font-serif-display text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-6 keep-all">
+        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-6 keep-all">
           수술보다 에스엠성형외과가 최우선으로 생각하는 것은{" "}
           <span className="inline-block bg-brand text-white px-3 py-1">
             환자의 안전

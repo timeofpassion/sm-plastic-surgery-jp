@@ -37,7 +37,7 @@ export default function BrandStatement() {
         <div className="hidden lg:block" />
 
         <div>
-          <h2 className="font-serif-display font-bold text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] leading-[1.25] text-text-main keep-all mb-8">
+          <h2 className="font-serif-display font-bold text-[1.75rem] sm:text-[2.3rem] lg:text-[3.4rem] leading-[1.25] text-text-main keep-all mb-6 lg:mb-8">
             가슴성형을{" "}
             <span className="text-brand">&lsquo;시술&rsquo;</span>이 아닌
             <br />

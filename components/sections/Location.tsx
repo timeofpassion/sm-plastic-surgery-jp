@@ -9,7 +9,7 @@ export default function Location() {
         <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">
           Location
         </span>
-        <h2 className="font-serif-display text-[2.2rem] sm:text-[2.6rem] lg:text-[3rem] font-medium leading-[1.25] mb-16 keep-all">
+        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[3rem] font-medium leading-[1.25] mb-16 keep-all">
           에스엠성형외과 오시는 길
         </h2>
 

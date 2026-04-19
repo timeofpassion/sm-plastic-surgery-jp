@@ -19,7 +19,7 @@ export default function Consultation() {
           상담 예약
         </span>
 
-        <h2 className="font-serif-display text-[2rem] sm:text-[2.6rem] lg:text-[3rem] font-medium leading-[1.25] mb-6 keep-all">
+        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[3rem] font-medium leading-[1.25] mb-6 keep-all">
           상담을 원하시면{" "}
           <span className="inline-block bg-brand text-white px-3 py-1">
             LINE

@@ -11,15 +11,15 @@ export default function Hero() {
             PREMIUM BREAST AUGMENTATION
           </span>
 
-          <h1 className="font-serif-display text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] font-medium text-text-main leading-[1.15] tracking-tight mb-8 keep-all">
+          <h1 className="font-serif-display text-[2rem] sm:text-[2.6rem] lg:text-[3.5rem] font-medium text-text-main leading-[1.15] tracking-tight mb-6 lg:mb-8 keep-all">
             가슴성형,
             <br />
             깊이 있게 합니다.
           </h1>
 
-          <div className="w-10 h-px bg-brand mb-8" />
+          <div className="w-10 h-px bg-brand mb-6 lg:mb-8" />
 
-          <h2 className="text-[1.3rem] lg:text-[1.45rem] font-medium text-text-main leading-snug mb-12 keep-all">
+          <h2 className="text-[1.05rem] sm:text-[1.2rem] lg:text-[1.45rem] font-medium text-text-main leading-snug mb-8 lg:mb-12 keep-all">
             서울대 의대 출신 이무영 원장이,
             <br />
             12년째 같은 자리에서 직접 집도합니다.

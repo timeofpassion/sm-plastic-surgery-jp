@@ -65,7 +65,7 @@ const SOCIALS = [
 
 export default function SocialFloat() {
   return (
-    <div className="fixed right-4 lg:right-6 top-1/2 -translate-y-1/2 z-[200] flex flex-col gap-2.5">
+    <div className="fixed right-2 lg:right-6 top-1/2 -translate-y-1/2 z-[200] flex flex-col gap-1.5 lg:gap-2.5">
       {SOCIALS.map((s) => (
         <a
           key={s.name}
@@ -73,7 +73,7 @@ export default function SocialFloat() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={s.name}
-          className="group relative w-11 h-11 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-white shadow-lg shadow-black/15 transition-transform hover:scale-110 hover:shadow-xl"
+          className="group relative w-9 h-9 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-white shadow-lg shadow-black/15 transition-transform hover:scale-110 hover:shadow-xl"
           style={{ background: s.bg }}
         >
           {s.icon}

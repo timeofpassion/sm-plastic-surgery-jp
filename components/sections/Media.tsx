@@ -14,7 +14,7 @@ export default function Media() {
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           YouTube — 영상으로 만나는 에스엠
         </span>
-        <h2 className="font-serif-display text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-6 keep-all">
+        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-6 keep-all">
           영상으로 만나는 <b className="font-bold">에스엠 성형외과</b>
         </h2>
         <p className="text-[1.1rem] text-text-sub mb-16 max-w-[700px]">
