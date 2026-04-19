@@ -35,15 +35,15 @@ export default function HomePage() {
       <Procedures />
       {/* 3. Before & After (가슴 → 바로 전후사진) */}
       <Gallery />
-      {/* 4. 눈성형 */}
-      <EyeSurgery />
-      {/* 5. 피부·리프팅 */}
-      <SkinLifting />
-      {/* 6. 안전마취센터 */}
-      <Safety />
-      {/* 7. 마케팅채널 (YouTube) */}
+      {/* 4. 마케팅채널 (YouTube + Shorts) - 눈성형 위로 이동 */}
       <Media />
       <Shorts />
+      {/* 5. 눈성형 */}
+      <EyeSurgery />
+      {/* 6. 피부·리프팅 */}
+      <SkinLifting />
+      {/* 7. 안전마취센터 */}
+      <Safety />
       {/* 오시는 길 */}
       <Location />
       <Consultation />

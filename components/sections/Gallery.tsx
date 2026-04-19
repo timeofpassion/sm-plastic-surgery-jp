@@ -2,11 +2,33 @@
 
 import { useState } from "react";
 
-const STANDARDS = [
-  "조명·각도·거리·화장 여부를 통일",
-  "촬영일을 연월일로 표기",
-  "포토샵 보정 없음",
-  "환자 개별 서면 동의 후 게시",
+type Standard = {
+  tag: string;
+  title: string;
+  desc: string;
+};
+
+const STANDARDS: Standard[] = [
+  {
+    tag: "NO PHOTOSHOP",
+    title: "포토샵·보정 일체 금지",
+    desc: "빛 조절, 필터, 피부 보정 전부 없습니다. 원본 그대로입니다.",
+  },
+  {
+    tag: "SAME CONDITION",
+    title: "조명·각도·거리·화장 100% 동일",
+    desc: "수술 전과 후, 같은 환경에서만 촬영합니다.",
+  },
+  {
+    tag: "TRANSPARENT DATE",
+    title: "촬영일 연·월·일까지 공개",
+    desc: "'N개월 후' 같은 애매한 표기는 쓰지 않습니다.",
+  },
+  {
+    tag: "SIGNED CONSENT",
+    title: "환자 본인 서면 동의 후 게시",
+    desc: "동의서 없는 사진은 단 한 장도 올라가지 않습니다.",
+  },
 ];
 
 const FILTERS = ["가슴성형", "눈성형"] as const;
@@ -79,20 +101,41 @@ export default function Gallery() {
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           Before &amp; After
         </span>
-        <h2 className="font-serif-display text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-6 keep-all">
-          사진으로 말합니다.
+        <h2 className="font-serif-display text-[2rem] sm:text-[2.4rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-5 keep-all">
+          사진을{" "}
+          <span className="inline-block bg-brand text-white px-3 py-1">
+            꾸미지 않습니다.
+          </span>
         </h2>
-        <p className="text-[1.1rem] text-text-sub mb-16 max-w-[700px]">
-          에스엠의 전후 사진은 아래 기준을 지킵니다.
+        <p className="text-[1.05rem] lg:text-[1.15rem] text-text-main mb-4 max-w-[760px] keep-all leading-[1.8]">
+          한국 성형외과의 전후사진을 믿기 어려우셨다면,
+          <br />
+          에스엠이 <strong className="text-brand font-semibold">12년간 지켜온 4가지 원칙</strong>을 확인해주세요.
+        </p>
+        <p className="text-[0.9rem] text-text-sub mb-12 max-w-[760px] keep-all">
+          보정된 결과가 아니라, 실제 결과를 그대로 보여드립니다.
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
-          {STANDARDS.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 mb-16">
+          {STANDARDS.map((s, i) => (
             <div
-              key={item}
-              className="p-6 border border-border-default bg-bg-sub text-[0.9rem] text-text-main font-medium flex items-start gap-2.5 before:content-['•'] before:text-brand before:font-bold"
+              key={s.title}
+              className="p-6 lg:p-7 border border-border-default bg-white flex flex-col gap-3 transition-all hover:border-brand hover:shadow-md"
             >
-              {item}
+              <div className="flex items-center gap-2">
+                <span className="text-[0.65rem] font-bold tracking-[0.15em] text-brand">
+                  0{i + 1}
+                </span>
+                <span className="text-[0.65rem] tracking-[0.15em] text-accent-gold font-semibold">
+                  {s.tag}
+                </span>
+              </div>
+              <h3 className="text-[0.95rem] lg:text-[1rem] font-bold text-text-main keep-all leading-tight">
+                {s.title}
+              </h3>
+              <p className="text-[0.85rem] text-text-sub leading-[1.7] keep-all">
+                {s.desc}
+              </p>
             </div>
           ))}
         </div>

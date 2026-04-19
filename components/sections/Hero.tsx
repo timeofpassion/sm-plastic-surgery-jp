@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative lg:min-h-screen lg:flex lg:items-center lg:justify-center pt-10 pb-14 lg:py-0 bg-bg-base lg:bg-[linear-gradient(to_right,#ffffff_55%,#f5f6f8_55%)]"
+      className="relative lg:flex lg:items-center lg:justify-center pt-10 pb-10 lg:pt-14 lg:pb-8 bg-bg-base lg:bg-[linear-gradient(to_right,#ffffff_55%,#f5f6f8_55%)]"
     >
       <div className="w-full max-w-content px-6 grid lg:grid-cols-2 gap-8 lg:gap-20 lg:items-center relative z-[2]">
         {/* Hero content */}
@@ -58,9 +58,6 @@ export default function Hero() {
               icon="activity"
             />
           </div>
-          <span className="hidden lg:block mt-8 text-center text-[0.65rem] text-text-sub tracking-[0.3em] uppercase">
-            SEOUL · KR — EST. 2013
-          </span>
         </div>
       </div>
     </section>
