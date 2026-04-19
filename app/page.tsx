@@ -12,7 +12,6 @@ import Safety from "@/components/sections/Safety";
 import Gallery from "@/components/sections/Gallery";
 import Media from "@/components/sections/Media";
 import Shorts from "@/components/sections/Shorts";
-import International from "@/components/sections/International";
 import FAQ from "@/components/sections/FAQ";
 import Location from "@/components/sections/Location";
 import Consultation from "@/components/sections/Consultation";
@@ -44,8 +43,6 @@ export default function HomePage() {
       {/* 7. 마케팅채널 (YouTube) */}
       <Media />
       <Shorts />
-      {/* 해외 의료진 교류 · 논문 */}
-      <International />
       {/* 8. FAQ */}
       <FAQ />
       {/* 오시는 길 */}
