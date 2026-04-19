@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import BrandStatement from "@/components/sections/BrandStatement";
 import Director from "@/components/sections/Director";
 import Principles from "@/components/sections/Principles";
+import GangnamReviews from "@/components/sections/GangnamReviews";
 import Stats from "@/components/sections/Stats";
 import Procedures from "@/components/sections/Procedures";
 import EyeSurgery from "@/components/sections/EyeSurgery";
@@ -29,6 +30,7 @@ export default function HomePage() {
       {/* 1. SMPS 철학 */}
       <Director />
       <Principles />
+      <GangnamReviews />
       {/* 2. 가슴수술 */}
       <Procedures />
       {/* 3. 눈성형 */}
