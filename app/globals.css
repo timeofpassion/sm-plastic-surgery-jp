@@ -43,13 +43,7 @@
     padding-right: 24px;
   }
 
-  /* Mobile: ensure content doesn't hide behind floating social menu */
-  @media (max-width: 1023px) {
-    section,
-    footer {
-      padding-right: max(24px, env(safe-area-inset-right));
-    }
-  }
+  /* Mobile: SocialFloat is at bottom-right, so no right padding needed for sections */
 
   .keep-all {
     word-break: keep-all;

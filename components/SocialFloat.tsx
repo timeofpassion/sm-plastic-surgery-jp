@@ -65,7 +65,7 @@ const SOCIALS = [
 
 export default function SocialFloat() {
   return (
-    <div className="fixed right-2 lg:right-6 top-1/2 -translate-y-1/2 z-[200] flex flex-col gap-1.5 lg:gap-2.5">
+    <div className="fixed right-3 bottom-4 lg:right-6 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 z-[200] flex flex-col gap-1.5 lg:gap-2.5">
       {SOCIALS.map((s) => (
         <a
           key={s.name}
