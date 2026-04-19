@@ -116,24 +116,24 @@ export default function Gallery() {
           보정된 결과가 아니라, 실제 결과를 그대로 보여드립니다.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5 mb-16">
           {STANDARDS.map((s, i) => (
             <div
               key={s.title}
-              className="p-6 lg:p-7 border border-border-default bg-white flex flex-col gap-3 transition-all hover:border-brand hover:shadow-md"
+              className="p-6 lg:p-8 bg-brand text-white flex flex-col gap-3 transition-all hover:bg-brand-hover hover:shadow-xl hover:shadow-brand/30 hover:-translate-y-0.5"
             >
-              <div className="flex items-center gap-2">
-                <span className="text-[0.65rem] font-bold tracking-[0.15em] text-brand">
+              <div className="flex items-center gap-2.5 mb-1">
+                <span className="text-[0.75rem] font-bold tracking-[0.15em] text-white bg-white/15 px-2 py-0.5 rounded-sm">
                   0{i + 1}
                 </span>
-                <span className="text-[0.65rem] tracking-[0.15em] text-accent-gold font-semibold">
+                <span className="text-[0.7rem] tracking-[0.2em] text-white/70 font-semibold">
                   {s.tag}
                 </span>
               </div>
-              <h3 className="text-[0.95rem] lg:text-[1rem] font-bold text-text-main keep-all leading-tight">
+              <h3 className="text-[1.1rem] lg:text-[1.25rem] font-bold text-white keep-all leading-tight">
                 {s.title}
               </h3>
-              <p className="text-[0.85rem] text-text-sub leading-[1.7] keep-all">
+              <p className="text-[0.9rem] text-white/85 leading-[1.7] keep-all">
                 {s.desc}
               </p>
             </div>
