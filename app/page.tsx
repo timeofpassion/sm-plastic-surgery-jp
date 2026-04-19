@@ -33,14 +33,14 @@ export default function HomePage() {
       <GangnamReviews />
       {/* 2. 가슴수술 */}
       <Procedures />
-      {/* 3. 눈성형 */}
-      <EyeSurgery />
-      {/* 4. 피부·리프팅 */}
-      <SkinLifting />
-      {/* 5. 안전마취센터 */}
-      <Safety />
-      {/* 6. Before & After */}
+      {/* 3. Before & After (가슴 → 바로 전후사진) */}
       <Gallery />
+      {/* 4. 눈성형 */}
+      <EyeSurgery />
+      {/* 5. 피부·리프팅 */}
+      <SkinLifting />
+      {/* 6. 안전마취센터 */}
+      <Safety />
       {/* 7. 마케팅채널 (YouTube) */}
       <Media />
       <Shorts />
