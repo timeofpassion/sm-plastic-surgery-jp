@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const HERO_IMAGE = "/gangnam_review_01.png";
 
@@ -18,10 +18,25 @@ const VISIBLE = 3;
 
 export default function GangnamReviews() {
   const [index, setIndex] = useState(0);
+  const [lightbox, setLightbox] = useState<string | null>(null);
   const maxIndex = Math.max(0, REVIEWS.length - VISIBLE);
 
   const prev = () => setIndex((i) => Math.max(0, i - 1));
   const next = () => setIndex((i) => Math.min(maxIndex, i + 1));
+
+  // ESC key to close lightbox
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [lightbox]);
 
   return (
     <section
@@ -44,13 +59,17 @@ export default function GangnamReviews() {
         </h2>
 
         {/* Hero banner */}
-        <div className="mb-10 lg:mb-12 bg-white border border-border-default rounded-md overflow-hidden shadow-md max-w-[780px] mx-auto">
+        <button
+          type="button"
+          onClick={() => setLightbox(HERO_IMAGE)}
+          className="block w-full max-w-[780px] mx-auto mb-10 lg:mb-12 bg-white border border-border-default rounded-md overflow-hidden shadow-md transition-shadow hover:shadow-xl cursor-zoom-in"
+        >
           <img
             src={HERO_IMAGE}
             alt="강남언니 SM美容外科医院 프로필"
             className="w-full h-auto block"
           />
-        </div>
+        </button>
 
         {/* Slider */}
         <div className="relative mb-10">
@@ -82,9 +101,11 @@ export default function GangnamReviews() {
               }}
             >
               {REVIEWS.map((src, i) => (
-                <div
+                <button
+                  type="button"
                   key={i}
-                  className="shrink-0 rounded-md overflow-hidden bg-white border border-border-default"
+                  onClick={() => setLightbox(src)}
+                  className="shrink-0 rounded-md overflow-hidden bg-white border border-border-default transition-all hover:border-brand hover:shadow-lg cursor-zoom-in"
                   style={{
                     width: `calc((100% - ${(VISIBLE - 1) * 24}px) / ${VISIBLE})`,
                   }}
@@ -94,7 +115,7 @@ export default function GangnamReviews() {
                     alt={`강남언니 리뷰 ${i + 1}`}
                     className="w-full h-auto block"
                   />
-                </div>
+                </button>
               ))}
             </div>
           </div>
@@ -136,6 +157,39 @@ export default function GangnamReviews() {
           </a>
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-[300] bg-black/85 flex items-center justify-center p-4 cursor-zoom-out"
+        >
+          <button
+            type="button"
+            aria-label="닫기"
+            onClick={() => setLightbox(null)}
+            className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+          <img
+            src={lightbox}
+            alt=""
+            onClick={(e) => e.stopPropagation()}
+            className="max-w-[92vw] max-h-[90vh] object-contain rounded-sm shadow-2xl"
+          />
+        </div>
+      )}
     </section>
   );
 }

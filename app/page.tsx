@@ -19,7 +19,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function HomePage() {
   return (
-    <main className="relative">
+    <main id="top" className="relative">
       <SocialFloat />
       <Navigation />
       {/* 브랜드 미션 (메인 히어로 · SkinMedi 스타일) */}

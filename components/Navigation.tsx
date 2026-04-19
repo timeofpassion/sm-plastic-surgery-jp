@@ -3,13 +3,16 @@
 import { useState } from "react";
 
 const NAV_LINKS = [
-  { label: "SMPS 철학", href: "#director" },
+  { label: "홈페이지", href: "#top" },
+  { label: "대표원장 소개", href: "#director" },
+  { label: "SMPS 철학", href: "#why-sm" },
   { label: "가슴수술", href: "#procedures" },
   { label: "Before&After", href: "#gallery" },
   { label: "마케팅채널", href: "#media" },
   { label: "눈성형", href: "#eye" },
   { label: "피부·리프팅", href: "#skin" },
   { label: "안전마취센터", href: "#safety" },
+  { label: "오시는 길", href: "#location" },
 ];
 
 export default function Navigation() {
@@ -30,7 +33,7 @@ export default function Navigation() {
           />
         </a>
 
-        <div className="hidden lg:flex gap-5 xl:gap-7 text-[0.82rem] font-medium tracking-tight whitespace-nowrap">
+        <div className="hidden xl:flex gap-3.5 2xl:gap-5 text-[0.78rem] font-medium tracking-tight whitespace-nowrap">
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
