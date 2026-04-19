@@ -24,6 +24,10 @@ export default function Navigation() {
             src="/logo_smps.png"
             alt="에스엠성형외과"
             className="h-8 w-auto"
+            style={{
+              filter:
+                "brightness(0.45) hue-rotate(208deg) saturate(2.2) contrast(1.1)",
+            }}
           />
         </a>
 

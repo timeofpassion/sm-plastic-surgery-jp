@@ -24,6 +24,10 @@ export default function BrandStatement() {
           src="/logo_smps.png"
           alt="SM Plastic Surgery"
           className="h-8 lg:h-10 w-auto opacity-90"
+          style={{
+            filter:
+              "brightness(0.45) hue-rotate(208deg) saturate(2.2) contrast(1.1)",
+          }}
         />
       </div>
 
