@@ -42,6 +42,15 @@ export default function GangnamReviews() {
           실제 환자들의 생생한 후기
         </h2>
 
+        {/* Hero banner */}
+        <div className="mb-10 lg:mb-12 bg-white border border-border-default rounded-md overflow-hidden shadow-md">
+          <img
+            src="/gangnam_hero.png"
+            alt="강남언니 SM美容外科医院 프로필"
+            className="w-full h-auto block"
+          />
+        </div>
+
         {/* Slider */}
         <div className="relative mb-10">
           <button
