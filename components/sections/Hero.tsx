@@ -44,27 +44,22 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Trust Board */}
-          <div className="border-t-2 border-text-main pt-8 grid grid-cols-2 gap-x-5 gap-y-6">
-            <TrustItem label="Rating" value="강남언니 9.7" icon="star" />
-            <TrustItem label="Experience" value="리뷰 872건" icon="file" />
-            <TrustItem label="Established" value="개원 2013" icon="calendar" />
-            <TrustItem label="Credentials" value="아산병원 전문의" icon="activity" />
-          </div>
         </div>
 
-        {/* Hero Visual */}
-        <div className="order-2 relative h-[420px] sm:h-[500px] lg:h-[700px] w-full flex items-center justify-center opacity-0 animate-fade-left">
-          <div className="hidden lg:block absolute top-0 right-0 w-4/5 h-full border border-border-default translate-x-5 -translate-y-5 z-[1]" />
-          <div className="relative w-full lg:w-[90%] h-full lg:h-[90%] z-[2] overflow-hidden shadow-2xl shadow-black/10">
-            <img
-              src="/doctor_white.png"
-              alt="이무영 원장"
-              className="w-full h-full object-cover object-center"
+        {/* Hero Visual — Trust Board as main visual */}
+        <div className="order-2 relative w-full opacity-0 animate-fade-left">
+          <div className="grid grid-cols-2 gap-4 lg:gap-6">
+            <TrustCard label="Rating" value="강남언니 9.7" icon="star" />
+            <TrustCard label="Experience" value="리뷰 872건" icon="file" />
+            <TrustCard label="Established" value="개원 2013" icon="calendar" />
+            <TrustCard
+              label="Credentials"
+              value="아산병원 전문의"
+              icon="activity"
             />
           </div>
-          <span className="hidden lg:block absolute -bottom-8 right-0 text-[0.6rem] text-text-sub tracking-[0.2em] origin-bottom-right -rotate-90">
-            SEOUL. KR — EST. 2013
+          <span className="hidden lg:block mt-8 text-center text-[0.65rem] text-text-sub tracking-[0.3em] uppercase">
+            SEOUL · KR — EST. 2013
           </span>
         </div>
       </div>
@@ -72,7 +67,7 @@ export default function Hero() {
   );
 }
 
-function TrustItem({
+function TrustCard({
   label,
   value,
   icon,
@@ -82,15 +77,6 @@ function TrustItem({
   icon: "star" | "file" | "calendar" | "activity";
 }) {
   const iconPaths: Record<string, React.ReactNode> = {
-    star: (
-      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-    ),
-    file: (
-      <>
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-      </>
-    ),
     calendar: (
       <>
         <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -99,38 +85,44 @@ function TrustItem({
         <line x1="3" y1="10" x2="21" y2="10" />
       </>
     ),
-    activity: <path d="M22 12h-4l-3 9L9 3l-3 9H2" />,
   };
 
   return (
-    <div className="flex flex-col gap-2">
-      <span className="text-[0.7rem] uppercase tracking-[0.15em] text-accent-gold font-semibold">
-        {label}
-      </span>
-      <div className="text-[1.05rem] lg:text-[1.1rem] font-semibold text-text-main flex items-center gap-2">
+    <div className="flex flex-col items-start gap-4 p-6 lg:p-8 bg-white border border-border-default rounded-sm transition-all hover:border-brand hover:shadow-lg hover:shadow-blue-100/60">
+      {/* Icon */}
+      <div className="w-11 h-11 flex items-center justify-center">
         {icon === "star" || icon === "file" ? (
           <img
             src="/gangnam.png"
             alt="강남언니"
-            className="w-5 h-5 shrink-0 object-contain"
+            className="w-10 h-10 object-contain"
           />
         ) : icon === "activity" ? (
           <img
             src="/asan.jpg"
             alt="서울아산병원"
-            className="w-5 h-5 shrink-0 object-contain"
+            className="w-10 h-10 object-contain rounded-sm"
           />
         ) : (
           <svg
             viewBox="0 0 24 24"
-            className="w-4 h-4 shrink-0"
-            stroke="#8aa3c4"
-            strokeWidth="1.8"
+            className="w-8 h-8"
+            stroke="#1e3a5f"
+            strokeWidth="1.5"
             fill="none"
           >
             {iconPaths[icon]}
           </svg>
         )}
+      </div>
+
+      {/* Label */}
+      <span className="text-[0.7rem] uppercase tracking-[0.15em] text-accent-gold font-semibold">
+        {label}
+      </span>
+
+      {/* Value */}
+      <div className="text-[1.1rem] lg:text-[1.25rem] font-semibold text-text-main leading-tight keep-all">
         {value}
       </div>
     </div>

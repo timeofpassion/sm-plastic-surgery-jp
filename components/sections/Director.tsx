@@ -17,7 +17,7 @@ export default function Director() {
           <div className="hidden lg:block absolute -top-5 -left-5 w-full h-full border border-border-default z-[1]" />
           <div className="relative w-full aspect-[3/4.2] overflow-hidden border border-border-default bg-gray-200 z-[2]">
             <img
-              src="/doctor.png"
+              src="/doctor_white.png"
               alt="이무영 대표원장"
               className="w-full h-full object-cover object-top"
             />

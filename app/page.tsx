@@ -28,8 +28,8 @@ export default function HomePage() {
       <Hero />
       {/* 1. SMPS 철학 */}
       <Director />
-      <Principles />
       <Stats />
+      <Principles />
       {/* 2. 가슴수술 */}
       <Procedures />
       {/* 3. 눈성형 */}
