@@ -60,31 +60,39 @@ export default function Director() {
 
           <div className="w-10 h-px bg-brand mb-10" />
 
-          <p className="text-[1.05rem] text-text-main mb-6 font-light keep-all text-justify">
-            이무영 원장은 서울대학교 의과대학을 졸업하고 서울아산병원에서 성형외과
-            전문의 과정을 마쳤습니다. 울산대학교병원 성형외과 과장, BR바람·BK성형외과
-            원장을 거쳐 2013년 6월 강남역에 에스엠성형외과를 열었습니다.
-          </p>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-start">
+            {/* Left column: Bio */}
+            <div>
+              <p className="text-[0.95rem] lg:text-[1rem] text-text-main mb-5 font-light keep-all text-justify leading-[1.9]">
+                이무영 원장은 서울대학교 의과대학을 졸업하고 서울아산병원에서
+                성형외과 전문의 과정을 마쳤습니다. 울산대학교병원 성형외과 과장,
+                BR바람·BK성형외과 원장을 거쳐 2013년 6월 강남역에 에스엠성형외과를
+                열었습니다.
+              </p>
 
-          <p className="text-[1.05rem] text-text-main mb-6 font-light keep-all text-justify">
-            개원 이후 12년, 자리를 옮기지 않았습니다. 처음 수술한 환자가 1년 뒤, 5년
-            뒤 같은 문을 열고 들어올 수 있다는 것 — 그것이 에스엠이 지켜온 기본입니다.
-          </p>
+              <p className="text-[0.95rem] lg:text-[1rem] text-text-main font-light keep-all text-justify leading-[1.9]">
+                개원 이후 12년, 자리를 옮기지 않았습니다. 처음 수술한 환자가 1년 뒤,
+                5년 뒤 같은 문을 열고 들어올 수 있다는 것 — 그것이 에스엠이 지켜온
+                기본입니다.
+              </p>
+            </div>
 
-          <div className="mt-14 p-10 bg-bg-sub border-l-[3px] border-brand">
-            <h3 className="font-serif-display text-[1.2rem] font-semibold mb-6 flex items-center gap-3">
-              학술 활동 (Academic Activities)
-            </h3>
-            <ul className="list-none grid sm:grid-cols-2 gap-x-6 gap-y-3">
-              {ACADEMIC.map((item) => (
-                <li
-                  key={item}
-                  className="text-[0.9rem] text-text-sub relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-1 before:h-px before:bg-brand"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
+            {/* Right column: Academic Activities */}
+            <div className="p-7 lg:p-9 bg-bg-sub border-l-[3px] border-brand">
+              <h3 className="font-serif-display text-[1.1rem] lg:text-[1.2rem] font-semibold mb-5 flex items-center gap-3">
+                학술 활동 (Academic Activities)
+              </h3>
+              <ul className="list-none space-y-2.5">
+                {ACADEMIC.map((item) => (
+                  <li
+                    key={item}
+                    className="text-[0.9rem] text-text-sub relative pl-4 before:content-[''] before:absolute before:left-0 before:top-[10px] before:w-1 before:h-px before:bg-brand"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
