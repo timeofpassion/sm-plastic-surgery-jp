@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 
+const HERO_IMAGE = "/gangnam_review_01.png";
+
 const REVIEWS = [
-  "/gangnam_review_01.png",
   "/gangnam_review_02.png",
   "/gangnam_review_03.png",
   "/gangnam_review_04.png",
@@ -43,9 +44,9 @@ export default function GangnamReviews() {
         </h2>
 
         {/* Hero banner */}
-        <div className="mb-10 lg:mb-12 bg-white border border-border-default rounded-md overflow-hidden shadow-md">
+        <div className="mb-10 lg:mb-12 bg-white border border-border-default rounded-md overflow-hidden shadow-md max-w-[780px] mx-auto">
           <img
-            src="/gangnam_hero.png"
+            src={HERO_IMAGE}
             alt="강남언니 SM美容外科医院 프로필"
             className="w-full h-auto block"
           />
