@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import SocialFloat from "@/components/SocialFloat";
 import Hero from "@/components/sections/Hero";
+import BrandStatement from "@/components/sections/BrandStatement";
 import Director from "@/components/sections/Director";
 import Principles from "@/components/sections/Principles";
 import Stats from "@/components/sections/Stats";
@@ -23,6 +24,8 @@ export default function HomePage() {
       <SocialFloat />
       <Navigation />
       <Hero />
+      {/* 브랜드 미션 (SkinMedi 스타일) */}
+      <BrandStatement />
       {/* 1. SMPS 철학 */}
       <Director />
       <Principles />
