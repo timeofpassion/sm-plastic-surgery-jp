@@ -1,6 +1,6 @@
 const PROCEDURES = [
   {
-    image: "/breast.png",
+    image: "/breast_01.png",
     title: "하이브리드 가슴성형",
     who: "자연스러운 촉감과 형태를 같이 원하는 분",
     method: "멘토 보형물 + 자가 지방이식 병행",
@@ -12,13 +12,13 @@ const PROCEDURES = [
     ],
   },
   {
-    image: "/breast.png",
+    image: "/breast_02.png",
     title: "가슴 확대 (보형물)",
     who: "첫 수술, 볼륨 업을 우선하는 분",
     body: "흉곽 너비·피부 탄력·출산력을 확인한 뒤 보형물 종류(라운드/앵커, 스무스/텍스처드)와 삽입 위치(근육 위/아래)를 결정합니다.",
   },
   {
-    image: "/resurgery.png",
+    image: "/breast_03.png",
     title: "가슴 재수술",
     symptoms: [
       "구형구축 (Baker Ⅱ~Ⅳ)",
