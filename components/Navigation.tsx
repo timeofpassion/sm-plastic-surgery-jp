@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { label: "안전마취센터", href: "#safety" },
   { label: "Before&After", href: "#gallery" },
   { label: "마케팅채널", href: "#media" },
-  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navigation() {

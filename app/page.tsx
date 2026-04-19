@@ -12,7 +12,6 @@ import Safety from "@/components/sections/Safety";
 import Gallery from "@/components/sections/Gallery";
 import Media from "@/components/sections/Media";
 import Shorts from "@/components/sections/Shorts";
-import FAQ from "@/components/sections/FAQ";
 import Location from "@/components/sections/Location";
 import Consultation from "@/components/sections/Consultation";
 import Footer from "@/components/sections/Footer";
@@ -43,8 +42,6 @@ export default function HomePage() {
       {/* 7. 마케팅채널 (YouTube) */}
       <Media />
       <Shorts />
-      {/* 8. FAQ */}
-      <FAQ />
       {/* 오시는 길 */}
       <Location />
       <Consultation />

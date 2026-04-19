@@ -28,7 +28,7 @@ export default function Consultation() {
         </h2>
 
         <p className="text-[1.05rem] lg:text-[1.15rem] text-text-sub max-w-[640px] mx-auto mb-14 font-light keep-all">
-          일본 담당 서채우 팀장이 일본어로 1:1 응대해드립니다.
+          일본 전문 통역 담당자가 일본어로 1:1 응대해드립니다.
           <br />
           상담부터 수술, 귀국 후 사후관리까지 동일한 담당자가 함께합니다.
         </p>
