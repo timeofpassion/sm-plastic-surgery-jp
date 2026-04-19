@@ -38,7 +38,7 @@ export default function Consultation() {
           href={LINE_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-3 bg-[#06C755] text-white text-[1.1rem] lg:text-[1.25rem] font-semibold py-5 px-12 rounded-sm shadow-lg shadow-[#06C755]/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#06C755]/40 mb-20"
+          className="inline-flex items-center justify-center gap-3 bg-[#06C755] text-white text-[1.1rem] lg:text-[1.25rem] font-semibold py-5 px-12 rounded-full shadow-lg shadow-[#06C755]/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#06C755]/40 mb-20"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
             <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738C5.384.566 0 4.935 0 10.304c0 4.811 4.27 8.843 10.035 9.608.39.084.922.258 1.057.592.122.302.079.775.038 1.085l-.164 1.026c-.045.303-.24 1.186 1.049.647 1.291-.54 6.957-4.098 9.489-7.016 1.749-1.918 2.496-3.862 2.496-5.942zM7.591 13.078H5.206a.515.515 0 01-.515-.514V7.788a.515.515 0 111.03 0v4.264h1.87a.515.515 0 110 1.026zm2.02-.514a.515.515 0 11-1.03 0V7.788a.515.515 0 111.03 0v4.776zm5.761 0a.515.515 0 01-.927.307l-2.44-3.321v2.999a.515.515 0 11-1.03 0V7.788a.515.515 0 01.928-.307l2.44 3.322v-3a.515.515 0 111.029 0v4.776zm3.889-2.903a.515.515 0 110 1.03h-1.871v1.187h1.871a.515.515 0 110 1.03h-2.386a.515.515 0 01-.514-.514V7.788a.515.515 0 01.514-.515h2.386a.515.515 0 110 1.03h-1.871v1.358z" />

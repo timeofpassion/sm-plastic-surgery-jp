@@ -13,7 +13,7 @@ const SKIN: SkinItem[] = [
       <>
         근육의 과도한 움직임으로 생기는 주름을 부드럽게 풀어주고 턱·사각턱·종아리
         볼륨까지 자연스럽게 다듬어주는 시술로 주요 부위는{" "}
-        <mark className="bg-sky-100 text-text-main px-1 font-medium transition-colors group-hover:bg-white group-hover:text-brand">
+        <mark className="bg-sky-100 text-text-main px-1 font-medium">
           이마 / 미간 / 눈가 / 턱 / 사각턱
         </mark>{" "}
         등이 있습니다.
@@ -28,7 +28,7 @@ const SKIN: SkinItem[] = [
       <>
         꺼진 부위에 히알루론산을 채워 즉각적인 볼륨과 윤곽을 만들어주고 깊은 주름을
         자연스럽게 완화시키는 시술로 주요 부위는{" "}
-        <mark className="bg-sky-100 text-text-main px-1 font-medium transition-colors group-hover:bg-white group-hover:text-brand">
+        <mark className="bg-sky-100 text-text-main px-1 font-medium">
           앞광대 / 팔자 / 입술 / 애교 / 눈밑
         </mark>{" "}
         등이 있습니다.
@@ -43,7 +43,7 @@ const SKIN: SkinItem[] = [
       <>
         히알루론산을 진피층에 직접 주입해 속부터 차오르는 수분과 광채로 피부 결과
         탄력을 개선해주는 시술로 효과는{" "}
-        <mark className="bg-sky-100 text-text-main px-1 font-medium transition-colors group-hover:bg-white group-hover:text-brand">
+        <mark className="bg-sky-100 text-text-main px-1 font-medium">
           보습 / 미백 / 탄력
         </mark>{" "}
         세 가지로 정리됩니다.
@@ -58,7 +58,7 @@ const SKIN: SkinItem[] = [
       <>
         절개 없이 피부 속 콜라겐을 자극해 탄력과 리프팅을 동시에 잡아주는 시술로
         방법으로는{" "}
-        <mark className="bg-sky-100 text-text-main px-1 font-medium transition-colors group-hover:bg-white group-hover:text-brand">
+        <mark className="bg-sky-100 text-text-main px-1 font-medium">
           텐써마(고주파) / 텐쎄라(초음파 HIFU)
         </mark>{" "}
         두 가지가 있습니다.
@@ -89,7 +89,7 @@ export default function SkinLifting() {
           {SKIN.map((item, i) => (
             <div
               key={item.title}
-              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:bg-brand hover:border-brand hover:shadow-2xl hover:shadow-brand/30"
+              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-blue-100/60"
               style={{
                 animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
                   i * 0.08
@@ -104,13 +104,13 @@ export default function SkinLifting() {
                 />
               </div>
               <div className="flex flex-col p-6 lg:p-8">
-                <span className="font-serif-display text-[1.5rem] text-brand mb-3 transition-all group-hover:scale-110 group-hover:text-white origin-left">
+                <span className="font-serif-display text-[1.5rem] text-brand mb-3 origin-left">
                   {item.num}
                 </span>
-                <h3 className="font-serif-display text-[1.5rem] lg:text-[1.65rem] font-bold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-white group-hover:border-white/30">
+                <h3 className="font-serif-display text-[1.35rem] lg:text-[1.5rem] font-semibold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-[0.9rem] text-text-sub leading-[1.7] keep-all transition-colors group-hover:text-white">
+                <p className="text-[0.9rem] text-text-sub leading-[1.7] keep-all">
                   {item.desc}
                 </p>
               </div>

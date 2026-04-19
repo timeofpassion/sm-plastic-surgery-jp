@@ -48,7 +48,7 @@ export default function Procedures() {
           {PROCEDURES.map((p, i) => (
             <article
               key={p.title}
-              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:bg-brand hover:border-brand hover:shadow-2xl hover:shadow-brand/30"
+              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-blue-100/60"
               style={{
                 animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
                   i * 0.1
@@ -63,14 +63,14 @@ export default function Procedures() {
                 />
               </div>
               <div className="flex flex-col p-8 lg:p-10">
-                <h3 className="font-serif-display text-[1.75rem] lg:text-[1.9rem] font-bold text-brand mb-5 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-white group-hover:border-white/30">
+                <h3 className="font-serif-display text-[1.5rem] lg:text-[1.65rem] font-semibold text-brand mb-5 pb-4 border-b border-border-default keep-all leading-tight">
                   {p.title}
                 </h3>
 
                 {p.who && (
                   <>
                     <MetaLabel>누구를 위한가</MetaLabel>
-                    <p className="text-[0.95rem] font-medium mb-5 leading-relaxed text-text-main transition-colors group-hover:text-white">
+                    <p className="text-[0.95rem] font-medium mb-5 leading-relaxed text-text-main">
                       {p.who}
                     </p>
                   </>
@@ -79,7 +79,7 @@ export default function Procedures() {
                 {p.method && (
                   <>
                     <MetaLabel>어떻게 하는가</MetaLabel>
-                    <div className="text-[0.9rem] mb-6 p-3 px-4 border-l-2 border-accent-gold bg-bg-sub-alt text-text-sub transition-colors group-hover:bg-white/10 group-hover:border-yellow-300 group-hover:text-white">
+                    <div className="text-[0.9rem] mb-6 p-3 px-4 border-l-2 border-accent-gold bg-bg-sub-alt text-text-sub">
                       {p.method}
                     </div>
                   </>
@@ -90,7 +90,7 @@ export default function Procedures() {
                     {p.details.map((d) => (
                       <li
                         key={d}
-                        className="text-[0.88rem] mb-2.5 flex items-start gap-2 text-text-sub transition-colors group-hover:text-white before:content-['•'] before:text-accent-gold group-hover:before:text-yellow-300"
+                        className="text-[0.88rem] mb-2.5 flex items-start gap-2 text-text-sub before:content-['•'] before:text-accent-gold"
                       >
                         {d}
                       </li>
@@ -105,7 +105,7 @@ export default function Procedures() {
                       {p.symptoms.map((s) => (
                         <span
                           key={s}
-                          className="text-[0.75rem] bg-white border border-border-default py-1 px-2.5 text-text-sub transition-colors group-hover:bg-white/10 group-hover:border-white/30 group-hover:text-white"
+                          className="text-[0.75rem] bg-white border border-border-default py-1 px-2.5 text-text-sub"
                         >
                           {s}
                         </span>
@@ -115,7 +115,7 @@ export default function Procedures() {
                 )}
 
                 {p.body && (
-                  <p className="text-[0.9rem] leading-[1.7] text-justify text-text-sub transition-colors group-hover:text-white">
+                  <p className="text-[0.9rem] leading-[1.7] text-justify text-text-sub">
                     {p.body}
                   </p>
                 )}
@@ -130,7 +130,7 @@ export default function Procedures() {
 
 function MetaLabel({ children }: { children: React.ReactNode }) {
   return (
-    <span className="text-[0.75rem] font-bold text-brand uppercase mb-2 block tracking-wider transition-colors group-hover:text-white">
+    <span className="text-[0.75rem] font-bold text-brand uppercase mb-2 block tracking-wider">
       {children}
     </span>
   );

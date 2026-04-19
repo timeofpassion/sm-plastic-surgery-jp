@@ -31,7 +31,7 @@ export default function Hero() {
               href="https://line.me/R/ti/p/@952nqpbr"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 text-[0.9rem] font-medium tracking-wide bg-brand text-white border border-brand rounded-sm min-w-[200px] transition-all hover:bg-brand-hover hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/15"
+              className="inline-flex items-center justify-center px-8 py-4 text-[0.9rem] font-medium tracking-wide bg-brand text-white border border-brand rounded-full min-w-[220px] transition-all hover:bg-brand-hover hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/20"
             >
               <svg
                 viewBox="0 0 24 24"

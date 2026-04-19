@@ -52,7 +52,7 @@ export default function Safety() {
           {SAFETY.map((item, i) => (
             <div
               key={item.title}
-              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-300 cursor-pointer hover:-translate-y-2 hover:bg-brand hover:border-brand hover:shadow-2xl hover:shadow-brand/30"
+              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-blue-100/60"
               style={{
                 animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
                   i * 0.08
@@ -67,10 +67,10 @@ export default function Safety() {
                 />
               </div>
               <div className="flex flex-col p-6 lg:p-8">
-                <h3 className="font-serif-display text-[1.35rem] lg:text-[1.5rem] font-bold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-white group-hover:border-white/30">
+                <h3 className="font-serif-display text-[1.25rem] lg:text-[1.4rem] font-semibold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-[0.9rem] text-text-sub leading-[1.7] keep-all transition-colors group-hover:text-white">
+                <p className="text-[0.9rem] text-text-sub leading-[1.7] keep-all">
                   {item.desc}
                 </p>
               </div>
