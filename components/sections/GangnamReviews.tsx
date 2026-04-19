@@ -74,7 +74,7 @@ export default function GangnamReviews() {
               {REVIEWS.map((src, i) => (
                 <div
                   key={i}
-                  className="shrink-0 rounded-md overflow-hidden bg-white border border-border-default aspect-[3/4]"
+                  className="shrink-0 rounded-md overflow-hidden bg-white border border-border-default"
                   style={{
                     width: `calc((100% - ${(VISIBLE - 1) * 24}px) / ${VISIBLE})`,
                   }}
@@ -82,7 +82,7 @@ export default function GangnamReviews() {
                   <img
                     src={src}
                     alt={`강남언니 리뷰 ${i + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto block"
                   />
                 </div>
               ))}
