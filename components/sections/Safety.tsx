@@ -67,7 +67,7 @@ export default function Safety() {
                 />
               </div>
               <div className="flex flex-col p-6 lg:p-8">
-                <h3 className="font-serif-display text-[1.35rem] lg:text-[1.5rem] font-bold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-yellow-300 group-hover:border-white/30">
+                <h3 className="font-serif-display text-[1.35rem] lg:text-[1.5rem] font-bold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-white group-hover:border-white/30">
                   {item.title}
                 </h3>
                 <p className="text-[0.9rem] text-text-sub leading-[1.7] keep-all transition-colors group-hover:text-white">

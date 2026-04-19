@@ -124,7 +124,7 @@ function TrustItem({
           <svg
             viewBox="0 0 24 24"
             className="w-4 h-4 shrink-0"
-            stroke="#c5a880"
+            stroke="#8aa3c4"
             strokeWidth="1.8"
             fill="none"
           >

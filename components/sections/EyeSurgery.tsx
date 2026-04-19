@@ -13,7 +13,7 @@ const EYE: EyeItem[] = [
       <>
         쌍꺼풀이 없어 눈이 밋밋하거나 사나워보이는 눈매를 한층 부드럽고 아름답게
         만들어주는 수술로 방법으로는{" "}
-        <mark className="bg-yellow-200 text-text-main px-1 font-medium transition-colors group-hover:bg-yellow-300 group-hover:text-text-main">
+        <mark className="bg-sky-100 text-text-main px-1 font-medium transition-colors group-hover:bg-white group-hover:text-brand">
           매몰법 / 자연유착법 / 절개법
         </mark>{" "}
         등의 수술법이 있습니다.
@@ -28,7 +28,7 @@ const EYE: EyeItem[] = [
       <>
         나이와 함께 늘어진 윗눈꺼풀의 피부·근육·지방을 정리해 시야를 가리는 답답함을
         해소하고, 한층 젊고 또렷한 눈매로 개선하는 수술로 방법으로는{" "}
-        <mark className="bg-yellow-200 text-text-main px-1 font-medium transition-colors group-hover:bg-yellow-300 group-hover:text-text-main">
+        <mark className="bg-sky-100 text-text-main px-1 font-medium transition-colors group-hover:bg-white group-hover:text-brand">
           절개법 / 눈썹하거상술
         </mark>{" "}
         등의 수술법이 있습니다.
@@ -43,7 +43,7 @@ const EYE: EyeItem[] = [
       <>
         눈밑 지방 돌출, 다크서클, 잔주름으로 피곤해 보이는 인상을 개선하고 매끈하고
         생기 있는 눈밑 라인을 만들어주는 수술로 방법으로는{" "}
-        <mark className="bg-yellow-200 text-text-main px-1 font-medium transition-colors group-hover:bg-yellow-300 group-hover:text-text-main">
+        <mark className="bg-sky-100 text-text-main px-1 font-medium transition-colors group-hover:bg-white group-hover:text-brand">
           눈밑지방재배치 / 절제법
         </mark>{" "}
         등의 수술법이 있습니다.
@@ -58,7 +58,7 @@ const EYE: EyeItem[] = [
       <>
         눈 뜨는 근육(상안검거근)의 힘이 약해 졸려 보이거나 답답한 눈매를 또렷하고
         시원한 인상으로 교정해주는 수술로 방법으로는{" "}
-        <mark className="bg-yellow-200 text-text-main px-1 font-medium transition-colors group-hover:bg-yellow-300 group-hover:text-text-main">
+        <mark className="bg-sky-100 text-text-main px-1 font-medium transition-colors group-hover:bg-white group-hover:text-brand">
           상안검거근 단축술 / 뮬러근 단축술
         </mark>{" "}
         등의 수술법이 있습니다.
@@ -107,10 +107,10 @@ export default function EyeSurgery() {
                 />
               </div>
               <div className="flex flex-col p-6 lg:p-8">
-                <span className="font-serif-display text-[1.5rem] text-brand mb-3 transition-all group-hover:scale-110 group-hover:text-yellow-300 origin-left">
+                <span className="font-serif-display text-[1.5rem] text-brand mb-3 transition-all group-hover:scale-110 group-hover:text-white origin-left">
                   {item.num}
                 </span>
-                <h3 className="font-serif-display text-[1.5rem] lg:text-[1.65rem] font-bold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-yellow-300 group-hover:border-white/30">
+                <h3 className="font-serif-display text-[1.5rem] lg:text-[1.65rem] font-bold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-white group-hover:border-white/30">
                   {item.title}
                 </h3>
                 <p className="text-[0.9rem] text-text-sub leading-[1.7] keep-all transition-colors group-hover:text-white">

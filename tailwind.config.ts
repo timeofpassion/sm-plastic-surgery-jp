@@ -14,11 +14,11 @@ const config: Config = {
         "text-main": "#111111",
         "text-sub": "#555555",
         brand: {
-          DEFAULT: "#d32f2f",
-          hover: "#b71c1c",
+          DEFAULT: "#1e3a5f",
+          hover: "#142c47",
         },
         "border-default": "#e5e7eb",
-        "accent-gold": "#c5a880",
+        "accent-gold": "#8aa3c4",
       },
       fontFamily: {
         sans: [

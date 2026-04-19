@@ -75,7 +75,7 @@ export default function Media() {
                         borderStyle: "solid",
                         borderWidth: "8px 0 8px 14px",
                         borderColor:
-                          "transparent transparent transparent #d32f2f",
+                          "transparent transparent transparent #1e3a5f",
                       }}
                     />
                   </div>

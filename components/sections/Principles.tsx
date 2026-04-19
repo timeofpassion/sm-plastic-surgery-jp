@@ -49,10 +49,10 @@ export default function Principles() {
                 />
               </div>
               <div className="flex flex-col p-8 lg:p-10">
-                <span className="font-serif-display text-[1.5rem] text-brand mb-3 transition-all group-hover:scale-110 group-hover:text-yellow-300 origin-left">
+                <span className="font-serif-display text-[1.5rem] text-brand mb-3 transition-all group-hover:scale-110 group-hover:text-white origin-left">
                   {p.num}
                 </span>
-                <h3 className="font-serif-display text-[1.75rem] lg:text-[1.9rem] font-bold text-brand mb-5 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-yellow-300 group-hover:border-white/30">
+                <h3 className="font-serif-display text-[1.75rem] lg:text-[1.9rem] font-bold text-brand mb-5 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-white group-hover:border-white/30">
                   {p.title}
                 </h3>
                 <p className="text-[0.95rem] text-text-sub leading-[1.8] keep-all text-justify transition-colors group-hover:text-white">

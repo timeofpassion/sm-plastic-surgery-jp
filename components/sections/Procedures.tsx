@@ -63,7 +63,7 @@ export default function Procedures() {
                 />
               </div>
               <div className="flex flex-col p-8 lg:p-10">
-                <h3 className="font-serif-display text-[1.75rem] lg:text-[1.9rem] font-bold text-brand mb-5 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-yellow-300 group-hover:border-white/30">
+                <h3 className="font-serif-display text-[1.75rem] lg:text-[1.9rem] font-bold text-brand mb-5 pb-4 border-b border-border-default keep-all leading-tight transition-colors group-hover:text-white group-hover:border-white/30">
                   {p.title}
                 </h3>
 
@@ -130,7 +130,7 @@ export default function Procedures() {
 
 function MetaLabel({ children }: { children: React.ReactNode }) {
   return (
-    <span className="text-[0.75rem] font-bold text-brand uppercase mb-2 block tracking-wider transition-colors group-hover:text-yellow-300">
+    <span className="text-[0.75rem] font-bold text-brand uppercase mb-2 block tracking-wider transition-colors group-hover:text-white">
       {children}
     </span>
   );
