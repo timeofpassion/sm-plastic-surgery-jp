@@ -27,10 +27,10 @@ export default function HomePage() {
       {/* 신뢰를 쌓은 시간 */}
       <Stats />
       <Hero />
+      <GangnamReviews />
       {/* 1. SMPS 철학 */}
       <Director />
       <Principles />
-      <GangnamReviews />
       {/* 2. 가슴수술 */}
       <Procedures />
       {/* 3. Before & After (가슴 → 바로 전후사진) */}
