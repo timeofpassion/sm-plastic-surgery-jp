@@ -25,10 +25,11 @@ export default function HomePage() {
       <Navigation />
       {/* 브랜드 미션 (메인 히어로 · SkinMedi 스타일) */}
       <BrandStatement />
+      {/* 신뢰를 쌓은 시간 */}
+      <Stats />
       <Hero />
       {/* 1. SMPS 철학 */}
       <Director />
-      <Stats />
       <Principles />
       {/* 2. 가슴수술 */}
       <Procedures />
