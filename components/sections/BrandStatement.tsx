@@ -8,7 +8,7 @@ export default function BrandStatement() {
       <div
         className="absolute right-0 top-0 w-full lg:w-1/2 h-full bg-cover bg-center opacity-90 lg:opacity-100"
         style={{
-          backgroundImage: "url('/doctor_white.png')",
+          backgroundImage: "url('/herosection.png')",
           backgroundPosition: "center top",
           maskImage:
             "linear-gradient(to right, transparent 0%, black 30%, black 100%)",
