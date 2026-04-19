@@ -60,8 +60,6 @@ const KEYWORDS_JP = [
   "イ・ムヨン",
 ];
 
-const OG_IMAGE = `${SITE_URL}/logo_smps.png`;
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -92,12 +90,6 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: SITE_URL,
     siteName: "에스엠성형외과 SM美容外科",
-    images: [
-      {
-        url: OG_IMAGE,
-        alt: "에스엠성형외과 SM Plastic Surgery",
-      },
-    ],
     locale: "ja_JP",
     alternateLocale: ["ko_KR"],
     type: "website",
@@ -106,7 +98,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: [OG_IMAGE],
   },
   alternates: {
     canonical: SITE_URL,
