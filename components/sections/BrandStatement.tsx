@@ -4,19 +4,20 @@ export default function BrandStatement() {
       id="brand-statement"
       className="relative overflow-hidden bg-gradient-to-br from-[#eaf1fb] via-[#d8e6f5] to-[#a9c4e2]"
     >
-      {/* Right side decorative image */}
+      {/* Right side doctor photo */}
       <div
-        className="absolute right-0 top-0 w-full lg:w-3/5 h-full bg-cover bg-center opacity-80 lg:opacity-95"
+        className="absolute right-0 top-0 w-full lg:w-1/2 h-full bg-cover bg-center opacity-90 lg:opacity-100"
         style={{
-          backgroundImage:
-            "url('https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+          backgroundImage: "url('/doctor_white.png')",
+          backgroundPosition: "center top",
           maskImage:
-            "linear-gradient(to right, transparent 0%, black 25%, black 100%)",
+            "linear-gradient(to right, transparent 0%, black 30%, black 100%)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, black 25%, black 100%)",
+            "linear-gradient(to right, transparent 0%, black 30%, black 100%)",
         }}
       />
-      <div className="absolute inset-0 lg:hidden bg-white/60" />
+      {/* Mobile overlay for readability */}
+      <div className="absolute inset-0 lg:hidden bg-white/70" />
 
       {/* Logo top */}
       <div className="relative z-10 pt-10 lg:pt-14 flex justify-center">

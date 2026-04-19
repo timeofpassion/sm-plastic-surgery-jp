@@ -23,9 +23,9 @@ export default function HomePage() {
     <main className="relative">
       <SocialFloat />
       <Navigation />
-      <Hero />
-      {/* 브랜드 미션 (SkinMedi 스타일) */}
+      {/* 브랜드 미션 (메인 히어로 · SkinMedi 스타일) */}
       <BrandStatement />
+      <Hero />
       {/* 1. SMPS 철학 */}
       <Director />
       <Principles />
