@@ -99,7 +99,7 @@ export default function EyeSurgery() {
                 }s forwards`,
               }}
             >
-              <div className="w-full aspect-[4/3] overflow-hidden bg-bg-sub-alt">
+              <div className="w-full aspect-[5/4] overflow-hidden bg-bg-sub-alt">
                 <img
                   src={item.image}
                   alt={item.title}
