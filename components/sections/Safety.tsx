@@ -25,7 +25,7 @@ export default function Safety() {
   return (
     <section
       id="safety"
-      className="py-20 lg:py-[120px] flex justify-center bg-bg-base"
+      className="py-12 lg:py-[70px] flex justify-center bg-bg-base"
     >
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">

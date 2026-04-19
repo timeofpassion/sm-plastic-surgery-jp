@@ -70,7 +70,7 @@ const SKIN: SkinItem[] = [
 
 export default function SkinLifting() {
   return (
-    <section id="skin" className="py-20 lg:py-[120px] flex justify-center">
+    <section id="skin" className="py-12 lg:py-[70px] flex justify-center">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">
           피부 · 리프팅

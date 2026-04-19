@@ -21,7 +21,7 @@ const PRINCIPLES = [
 
 export default function Principles() {
   return (
-    <section id="why-sm" className="py-20 lg:py-[120px] flex justify-center">
+    <section id="why-sm" className="py-12 lg:py-[70px] flex justify-center">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           WHY SM — 에스엠의 세 가지 원칙

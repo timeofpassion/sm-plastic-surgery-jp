@@ -12,7 +12,7 @@ export default function Consultation() {
   return (
     <section
       id="consultation"
-      className="py-20 lg:py-[120px] flex justify-center bg-bg-sub-alt"
+      className="py-12 lg:py-[70px] flex justify-center bg-bg-sub-alt"
     >
       <div className="w-full max-w-content px-6 text-center">
         <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">

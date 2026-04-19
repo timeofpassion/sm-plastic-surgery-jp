@@ -114,7 +114,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 lg:py-[120px] flex justify-center">
+    <section id="faq" className="py-12 lg:py-[70px] flex justify-center">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">
           Information & Support

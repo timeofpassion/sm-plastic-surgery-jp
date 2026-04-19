@@ -74,7 +74,7 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-20 lg:py-[120px] flex justify-center">
+    <section id="gallery" className="py-12 lg:py-[70px] flex justify-center">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           Before &amp; After

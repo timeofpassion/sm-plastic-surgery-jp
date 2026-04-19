@@ -9,7 +9,7 @@ const VIDEOS = [
 
 export default function Media() {
   return (
-    <section id="media" className="py-20 lg:py-[120px] flex justify-center">
+    <section id="media" className="py-12 lg:py-[70px] flex justify-center">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           YouTube — 영상으로 만나는 에스엠

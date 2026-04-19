@@ -26,7 +26,7 @@ export default function Shorts() {
   );
 
   return (
-    <section id="shorts" className="py-20 lg:py-[100px] flex justify-center">
+    <section id="shorts" className="py-12 lg:py-[60px] flex justify-center">
       <div className="w-full max-w-content px-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-10 lg:mb-14">

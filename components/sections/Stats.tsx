@@ -22,7 +22,7 @@ const STATS = [
 export default function Stats() {
   return (
     <section
-      className="relative py-24 lg:py-36 flex justify-center text-white bg-cover bg-center"
+      className="relative py-14 lg:py-20 flex justify-center text-white bg-cover bg-center"
       style={{
         backgroundImage: "url('/space.png')",
       }}
