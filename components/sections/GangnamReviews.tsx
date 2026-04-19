@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-const HERO_IMAGE = "/gangnam_review_01.png";
-
 const REVIEWS = [
   "/gangnam_review_02.png",
   "/gangnam_review_03.png",
@@ -58,18 +56,117 @@ export default function GangnamReviews() {
           실제 환자들의 생생한 후기
         </h2>
 
-        {/* Hero banner */}
-        <button
-          type="button"
-          onClick={() => setLightbox(HERO_IMAGE)}
-          className="block w-full max-w-[780px] mx-auto mb-10 lg:mb-12 bg-white border border-border-default rounded-md overflow-hidden shadow-md transition-shadow hover:shadow-xl cursor-zoom-in"
-        >
-          <img
-            src={HERO_IMAGE}
-            alt="강남언니 SM美容外科医院 프로필"
-            className="w-full h-auto block"
-          />
-        </button>
+        {/* Hero card — code-generated (no model photo) */}
+        <div className="mb-10 lg:mb-12 w-full max-w-[780px] mx-auto bg-white border border-border-default rounded-md overflow-hidden shadow-md">
+          {/* Top app bar */}
+          <div className="flex items-center justify-between px-5 py-3 bg-white border-b border-border-default">
+            <div className="flex items-center gap-2">
+              <img src="/gangnam.png" alt="" className="w-6 h-6 object-contain" />
+              <span className="font-bold text-[0.95rem] text-[#ff5c3a] tracking-tight">
+                カンナムオンニ
+              </span>
+            </div>
+            <div className="flex items-center gap-3">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#9ca3af"
+                strokeWidth="2"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <span className="text-[0.75rem] text-gray-500 px-2.5 py-1 border border-border-default rounded-full">
+                ログイン/登録
+              </span>
+            </div>
+          </div>
+
+          {/* Blue banner with SMPS mark */}
+          <div
+            className="relative h-[200px] sm:h-[240px] flex items-center justify-center overflow-hidden"
+            style={{
+              background:
+                "linear-gradient(135deg, #1e3a5f 0%, #2c5282 55%, #0f1f38 100%)",
+            }}
+          >
+            {/* decorative circles */}
+            <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-white/5" />
+            <div className="absolute -bottom-14 -right-10 w-52 h-52 rounded-full bg-white/5" />
+
+            <div className="relative flex flex-col items-center text-white text-center px-4">
+              <div className="font-black text-[3rem] sm:text-[4rem] leading-none tracking-tight mb-3">
+                SMPS
+              </div>
+              <div className="text-[0.8rem] sm:text-[0.9rem] opacity-90 tracking-[0.3em] uppercase mb-2">
+                SM Plastic Surgery
+              </div>
+              <div className="text-[0.7rem] opacity-70 tracking-[0.2em]">
+                韓国 江南 · EST. 2013
+              </div>
+            </div>
+          </div>
+
+          {/* Info section */}
+          <div className="p-5 sm:p-6">
+            <div className="flex items-start justify-between mb-3">
+              <h3 className="text-[1.25rem] sm:text-[1.4rem] font-bold text-text-main">
+                SM美容外科医院
+              </h3>
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#d1d5db"
+                strokeWidth="1.8"
+              >
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </div>
+
+            <div className="flex items-center gap-2 mb-4">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="#f5b800"
+              >
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+              <span className="font-bold text-text-main text-[1rem]">9.6</span>
+              <span className="text-text-sub text-[0.9rem]">口コミ 887件</span>
+            </div>
+
+            <div className="flex items-start gap-2 text-[0.85rem] text-text-sub">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                className="shrink-0 mt-0.5"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>
+                Sinnonhyeon stn. · 435, Gangnam-daero, Seocho-gu, Seoul, Korea
+              </span>
+            </div>
+
+            <div className="mt-5 pt-4 border-t border-border-default grid grid-cols-3 text-center text-[0.8rem]">
+              <div className="pb-2 border-b-2 border-text-main font-semibold text-text-main">
+                クリニック情報
+              </div>
+              <div className="text-text-sub">イベント料金</div>
+              <div className="text-text-sub">施術口コミ</div>
+            </div>
+          </div>
+        </div>
 
         {/* Slider */}
         <div className="relative mb-10">
