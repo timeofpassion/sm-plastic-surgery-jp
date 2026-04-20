@@ -108,7 +108,7 @@ export const metadata: Metadata = {
   },
   category: "healthcare",
   verification: {
-    // google: "여기에 구글 서치콘솔 메타 태그 값 입력 예정",
+    google: "X5gJW4TYCuZU1zIcCk4gfCSnzuLhR70W13YKC0zqevs",
   },
 };
 
@@ -272,6 +272,73 @@ export default function RootLayout({
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <Script id="track-events" strategy="afterInteractive">
+        {`
+          (function() {
+            function track(name, params) {
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', name, params || {});
+              }
+            }
+
+            // Click tracking (delegated)
+            document.addEventListener('click', function(e) {
+              var target = e.target;
+              if (!target || !target.closest) return;
+
+              // LINE 클릭
+              var lineLink = target.closest('a[href*="line.me/R/ti/p"]');
+              if (lineLink) {
+                track('click_line', {
+                  button_location: lineLink.getAttribute('data-track-location') || 'other',
+                });
+              }
+
+              // Social 채널 클릭 (플로팅)
+              var socialLink = target.closest('a[data-social]');
+              if (socialLink) {
+                track('click_social', {
+                  platform: socialLink.getAttribute('data-social'),
+                });
+              }
+
+              // YouTube 채널 링크 클릭
+              var ytLink = target.closest('a[href*="youtube.com"], a[href*="youtu.be"]');
+              if (ytLink && !socialLink) {
+                track('click_youtube', {
+                  url: ytLink.getAttribute('href') || '',
+                });
+              }
+            }, true);
+
+            // Scroll depth (25 / 50 / 75 / 90)
+            var thresholds = [25, 50, 75, 90];
+            var fired = {};
+            var ticking = false;
+
+            function onScroll() {
+              if (ticking) return;
+              ticking = true;
+              requestAnimationFrame(function() {
+                var doc = document.documentElement;
+                var scrollable = doc.scrollHeight - window.innerHeight;
+                if (scrollable <= 0) { ticking = false; return; }
+                var pct = (window.scrollY / scrollable) * 100;
+                for (var i = 0; i < thresholds.length; i++) {
+                  var t = thresholds[i];
+                  if (pct >= t && !fired[t]) {
+                    fired[t] = true;
+                    track('scroll_depth', { percent: t });
+                  }
+                }
+                ticking = false;
+              });
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+          })();
+        `}
+      </Script>
     </html>
   );
 }

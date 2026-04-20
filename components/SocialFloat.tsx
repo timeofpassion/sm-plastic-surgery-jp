@@ -1,6 +1,7 @@
 const SOCIALS = [
   {
     name: "LINE",
+    platform: "line",
     href: "https://line.me/R/ti/p/@952nqpbr",
     bg: "#06C755",
     icon: (
@@ -11,6 +12,7 @@ const SOCIALS = [
   },
   {
     name: "YouTube",
+    platform: "youtube",
     href: "https://www.youtube.com/@smplasticsurgery",
     bg: "#FF0000",
     icon: (
@@ -21,6 +23,7 @@ const SOCIALS = [
   },
   {
     name: "Instagram",
+    platform: "instagram",
     href: "https://www.instagram.com/sm_official_jp",
     bg: "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
     icon: (
@@ -31,6 +34,7 @@ const SOCIALS = [
   },
   {
     name: "X (Twitter)",
+    platform: "x",
     href: "https://x.com/smps8888",
     bg: "#000000",
     icon: (
@@ -41,6 +45,7 @@ const SOCIALS = [
   },
   {
     name: "TikTok",
+    platform: "tiktok",
     href: "https://www.tiktok.com/@smps_jp8888",
     bg: "#000000",
     icon: (
@@ -51,6 +56,7 @@ const SOCIALS = [
   },
   {
     name: "Ameba Blog",
+    platform: "ameba",
     href: "https://ameblo.jp/sm-official-jp/",
     bg: "#FFFFFF",
     icon: (
@@ -73,6 +79,8 @@ export default function SocialFloat() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={s.name}
+          data-social={s.platform}
+          {...(s.platform === "line" ? { "data-track-location": "floating" } : {})}
           className="group relative w-8 h-8 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-white shadow-lg shadow-black/20 transition-transform hover:scale-110 hover:shadow-xl"
           style={{ background: s.bg }}
         >

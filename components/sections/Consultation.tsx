@@ -38,6 +38,7 @@ export default function Consultation() {
           href={LINE_URL}
           target="_blank"
           rel="noopener noreferrer"
+          data-track-location="consultation"
           className="inline-flex items-center justify-center gap-3 bg-[#06C755] text-white text-[1.1rem] lg:text-[1.25rem] font-semibold py-5 px-12 rounded-full shadow-lg shadow-[#06C755]/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#06C755]/40 mb-20"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

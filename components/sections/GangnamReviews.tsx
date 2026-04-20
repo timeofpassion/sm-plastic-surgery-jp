@@ -245,6 +245,7 @@ export default function GangnamReviews() {
             href={LINE_URL}
             target="_blank"
             rel="noopener noreferrer"
+            data-track-location="gangnam_reviews"
             className="inline-flex items-center gap-2 bg-[#06C755] text-white text-[0.95rem] lg:text-[1rem] font-semibold py-3.5 px-8 rounded-full shadow-md shadow-[#06C755]/25 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#06C755]/40"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">

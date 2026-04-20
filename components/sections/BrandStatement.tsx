@@ -59,6 +59,7 @@ export default function BrandStatement() {
             href="https://line.me/R/ti/p/@952nqpbr"
             target="_blank"
             rel="noopener noreferrer"
+            data-track-location="brand_statement"
             className="inline-flex items-center gap-2 bg-brand text-white text-[0.95rem] lg:text-[1rem] font-medium py-4 px-8 rounded-full transition-all hover:bg-brand-hover hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand/20"
           >
             상담 · 문의하기
