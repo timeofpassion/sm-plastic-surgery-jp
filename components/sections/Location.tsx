@@ -36,7 +36,20 @@ export default function Location() {
                 </>
               }
             />
-            <InfoRow label="교통" value="강남역 3번 출구 도보 3분" />
+            <InfoRow
+              label="교통"
+              value={
+                <>
+                  강남역 10번출구 도보 7분
+                  <br />
+                  신논현역 7번출구 도보 5분
+                  <br />
+                  <span className="text-[0.85rem] text-text-sub mt-1 block">
+                    인천공항 → 공항버스 6009 → 강남역 하차 → 도보 2분
+                  </span>
+                </>
+              }
+            />
             <InfoRow
               label="진료시간"
               value={
