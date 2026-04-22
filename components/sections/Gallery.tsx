@@ -102,15 +102,10 @@ export default function Gallery() {
           Before &amp; After
         </span>
         <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[2.8rem] font-medium leading-[1.3] mb-5 keep-all">
-          사진을{" "}
-          <span className="inline-block bg-brand text-white px-3 py-1">
-            꾸미지 않습니다.
-          </span>
+          오직 실력으로 증명하는 변화
         </h2>
         <p className="text-[1.05rem] lg:text-[1.15rem] text-text-main mb-4 max-w-[760px] keep-all leading-[1.8]">
-          한국 성형외과의 전후사진을 믿기 어려우셨다면,
-          <br />
-          에스엠이 <strong className="text-brand font-semibold">12년간 지켜온 4가지 원칙</strong>을 확인해주세요.
+          과도한 욕심보다는 환자 본연의 아름다움을 살리는 가장 정교한 디자인을 지향합니다.
         </p>
         <p className="text-[0.9rem] text-text-sub mb-12 max-w-[760px] keep-all">
           보정된 결과가 아니라, 실제 결과를 그대로 보여드립니다.
