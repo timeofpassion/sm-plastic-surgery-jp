@@ -20,11 +20,6 @@ const STANDARDS: Standard[] = [
     desc: "수술 전과 후, 같은 환경에서만 촬영합니다.",
   },
   {
-    tag: "TRANSPARENT DATE",
-    title: "촬영일 연·월·일까지 공개",
-    desc: "'N개월 후' 같은 애매한 표기는 쓰지 않습니다.",
-  },
-  {
     tag: "SIGNED CONSENT",
     title: "환자 본인 서면 동의 후 게시",
     desc: "동의서 없는 사진은 단 한 장도 올라가지 않습니다.",
@@ -108,7 +103,7 @@ export default function Gallery() {
           과도한 욕심보다는 환자 본연의 아름다움을 살리는 가장 정교한 디자인을 지향합니다.
         </p>
         <p className="text-[0.9rem] text-text-sub mb-12 max-w-[760px] keep-all">
-          보정된 결과가 아니라, 실제 결과를 그대로 보여드립니다.
+          에스엠이 12년간 지켜온 3가지 원칙을 확인해주세요.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5 mb-16">
