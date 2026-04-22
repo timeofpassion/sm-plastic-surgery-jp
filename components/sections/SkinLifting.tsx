@@ -19,7 +19,7 @@ const SKIN: SkinItem[] = [
         등이 있습니다.
       </>
     ),
-    image: "/ai_09.jpg",
+    image: "/ai_07.png",
   },
   {
     num: "02",
