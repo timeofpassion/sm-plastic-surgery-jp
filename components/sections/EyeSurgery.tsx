@@ -23,7 +23,7 @@ const EYE: EyeItem[] = [
         등의 수술법이 있습니다.
       </>
     ),
-    image: "/쌍꺼풀.png",
+    image: "/ai_02.png",
   },
   {
     num: "②",
@@ -38,7 +38,7 @@ const EYE: EyeItem[] = [
         등의 수술법이 있습니다.
       </>
     ),
-    image: "/상안검.png",
+    image: "/ai_05.png",
   },
   {
     num: "③",
@@ -53,7 +53,7 @@ const EYE: EyeItem[] = [
         등의 수술법이 있습니다.
       </>
     ),
-    image: "/하안검.png",
+    image: "/ai_12.png",
   },
   {
     num: "④",
@@ -68,7 +68,7 @@ const EYE: EyeItem[] = [
         등의 수술법이 있습니다.
       </>
     ),
-    image: "/안검하수.png",
+    image: "/ai_04.png",
   },
 ];
 

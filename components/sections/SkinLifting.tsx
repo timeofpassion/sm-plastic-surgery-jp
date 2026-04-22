@@ -7,7 +7,7 @@ type SkinItem = {
 
 const SKIN: SkinItem[] = [
   {
-    num: "①",
+    num: "01",
     title: "보톡스",
     desc: (
       <>
@@ -19,10 +19,10 @@ const SKIN: SkinItem[] = [
         등이 있습니다.
       </>
     ),
-    image: "/보톡스.png",
+    image: "/ai_09.jpg",
   },
   {
-    num: "②",
+    num: "02",
     title: "필러",
     desc: (
       <>
@@ -34,10 +34,10 @@ const SKIN: SkinItem[] = [
         등이 있습니다.
       </>
     ),
-    image: "/필러.png",
+    image: "/ai_03.png",
   },
   {
-    num: "③",
+    num: "03",
     title: "물광주사",
     desc: (
       <>
@@ -49,10 +49,10 @@ const SKIN: SkinItem[] = [
         세 가지로 정리됩니다.
       </>
     ),
-    image: "/물광주사.png",
+    image: "/ai_11.png",
   },
   {
-    num: "④",
+    num: "04",
     title: "텐쎄라 · 텐써마",
     desc: (
       <>
@@ -64,53 +64,53 @@ const SKIN: SkinItem[] = [
         두 가지가 있습니다.
       </>
     ),
-    image: "/텐쎄라 텐써마.png",
+    image: "/ai_06.png",
   },
 ];
 
 export default function SkinLifting() {
   return (
-    <section id="skin" className="py-12 lg:py-[70px] flex justify-center">
+    <section id="skin" className="py-12 lg:py-[70px] flex justify-center bg-bg-sub">
       <div className="w-full max-w-content px-6">
-        <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">
-          피부 · 리프팅
-        </span>
-        <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[3.2rem] font-medium leading-[1.3] mb-6 lg:mb-8 keep-all">
-          수술 회복 기간에
-          <br />
-          더할 수 있는 피부관리
-        </h2>
-        <p className="text-[1.05rem] lg:text-[1.15rem] text-text-sub mb-16 max-w-[720px] font-light keep-all">
-          병원을 방문하여 머물거나 회복하는 시간에 보톡스 / 필러 / 물광주사 /
-          텐쎄라·텐써마로 피부관리를 받아보세요.
-        </p>
+        <div className="text-center mb-12 lg:mb-16">
+          <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-4">
+            피부 · 리프팅
+          </span>
+          <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[3rem] font-medium leading-[1.3] mb-5 keep-all">
+            수술 회복 기간에
+            <br />
+            더할 수 있는 피부관리
+          </h2>
+          <p className="text-[1rem] text-text-sub max-w-[580px] mx-auto font-light keep-all leading-[1.8]">
+            방한 기간 동안 보톡스 / 필러 / 물광주사 / 텐쎄라·텐써마로
+            피부관리를 함께 받아보세요.
+          </p>
+        </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {SKIN.map((item, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border-default border border-border-default">
+          {SKIN.map((item) => (
             <div
               key={item.title}
-              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-blue-100/60"
-              style={{
-                animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
-                  i * 0.08
-                }s forwards`,
-              }}
+              className="group bg-white flex flex-col sm:flex-row overflow-hidden transition-all duration-300 hover:bg-bg-sub-alt"
             >
-              <div className="w-full aspect-[5/4] overflow-hidden bg-bg-sub-alt">
+              {/* 이미지 */}
+              <div className="w-full sm:w-[200px] lg:w-[240px] shrink-0 aspect-[4/3] sm:aspect-auto overflow-hidden bg-bg-sub-alt relative">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
-              </div>
-              <div className="flex flex-col p-6 lg:p-8">
-                <span className="font-serif-display text-[1.5rem] text-brand mb-3 origin-left">
+                <span className="absolute top-4 left-4 font-serif-display text-[0.75rem] tracking-[0.2em] text-white bg-black/40 px-2.5 py-1">
                   {item.num}
                 </span>
-                <h3 className="font-serif-display text-[1.35rem] lg:text-[1.5rem] font-semibold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight">
+              </div>
+
+              {/* 텍스트 */}
+              <div className="flex flex-col justify-center p-7 lg:p-8 flex-1">
+                <h3 className="font-serif-display text-[1.3rem] lg:text-[1.5rem] font-semibold text-text-main mb-4 pb-4 border-b border-border-default keep-all leading-tight">
                   {item.title}
                 </h3>
-                <p className="text-[0.9rem] text-text-sub leading-[1.7] keep-all">
+                <p className="text-[0.88rem] text-text-sub leading-[1.8] keep-all">
                   {item.desc}
                 </p>
               </div>
