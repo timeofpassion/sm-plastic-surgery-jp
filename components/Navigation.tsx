@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const NAV_LINKS = [
   { label: "홈페이지", href: "#top" },
@@ -17,10 +17,43 @@ const NAV_LINKS = [
 
 export default function Navigation() {
   const [lang, setLang] = useState<"KR" | "JP">("JP");
+  const [activeSection, setActiveSection] = useState("#top");
+  const tabBarRef = useRef<HTMLDivElement>(null);
+  const linkRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
+
+  useEffect(() => {
+    const sectionIds = NAV_LINKS.map((l) => l.href.slice(1)).filter((id) => id !== "top");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        }
+      },
+      { rootMargin: "-120px 0px -55% 0px", threshold: 0 }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const activeLink = linkRefs.current.get(activeSection);
+    if (activeLink && tabBarRef.current) {
+      activeLink.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+  }, [activeSection]);
 
   return (
-    <nav className="sticky top-0 w-full h-nav flex items-center justify-center border-b border-border-default bg-white/95 backdrop-blur-md z-[100]">
-      <div className="w-full max-w-content px-6 flex justify-between items-center">
+    <nav className="sticky top-0 w-full border-b border-border-default bg-white/95 backdrop-blur-md z-[100]">
+      {/* Main bar */}
+      <div className="w-full max-w-content mx-auto px-6 h-nav flex justify-between items-center">
         <a href="#" className="flex items-center gap-3 no-underline">
           <img
             src="/logo_smps.png"
@@ -80,6 +113,32 @@ export default function Navigation() {
             />
           </button>
         </div>
+      </div>
+
+      {/* Mobile tab bar */}
+      <div
+        ref={tabBarRef}
+        className="xl:hidden flex overflow-x-auto hide-scrollbar border-t border-border-default"
+      >
+        {NAV_LINKS.map((link) => {
+          const isActive = activeSection === link.href;
+          return (
+            <a
+              key={link.label}
+              href={link.href}
+              ref={(el) => {
+                if (el) linkRefs.current.set(link.href, el);
+              }}
+              className={`shrink-0 px-4 py-2.5 text-[0.75rem] font-medium whitespace-nowrap transition-colors border-b-2 ${
+                isActive
+                  ? "text-brand border-brand"
+                  : "text-text-sub border-transparent hover:text-text-main"
+              }`}
+            >
+              {link.label}
+            </a>
+          );
+        })}
       </div>
     </nav>
   );
