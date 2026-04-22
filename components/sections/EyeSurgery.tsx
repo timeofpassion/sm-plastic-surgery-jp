@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 type EyeItem = {
   num: string;
   title: string;
@@ -69,6 +73,9 @@ const EYE: EyeItem[] = [
 ];
 
 export default function EyeSurgery() {
+  const [active, setActive] = useState(0);
+  const selected = EYE[active];
+
   return (
     <section id="eye" className="py-12 lg:py-[70px] flex justify-center">
       <div className="w-full max-w-content px-6">
@@ -84,43 +91,84 @@ export default function EyeSurgery() {
           </span>{" "}
           입니다.
         </h2>
-        <p className="text-[1.2rem] lg:text-[1.4rem] text-text-main font-medium mb-16 max-w-[720px] keep-all">
+        <p className="text-[1.2rem] lg:text-[1.4rem] text-text-main font-medium mb-12 max-w-[720px] keep-all">
           가슴 수술 날, 눈 수술도 같이 끝내주세요.
         </p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-10">
-          {EYE.map((item, i) => (
-            <div
-              key={item.title}
-              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:border-brand hover:shadow-xl hover:shadow-blue-100/60"
-              style={{
-                animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
-                  i * 0.08
-                }s forwards`,
-              }}
-            >
-              <div className="w-full aspect-[5/4] overflow-hidden bg-bg-sub-alt">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex flex-col p-6 lg:p-8">
-                <span className="font-serif-display text-[1.5rem] text-brand mb-3 origin-left">
-                  {item.num}
-                </span>
-                <h3 className="font-serif-display text-[1.35rem] lg:text-[1.5rem] font-semibold text-brand mb-4 pb-4 border-b border-border-default keep-all leading-tight">
-                  {item.title}
-                </h3>
-                <p className="text-[0.9rem] text-text-sub leading-[1.7] keep-all">
-                  {item.desc}
-                </p>
-              </div>
+        <div className="grid lg:grid-cols-2 gap-0 items-stretch">
+          {/* Left: crossfade image */}
+          <div className="relative overflow-hidden aspect-[4/5] lg:aspect-auto lg:min-h-[520px] bg-bg-sub-alt">
+            {EYE.map((item, i) => (
+              <img
+                key={item.title}
+                src={item.image}
+                alt={item.title}
+                className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
+                  i === active ? "opacity-100 scale-100" : "opacity-0 scale-105"
+                }`}
+              />
+            ))}
+            <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/65 to-transparent pointer-events-none">
+              <span className="font-serif-display text-[3.5rem] text-white/25 leading-none block">
+                {selected.num}
+              </span>
+              <h3 className="font-serif-display text-[2rem] text-white font-medium leading-tight">
+                {selected.title}
+              </h3>
             </div>
-          ))}
-        </div>
+          </div>
 
+          {/* Right: accordion list */}
+          <div className="flex flex-col border-t border-border-default lg:border-t-0 lg:border-l border-border-default">
+            {EYE.map((item, i) => {
+              const isActive = i === active;
+              return (
+                <button
+                  key={item.title}
+                  onClick={() => setActive(i)}
+                  className={`text-left px-8 py-7 border-b border-border-default transition-colors duration-200 ${
+                    isActive ? "bg-bg-sub-alt" : "hover:bg-bg-sub"
+                  }`}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex items-start gap-4 flex-1 min-w-0">
+                      <span
+                        className={`font-serif-display text-[1.1rem] mt-0.5 shrink-0 transition-colors ${
+                          isActive ? "text-brand" : "text-text-sub"
+                        }`}
+                      >
+                        {item.num}
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <h3
+                          className={`text-[1.15rem] font-semibold mb-0 transition-colors ${
+                            isActive ? "text-brand" : "text-text-main"
+                          }`}
+                        >
+                          {item.title}
+                        </h3>
+                        <div
+                          className={`text-[0.88rem] text-text-sub leading-[1.8] keep-all transition-all duration-400 overflow-hidden ${
+                            isActive ? "max-h-[200px] opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"
+                          }`}
+                        >
+                          {item.desc}
+                        </div>
+                      </div>
+                    </div>
+                    <span
+                      className={`text-[1.4rem] leading-none shrink-0 transition-all duration-300 mt-0.5 ${
+                        isActive ? "rotate-45 text-brand" : "text-text-sub"
+                      }`}
+                    >
+                      +
+                    </span>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </section>
   );
