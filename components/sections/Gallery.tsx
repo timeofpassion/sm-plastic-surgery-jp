@@ -106,7 +106,7 @@ export default function Gallery() {
           에스엠이 12년간 지켜온 3가지 원칙을 확인해주세요.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5 mb-16">
           {STANDARDS.map((s, i) => (
             <div
               key={s.title}
