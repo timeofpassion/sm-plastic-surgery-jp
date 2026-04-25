@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import Navigation from "@/components/Navigation";
 import SocialFloat from "@/components/SocialFloat";
 import Hero from "@/components/sections/Hero";
