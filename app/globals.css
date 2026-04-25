@@ -11,6 +11,19 @@
     scroll-padding-top: 120px;
   }
 
+  /* 페이지 최상단 블루 액센트 라인 */
+  body::before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, #0A2859 0%, #1253A6 40%, #2B9FE8 75%, #1253A6 100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+
   body {
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
       system-ui, Roboto, sans-serif;

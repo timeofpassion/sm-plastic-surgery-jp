@@ -77,7 +77,7 @@ export default function EyeSurgery() {
   const selected = EYE[active];
 
   return (
-    <section id="eye" className="py-12 lg:py-[70px] flex justify-center">
+    <section id="eye" className="py-12 lg:py-[70px] flex justify-center bg-[#F3F7FD]">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">
           눈성형

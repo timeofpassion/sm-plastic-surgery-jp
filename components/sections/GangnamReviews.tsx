@@ -89,7 +89,7 @@ export default function GangnamReviews() {
             className="relative h-[200px] sm:h-[240px] flex items-center justify-center overflow-hidden"
             style={{
               background:
-                "linear-gradient(135deg, #1e3a5f 0%, #2c5282 55%, #0f1f38 100%)",
+                "linear-gradient(135deg, #0A2859 0%, #1253A6 55%, #0D3D6E 100%)",
             }}
           >
             {/* decorative circles */}

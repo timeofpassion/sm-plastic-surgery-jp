@@ -10,7 +10,7 @@ export default function Director() {
   return (
     <section
       id="director"
-      className="py-12 lg:py-[70px] flex justify-center bg-bg-base lg:bg-[linear-gradient(to_left,#ffffff_60%,#f5f6f8_60%)]"
+      className="py-12 lg:py-[70px] flex justify-center bg-[#EEF4FC] lg:bg-[linear-gradient(to_left,#ffffff_60%,#EEF4FC_60%)]"
     >
       <div className="w-full max-w-content px-6">
         {/* Top row: photo + intro */}

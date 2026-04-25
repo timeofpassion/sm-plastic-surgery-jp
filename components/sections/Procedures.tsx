@@ -124,7 +124,7 @@ export default function Procedures() {
   const scrollTo = useCallback((i: number) => emblaApi?.scrollTo(i), [emblaApi]);
 
   return (
-    <section id="procedures" className="py-12 lg:py-20">
+    <section id="procedures" className="py-12 lg:py-20 bg-[#EEF4FC]">
 
       {/* Section header */}
       <div className="w-full max-w-content mx-auto px-6 mb-8 lg:mb-10">

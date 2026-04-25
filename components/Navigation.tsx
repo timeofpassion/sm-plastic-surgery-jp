@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import NavHeader from "@/components/ui/nav-header";
 
 const NAV_LINKS = [
   { label: "홈페이지", href: "#top" },
@@ -54,8 +55,8 @@ export default function Navigation() {
   return (
     <nav className="sticky top-0 w-full border-b border-border-default bg-white/95 backdrop-blur-md z-[100]">
       {/* Main bar */}
-      <div className="w-full max-w-content mx-auto px-6 h-nav flex justify-between items-center">
-        <a href="#" className="flex items-center gap-3 no-underline">
+      <div className="w-full max-w-[1260px] mx-auto px-6 h-nav flex justify-between items-center gap-4">
+        <a href="#" className="flex items-center gap-3 no-underline shrink-0">
           <img
             src="/logo_smps.png"
             alt="에스엠성형외과"
@@ -67,20 +68,12 @@ export default function Navigation() {
           />
         </a>
 
-        <div className="hidden xl:flex gap-3.5 2xl:gap-5 text-[0.78rem] font-medium tracking-tight whitespace-nowrap">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-text-main no-underline relative transition-colors hover:text-brand group"
-            >
-              {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-brand transition-all duration-300 group-hover:w-full" />
-            </a>
-          ))}
+        {/* Desktop: sliding cursor nav */}
+        <div className="hidden xl:flex flex-1 justify-center">
+          <NavHeader links={NAV_LINKS} activeSection={activeSection} />
         </div>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2.5 shrink-0">
           <a
             href="https://line.me/R/ti/p/@952nqpbr"
             target="_blank"

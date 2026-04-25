@@ -16,8 +16,22 @@ const TRUST = [
 
 export default function Hero() {
   return (
-    <section id="hero" className="bg-white border-b border-border-default">
-      <div className="w-full max-w-content mx-auto px-6 pt-14 lg:pt-20 pb-12 lg:pb-16">
+    <section
+      id="hero"
+      className="relative overflow-hidden border-b border-border-default"
+      style={{ background: "linear-gradient(135deg, #EEF4FC 0%, #F3F7FD 55%, #ffffff 100%)" }}
+    >
+      {/* Decorative circles — desktop only */}
+      <div className="pointer-events-none select-none absolute right-0 top-0 w-[55%] h-full hidden lg:block overflow-hidden">
+        <div className="absolute right-[-120px] top-[-80px] w-[500px] h-[500px] rounded-full border border-[#1253A6]/8" />
+        <div className="absolute right-[-50px] top-[-10px] w-[360px] h-[360px] rounded-full border border-[#2B9FE8]/10 bg-[#1253A6]/[0.03]" />
+        <div className="absolute right-[90px] top-[70px] w-[230px] h-[230px] rounded-full bg-[#2B9FE8]/[0.06]" />
+        <div className="absolute right-[170px] top-[110px] w-[140px] h-[140px] rounded-full bg-[#1253A6]/[0.07]" />
+        <div className="absolute right-[30px] bottom-[50px] w-[190px] h-[190px] rounded-full border border-[#2B9FE8]/10" />
+        <div className="absolute right-[200px] bottom-[30px] w-[90px] h-[90px] rounded-full bg-[#2B9FE8]/[0.05]" />
+      </div>
+
+      <div className="relative z-[1] w-full max-w-content mx-auto px-6 pt-14 lg:pt-20 pb-12 lg:pb-16">
 
         <span className="text-[0.72rem] uppercase tracking-[0.2em] text-accent-gold font-semibold block mb-5">
           SM Plastic Surgery — 강남 · 서울
@@ -73,9 +87,9 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border-default grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 opacity-0 animate-fade-up [animation-delay:0.45s]">
+        <div className="mt-12 pt-8 border-t border-[#1253A6]/15 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 opacity-0 animate-fade-up [animation-delay:0.45s]">
           {TRUST.map((item) => (
-            <div key={item.label}>
+            <div key={item.label} className="pl-3 border-l-2 border-[#2B9FE8]">
               <div className="text-[0.68rem] uppercase tracking-[0.12em] text-text-sub mb-1.5">
                 {item.label}
               </div>
@@ -90,3 +104,5 @@ export default function Hero() {
     </section>
   );
 }
+
+

@@ -22,9 +22,9 @@ const STATS = [
 export default function Stats() {
   return (
     <section
-      className="relative py-14 lg:py-20 flex justify-center text-white bg-cover bg-center"
+      className="relative py-14 lg:py-20 flex justify-center text-white"
       style={{
-        backgroundImage: "url('/space.png')",
+        background: "linear-gradient(135deg, #0A2859 0%, #1253A6 60%, #0D3D6E 100%)",
       }}
     >
       <div className="absolute inset-0 bg-[rgba(10,12,15,0.65)] z-[1]" />

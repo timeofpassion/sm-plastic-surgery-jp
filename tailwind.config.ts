@@ -9,16 +9,16 @@ const config: Config = {
     extend: {
       colors: {
         "bg-base": "#ffffff",
-        "bg-sub": "#f5f6f8",
-        "bg-sub-alt": "#f9fafb",
+        "bg-sub": "#F3F7FD",
+        "bg-sub-alt": "#EEF4FC",
         "text-main": "#111111",
         "text-sub": "#555555",
         brand: {
-          DEFAULT: "#1e3a5f",
-          hover: "#142c47",
+          DEFAULT: "#1253A6",
+          hover: "#0E3E7E",
         },
         "border-default": "#e5e7eb",
-        "accent-gold": "#8aa3c4",
+        "accent-gold": "#2B9FE8",
       },
       fontFamily: {
         sans: [

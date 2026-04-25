@@ -23,7 +23,7 @@ const ITEMS = [
 
 export default function Safety() {
   return (
-    <section id="safety" className="py-12 lg:py-[70px] bg-bg-base">
+    <section id="safety" className="py-12 lg:py-[70px] bg-[#F3F7FD]">
       <div className="w-full max-w-content mx-auto px-6">
 
         {/* 헤더 */}

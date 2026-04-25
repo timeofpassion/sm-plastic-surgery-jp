@@ -4,7 +4,7 @@ const MAP_LINK = "https://maps.app.goo.gl/FJaPvLH2QK8hqwBc9";
 
 export default function Location() {
   return (
-    <section id="location" className="py-12 lg:py-[70px] flex justify-center">
+    <section id="location" className="py-12 lg:py-[70px] flex justify-center bg-[#F3F7FD]">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">
           Location

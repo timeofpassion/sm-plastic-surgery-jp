@@ -81,7 +81,7 @@ export default function Shorts() {
                       borderStyle: "solid",
                       borderWidth: "7px 0 7px 11px",
                       borderColor:
-                        "transparent transparent transparent #1e3a5f",
+                        "transparent transparent transparent #1253A6",
                     }}
                   />
                 </div>

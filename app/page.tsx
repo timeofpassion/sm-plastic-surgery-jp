@@ -23,6 +23,10 @@ export default function HomePage() {
       <SocialFloat />
       <Navigation />
       <Hero />
+      {/* 대표원장 소개 */}
+      <Director />
+      {/* 신뢰 지표 */}
+      <Stats />
       {/* 가슴수술 */}
       <Procedures />
       {/* Before & After */}
@@ -36,16 +40,12 @@ export default function HomePage() {
       {/* 마케팅채널 */}
       <Media />
       <Shorts />
-      {/* 대표원장 소개 */}
-      <Director />
       {/* SMPS 철학 */}
       <Principles />
       {/* 안전마취센터 */}
       <Safety />
       {/* 리뷰 */}
       <GangnamReviews />
-      {/* 신뢰 지표 */}
-      <Stats />
       {/* 상담 예약 */}
       <Consultation />
       {/* 오시는 길 */}
