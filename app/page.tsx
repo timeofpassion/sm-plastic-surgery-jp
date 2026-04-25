@@ -1,7 +1,6 @@
 import Navigation from "@/components/Navigation";
 import SocialFloat from "@/components/SocialFloat";
 import Hero from "@/components/sections/Hero";
-import BrandStatement from "@/components/sections/BrandStatement";
 import Director from "@/components/sections/Director";
 import Principles from "@/components/sections/Principles";
 import GangnamReviews from "@/components/sections/GangnamReviews";
@@ -15,6 +14,7 @@ import Media from "@/components/sections/Media";
 import Shorts from "@/components/sections/Shorts";
 import Location from "@/components/sections/Location";
 import Consultation from "@/components/sections/Consultation";
+import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
 
 export default function HomePage() {
@@ -22,31 +22,34 @@ export default function HomePage() {
     <main id="top" className="relative">
       <SocialFloat />
       <Navigation />
-      {/* 브랜드 미션 (메인 히어로 · SkinMedi 스타일) */}
-      <BrandStatement />
-      {/* 신뢰를 쌓은 시간 */}
-      <Stats />
       <Hero />
-      <GangnamReviews />
-      {/* 1. SMPS 철학 */}
-      <Director />
-      <Principles />
-      {/* 2. 가슴수술 */}
+      {/* 가슴수술 */}
       <Procedures />
-      {/* 3. Before & After (가슴 → 바로 전후사진) */}
+      {/* Before & After */}
       <Gallery />
-      {/* 4. 마케팅채널 (YouTube + Shorts) - 눈성형 위로 이동 */}
+      {/* 눈성형 */}
+      <EyeSurgery />
+      {/* 피부·리프팅 */}
+      <SkinLifting />
+      {/* FAQ — 메인 정보 콘텐츠 */}
+      <FAQ />
+      {/* 마케팅채널 */}
       <Media />
       <Shorts />
-      {/* 5. 눈성형 */}
-      <EyeSurgery />
-      {/* 6. 피부·리프팅 */}
-      <SkinLifting />
-      {/* 7. 안전마취센터 */}
+      {/* 대표원장 소개 */}
+      <Director />
+      {/* SMPS 철학 */}
+      <Principles />
+      {/* 안전마취센터 */}
       <Safety />
+      {/* 리뷰 */}
+      <GangnamReviews />
+      {/* 신뢰 지표 */}
+      <Stats />
+      {/* 상담 예약 */}
+      <Consultation />
       {/* 오시는 길 */}
       <Location />
-      <Consultation />
       <Footer />
     </main>
   );

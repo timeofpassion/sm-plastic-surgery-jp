@@ -1,128 +1,92 @@
+const CHANNELS = [
+  { name: "LINE", href: "https://line.me/R/ti/p/@952nqpbr" },
+  { name: "YouTube", href: "https://www.youtube.com/@smplasticsurgery" },
+  { name: "Instagram", href: "https://www.instagram.com/sm_official_jp" },
+  { name: "Ameba", href: "https://ameblo.jp/sm-official-jp/" },
+  { name: "TikTok", href: "https://www.tiktok.com/@smps_jp8888" },
+  { name: "X", href: "https://x.com/smps8888" },
+];
+
+const TRUST = [
+  { label: "강남언니 평점", value: "9.7 / 10" },
+  { label: "환자 리뷰", value: "872건+" },
+  { label: "개원", value: "2013년" },
+  { label: "집도 전문의", value: "서울아산병원" },
+];
+
 export default function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative lg:flex lg:items-center lg:justify-center pt-10 pb-10 lg:pt-14 lg:pb-8 bg-bg-base lg:bg-[linear-gradient(to_right,#ffffff_55%,#f5f6f8_55%)]"
-    >
-      <div className="w-full max-w-content px-6 grid lg:grid-cols-2 gap-8 lg:gap-20 lg:items-center relative z-[2]">
-        {/* Hero content */}
-        <div className="order-1 py-0 lg:py-16 opacity-0 animate-fade-up">
-          <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-6">
-            PREMIUM BREAST AUGMENTATION
-          </span>
+    <section id="hero" className="bg-white border-b border-border-default">
+      <div className="w-full max-w-content mx-auto px-6 pt-14 lg:pt-20 pb-12 lg:pb-16">
 
-          <h1 className="font-serif-display text-[2rem] sm:text-[2.6rem] lg:text-[3.5rem] font-medium text-text-main leading-[1.15] tracking-tight mb-6 lg:mb-8 keep-all">
-            가슴성형,
-            <br />
-            깊이 있게 합니다.
-          </h1>
+        <span className="text-[0.72rem] uppercase tracking-[0.2em] text-accent-gold font-semibold block mb-5">
+          SM Plastic Surgery — 강남 · 서울
+        </span>
 
-          <div className="w-10 h-px bg-brand mb-6 lg:mb-8" />
+        <h1 className="font-serif-display text-[2.5rem] sm:text-[3.2rem] lg:text-[5rem] font-medium text-text-main leading-[1.1] tracking-tight keep-all mb-6 opacity-0 animate-fade-up">
+          가슴성형을
+          <br />
+          <span className="text-brand">&lsquo;의학&rsquo;</span>으로
+          {" "}설계합니다.
+        </h1>
 
-          <h2 className="text-[1.05rem] sm:text-[1.2rem] lg:text-[1.45rem] font-medium text-text-main leading-snug mb-8 lg:mb-12 keep-all">
-            서울대 의대 출신 이무영 원장이,
-            <br />
-            12년째 같은 자리에서 직접 집도합니다.
-          </h2>
+        <p className="text-[1rem] lg:text-[1.2rem] text-text-sub leading-[1.85] max-w-lg mb-10 opacity-0 animate-fade-up [animation-delay:0.15s]">
+          서울대 의대 출신 이무영 원장이,
+          <br />
+          12년째 같은 자리에서 직접 집도합니다.
+        </p>
 
-          {/* CTA */}
-          <div className="flex flex-wrap gap-4 mb-16">
+        <div className="flex flex-wrap items-center gap-4 mb-10 opacity-0 animate-fade-up [animation-delay:0.25s]">
+          <a
+            href="https://line.me/R/ti/p/@952nqpbr"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-track-location="hero"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#06C755] text-white text-[0.88rem] font-medium rounded-full transition-all hover:opacity-90 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/10"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 shrink-0">
+              <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738C5.384.566 0 4.935 0 10.304c0 4.811 4.27 8.843 10.035 9.608.39.084.922.258 1.057.592.122.302.079.775.038 1.085l-.164 1.026c-.045.303-.24 1.186 1.049.647 1.291-.54 6.957-4.098 9.489-7.016 1.749-1.918 2.496-3.862 2.496-5.942z" />
+            </svg>
+            LINE으로 상담하기
+          </a>
+          <a
+            href="#procedures"
+            className="text-[0.88rem] font-medium text-text-sub hover:text-text-main transition-colors flex items-center gap-1.5"
+          >
+            수술 정보 보기 ↓
+          </a>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 opacity-0 animate-fade-up [animation-delay:0.35s]">
+          <span className="text-[0.68rem] uppercase tracking-[0.15em] text-text-sub">채널</span>
+          {CHANNELS.map((ch) => (
             <a
-              href="https://line.me/R/ti/p/@952nqpbr"
+              key={ch.name}
+              href={ch.href}
               target="_blank"
               rel="noopener noreferrer"
-              data-track-location="hero"
-              className="inline-flex items-center justify-center px-8 py-4 text-[0.9rem] font-medium tracking-wide bg-brand text-white border border-brand rounded-full min-w-[220px] transition-all hover:bg-brand-hover hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/20"
+              data-social={ch.name.toLowerCase()}
+              className="text-[0.8rem] font-medium text-text-sub hover:text-text-main transition-colors underline-offset-2 hover:underline"
             >
-              <svg
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-4 h-4 mr-2.5 fill-current"
-              >
-                <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.122.301.079.766.038 1.08l-.164 1.02c-.045.281-.24 1.139 1.002.616 1.24-.523 6.694-3.951 9.176-6.764C23.232 14.394 24 12.454 24 10.304z" />
-              </svg>
-              LINE으로 상담하기
+              {ch.name}
             </a>
-          </div>
-
+          ))}
         </div>
 
-        {/* Hero Visual — Trust Board as main visual */}
-        <div className="order-2 relative w-full opacity-0 animate-fade-left">
-          <div className="grid grid-cols-2 gap-4 lg:gap-6">
-            <TrustCard label="Rating" value="강남언니 9.7" icon="star" />
-            <TrustCard label="Experience" value="리뷰 872건" icon="file" />
-            <TrustCard label="Established" value="개원 2013" icon="calendar" />
-            <TrustCard
-              label="Credentials"
-              value="아산병원 전문의"
-              icon="activity"
-            />
-          </div>
+        <div className="mt-12 pt-8 border-t border-border-default grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 opacity-0 animate-fade-up [animation-delay:0.45s]">
+          {TRUST.map((item) => (
+            <div key={item.label}>
+              <div className="text-[0.68rem] uppercase tracking-[0.12em] text-text-sub mb-1.5">
+                {item.label}
+              </div>
+              <div className="text-[1.1rem] lg:text-[1.3rem] font-semibold text-text-main font-serif-display">
+                {item.value}
+              </div>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
-  );
-}
-
-function TrustCard({
-  label,
-  value,
-  icon,
-}: {
-  label: string;
-  value: string;
-  icon: "star" | "file" | "calendar" | "activity";
-}) {
-  const iconPaths: Record<string, React.ReactNode> = {
-    calendar: (
-      <>
-        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-        <line x1="16" y1="2" x2="16" y2="6" />
-        <line x1="8" y1="2" x2="8" y2="6" />
-        <line x1="3" y1="10" x2="21" y2="10" />
-      </>
-    ),
-  };
-
-  return (
-    <div className="flex flex-col items-start gap-4 p-6 lg:p-8 bg-white border border-border-default rounded-sm transition-all hover:border-brand hover:shadow-lg hover:shadow-blue-100/60">
-      {/* Icon */}
-      <div className="w-11 h-11 flex items-center justify-center">
-        {icon === "star" || icon === "file" ? (
-          <img
-            src="/gangnam.png"
-            alt="강남언니"
-            className="w-10 h-10 object-contain"
-          />
-        ) : icon === "activity" ? (
-          <img
-            src="/asan.jpg"
-            alt="서울아산병원"
-            className="w-10 h-10 object-contain rounded-sm"
-          />
-        ) : (
-          <svg
-            viewBox="0 0 24 24"
-            className="w-8 h-8"
-            stroke="#1e3a5f"
-            strokeWidth="1.5"
-            fill="none"
-          >
-            {iconPaths[icon]}
-          </svg>
-        )}
-      </div>
-
-      {/* Label */}
-      <span className="text-[0.7rem] uppercase tracking-[0.15em] text-accent-gold font-semibold">
-        {label}
-      </span>
-
-      {/* Value */}
-      <div className="text-[1.1rem] lg:text-[1.25rem] font-semibold text-text-main leading-tight keep-all">
-        {value}
-      </div>
-    </div>
   );
 }

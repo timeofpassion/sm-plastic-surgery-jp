@@ -71,25 +71,46 @@ const SOCIALS = [
 
 export default function SocialFloat() {
   return (
-    <div className="fixed right-3 bottom-4 lg:right-6 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 z-[200] flex flex-col gap-1.5 lg:gap-2.5">
-      {SOCIALS.map((s) => (
-        <a
-          key={s.name}
-          href={s.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={s.name}
-          data-social={s.platform}
-          {...(s.platform === "line" ? { "data-track-location": "floating" } : {})}
-          className="group relative w-8 h-8 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-white shadow-lg shadow-black/20 transition-transform hover:scale-110 hover:shadow-xl"
-          style={{ background: s.bg }}
-        >
-          {s.icon}
-          <span className="absolute right-full mr-3 whitespace-nowrap bg-neutral-900/90 text-white text-[0.75rem] px-2.5 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-            {s.name}
-          </span>
-        </a>
-      ))}
+    <div className="fixed right-3 bottom-4 lg:right-6 lg:bottom-auto lg:top-1/2 lg:-translate-y-1/2 z-[200] flex flex-col items-end gap-1.5 lg:gap-2">
+      {SOCIALS.map((s) => {
+        if (s.platform === "line") {
+          return (
+            <a
+              key={s.name}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.name}
+              data-social={s.platform}
+              data-track-location="floating"
+              className="flex items-center gap-2 px-3 py-2 lg:px-4 lg:py-2.5 rounded-full text-white shadow-lg shadow-black/20 transition-transform hover:scale-105 hover:shadow-xl"
+              style={{ background: "#06C755" }}
+            >
+              {s.icon}
+              <span className="text-[0.72rem] lg:text-[0.8rem] font-semibold whitespace-nowrap">
+                LINE 相談
+              </span>
+            </a>
+          );
+        }
+        return (
+          <a
+            key={s.name}
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={s.name}
+            data-social={s.platform}
+            className="group relative w-8 h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center text-white shadow-lg shadow-black/20 transition-transform hover:scale-110 hover:shadow-xl"
+            style={{ background: s.bg }}
+          >
+            {s.icon}
+            <span className="absolute right-full mr-3 whitespace-nowrap bg-neutral-900/90 text-white text-[0.75rem] px-2.5 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              {s.name}
+            </span>
+          </a>
+        );
+      })}
     </div>
   );
 }

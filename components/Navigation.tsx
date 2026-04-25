@@ -4,13 +4,14 @@ import { useState, useEffect, useRef } from "react";
 
 const NAV_LINKS = [
   { label: "홈페이지", href: "#top" },
-  { label: "대표원장 소개", href: "#director" },
-  { label: "SMPS 철학", href: "#why-sm" },
   { label: "가슴수술", href: "#procedures" },
   { label: "Before&After", href: "#gallery" },
-  { label: "마케팅채널", href: "#media" },
   { label: "눈성형", href: "#eye" },
   { label: "피부·리프팅", href: "#skin" },
+  { label: "FAQ", href: "#faq" },
+  { label: "마케팅채널", href: "#media" },
+  { label: "대표원장 소개", href: "#director" },
+  { label: "SMPS 철학", href: "#why-sm" },
   { label: "안전마취센터", href: "#safety" },
   { label: "오시는 길", href: "#location" },
 ];
@@ -80,6 +81,18 @@ export default function Navigation() {
         </div>
 
         <div className="flex items-center gap-2.5">
+          <a
+            href="https://line.me/R/ti/p/@952nqpbr"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-track-location="nav"
+            className="hidden xl:inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#06C755] text-white text-[0.72rem] font-medium rounded-full transition-opacity hover:opacity-85"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
+              <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738C5.384.566 0 4.935 0 10.304c0 4.811 4.27 8.843 10.035 9.608.39.084.922.258 1.057.592.122.302.079.775.038 1.085l-.164 1.026c-.045.303-.24 1.186 1.049.647 1.291-.54 6.957-4.098 9.489-7.016 1.749-1.918 2.496-3.862 2.496-5.942z" />
+            </svg>
+            LINE 相談
+          </a>
           <button
             onClick={() => setLang("JP")}
             aria-label="日本語"
