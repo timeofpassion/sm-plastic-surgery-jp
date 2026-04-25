@@ -75,6 +75,12 @@ export default function Navigation() {
 
         <div className="flex items-center gap-2.5 shrink-0">
           <a
+            href="/blog"
+            className="hidden xl:inline-flex items-center gap-1.5 px-3.5 py-1.5 border border-border-default text-text-sub text-[0.72rem] font-medium rounded-full transition-colors hover:border-brand hover:text-brand"
+          >
+            ブログ
+          </a>
+          <a
             href="https://line.me/R/ti/p/@952nqpbr"
             target="_blank"
             rel="noopener noreferrer"

@@ -52,10 +52,12 @@ const Tab = ({
   isActive?: boolean;
 }) => {
   const ref = useRef<HTMLLIElement>(null);
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <li
       ref={ref}
       onMouseEnter={() => {
+        setIsHovered(true);
         if (!ref.current) return;
         const { width } = ref.current.getBoundingClientRect();
         setPosition({
@@ -64,12 +66,13 @@ const Tab = ({
           left: ref.current.offsetLeft,
         });
       }}
+      onMouseLeave={() => setIsHovered(false)}
       className="relative z-10 block cursor-pointer"
     >
       <a
         href={href}
-        className={`block px-3 py-1.5 text-[0.72rem] font-medium tracking-tight whitespace-nowrap mix-blend-difference md:px-4 md:py-2 md:text-[0.78rem] no-underline transition-colors ${
-          isActive ? "text-white" : "text-text-main"
+        className={`block px-3 py-1.5 text-[0.72rem] font-medium tracking-tight whitespace-nowrap md:px-4 md:py-2 md:text-[0.78rem] no-underline transition-colors ${
+          isActive || isHovered ? "text-white" : "text-gray-900"
         }`}
       >
         {children}

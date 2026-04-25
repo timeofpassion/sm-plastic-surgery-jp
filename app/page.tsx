@@ -15,6 +15,7 @@ import Shorts from "@/components/sections/Shorts";
 import Location from "@/components/sections/Location";
 import Consultation from "@/components/sections/Consultation";
 import FAQ from "@/components/sections/FAQ";
+import LatestBlog from "@/components/sections/LatestBlog";
 import Footer from "@/components/sections/Footer";
 
 export default function HomePage() {
@@ -27,6 +28,8 @@ export default function HomePage() {
       <Director />
       {/* 신뢰 지표 */}
       <Stats />
+      {/* 최신 블로그 */}
+      <LatestBlog />
       {/* 가슴수술 */}
       <Procedures />
       {/* Before & After */}
