@@ -18,6 +18,9 @@ export default function LatestBlog() {
           <p className="text-text-sub max-w-md mx-auto text-sm">
             豊胸・目元・肌治療に関する最新情報をお届けします
           </p>
+          <p className="text-text-sub max-w-md mx-auto text-sm mt-1">
+            このブログは、李武榮（イ・ムヨン）院長が直接執筆しています。
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
