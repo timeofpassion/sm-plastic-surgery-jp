@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { marked } from 'marked'
 import { getPostsByLang, getPostBySlug } from '@/lib/blog'
 import BlogContent from '@/components/blog/BlogContent'
-import Navigation from '@/components/Navigation'
+import EnNav from '@/components/en/EnNav'
 import Footer from '@/components/sections/Footer'
 
 const SITE_URL = 'https://www.smpsjp.com'
@@ -95,7 +95,7 @@ export default async function EnBlogPostPage({ params }: { params: { slug: strin
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Navigation />
+      <EnNav />
       <article className="max-w-[740px] mx-auto px-4 py-16">
         <nav className="flex items-center gap-2 text-sm text-text-sub mb-8">
           <Link href="/en/" className="hover:text-brand transition-colors">Home</Link>

@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import { getPostsByLang } from '@/lib/blog'
 import BlogCard from '@/components/blog/BlogCard'
-import Navigation from '@/components/Navigation'
+import EnNav from '@/components/en/EnNav'
 import Footer from '@/components/sections/Footer'
 
 const SITE_URL = 'https://www.smpsjp.com'
 
 export const metadata: Metadata = {
-  title: 'Blog | SM Plastic Surgery Korea',
+  title: 'Blog',
   description:
     'SM Plastic Surgery official blog. Expert guides on breast augmentation, eye surgery, and skin treatments in Seoul Gangnam.',
   alternates: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Blog | SM Plastic Surgery Korea',
+    title: 'Blog',
     description:
       'Expert guides on breast augmentation, eye surgery, and skincare from our clinical team in Gangnam, Seoul.',
     url: `${SITE_URL}/en/blog`,
@@ -32,7 +32,7 @@ export default function EnBlogPage() {
 
   return (
     <>
-      <Navigation />
+      <EnNav />
       <div className="max-w-content mx-auto px-4 py-16">
         <div className="mb-12 text-center">
           <p className="text-sm font-medium text-brand tracking-widest uppercase mb-3">Blog</p>

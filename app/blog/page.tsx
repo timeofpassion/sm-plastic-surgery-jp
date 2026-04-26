@@ -6,7 +6,7 @@ import type { BlogCategory } from '@/types/blog'
 const SITE_URL = 'https://www.smpsjp.com'
 
 export const metadata: Metadata = {
-  title: 'ブログ | SM美容外科医院',
+  title: 'ブログ',
   description:
     '韓国江南SM美容外科の公式ブログ。豊胸手術・目元整形・肌治療に関する最新情報、患者様の声、手術解説記事をお届けします。',
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'ブログ | SM美容外科医院',
+    title: 'ブログ',
     description:
       '韓国江南SM美容外科の公式ブログ。豊胸・目元・肌の最新情報をお届けします。',
     url: `${SITE_URL}/blog`,
