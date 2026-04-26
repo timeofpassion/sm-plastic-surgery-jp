@@ -102,8 +102,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE_URL,
     languages: {
-      "ja-JP": SITE_URL,
-      "ko-KR": SITE_URL,
+      ja: SITE_URL,
+      en: `${SITE_URL}/en/`,
+      'x-default': SITE_URL,
     },
   },
   category: "healthcare",
@@ -252,7 +253,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="ja">
       <body>{children}</body>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}

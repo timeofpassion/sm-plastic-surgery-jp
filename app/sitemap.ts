@@ -1,91 +1,50 @@
-import type { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/blog";
+import type { MetadataRoute } from 'next'
+import { getPostsByLang } from '@/lib/blog'
 
-const SITE_URL = "https://www.smpsjp.com";
+const SITE_URL = 'https://www.smpsjp.com'
+const now = new Date()
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
-  const blogPosts = getAllPosts().map((post) => ({
+  const jaPosts = getPostsByLang('ja').map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt),
-    changeFrequency: "weekly" as const,
+    changeFrequency: 'weekly' as const,
     priority: 0.8,
-  }));
+  }))
+
+  const enPosts = getPostsByLang('en').map((post) => ({
+    url: `${SITE_URL}/en/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
 
   return [
     {
+      url: `${SITE_URL}/`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 1.0,
+    },
+    {
       url: `${SITE_URL}/blog`,
       lastModified: now,
-      changeFrequency: "daily" as const,
+      changeFrequency: 'daily' as const,
       priority: 0.9,
     },
-    ...blogPosts,
+    ...jaPosts,
     {
-      url: SITE_URL,
+      url: `${SITE_URL}/en/`,
       lastModified: now,
-      changeFrequency: "weekly",
+      changeFrequency: 'weekly' as const,
       priority: 1.0,
-      alternates: {
-        languages: {
-          ja: SITE_URL,
-          ko: SITE_URL,
-        },
-      },
     },
     {
-      url: `${SITE_URL}/#director`,
+      url: `${SITE_URL}/en/blog`,
       lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/#why-sm`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/#procedures`,
-      lastModified: now,
-      changeFrequency: "monthly",
+      changeFrequency: 'daily' as const,
       priority: 0.9,
     },
-    {
-      url: `${SITE_URL}/#gallery`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/#eye`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/#skin`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/#safety`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/#location`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/#consultation`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-  ];
+    ...enPosts,
+  ]
 }

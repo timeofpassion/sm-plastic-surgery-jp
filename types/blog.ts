@@ -3,6 +3,12 @@ export type BlogCategory =
   | '目元整形'
   | '肌・リフティング'
   | 'クリニック情報'
+  | 'Breast Surgery'
+  | 'Eye Surgery'
+  | 'Skin & Lifting'
+  | 'Clinic Info'
+
+export type BlogLang = 'ja' | 'en'
 
 export interface BlogPost {
   id: string
@@ -19,4 +25,5 @@ export interface BlogPost {
   seoKeywords: string[]
   readingTime?: number
   sourceType?: 'original' | 'ameba-rewrite' | 'blog-generated'
+  lang?: BlogLang
 }

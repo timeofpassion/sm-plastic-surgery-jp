@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import NavHeader from "@/components/ui/nav-header";
 
 const NAV_LINKS = [
@@ -18,7 +19,9 @@ const NAV_LINKS = [
 ];
 
 export default function Navigation() {
-  const [lang, setLang] = useState<"KR" | "JP">("JP");
+  const pathname = usePathname();
+  const router = useRouter();
+  const currentLang = pathname?.startsWith('/en') ? 'en' : 'ja';
   const [activeSection, setActiveSection] = useState("#top");
   const tabBarRef = useRef<HTMLDivElement>(null);
   const linkRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
@@ -56,7 +59,7 @@ export default function Navigation() {
     <nav className="sticky top-0 w-full border-b border-border-default bg-white/95 backdrop-blur-md z-[100]">
       {/* Main bar */}
       <div className="w-full max-w-[1260px] mx-auto px-6 h-nav flex justify-between items-center gap-4">
-        <a href="#" className="flex items-center gap-3 no-underline shrink-0">
+        <a href="https://www.smpsjp.com/" className="flex items-center gap-3 no-underline shrink-0">
           <img
             src="/logo_smps.png"
             alt="에스엠성형외과"
@@ -93,11 +96,11 @@ export default function Navigation() {
             LINE 相談
           </a>
           <button
-            onClick={() => setLang("JP")}
+            onClick={() => router.push('/')}
             aria-label="日本語"
             title="日本語"
             className={`w-8 h-8 rounded-full overflow-hidden border transition-all flex items-center justify-center ${
-              lang === "JP"
+              currentLang === "ja"
                 ? "border-brand ring-2 ring-brand/30 scale-110"
                 : "border-border-default opacity-50 hover:opacity-100"
             }`}
@@ -109,18 +112,18 @@ export default function Navigation() {
             />
           </button>
           <button
-            onClick={() => setLang("KR")}
-            aria-label="한국어"
-            title="한국어"
+            onClick={() => router.push('/en/')}
+            aria-label="English"
+            title="English"
             className={`w-8 h-8 rounded-full overflow-hidden border transition-all flex items-center justify-center ${
-              lang === "KR"
+              currentLang === "en"
                 ? "border-brand ring-2 ring-brand/30 scale-110"
                 : "border-border-default opacity-50 hover:opacity-100"
             }`}
           >
             <img
-              src="https://flagcdn.com/w80/kr.png"
-              alt="KR"
+              src="https://flagcdn.com/w80/us.png"
+              alt="EN"
               className="w-full h-full object-cover"
             />
           </button>

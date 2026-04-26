@@ -3,13 +3,13 @@ import { NextRequest, NextResponse } from 'next/server'
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
-  // /admin/* → /blog/manage/* 리다이렉트
+  // /admin/* → /blog/manage/*
   if (pathname.startsWith('/admin')) {
     const newPath = pathname.replace('/admin', '/blog/manage')
     return NextResponse.redirect(new URL(newPath, request.url))
   }
 
-  // /blog/admin/* → /blog/manage/* 리다이렉트 (잘못 입력한 경우 방어)
+  // /blog/admin/* → /blog/manage/*
   if (pathname.startsWith('/blog/admin')) {
     const newPath = pathname.replace('/blog/admin', '/blog/manage')
     return NextResponse.redirect(new URL(newPath, request.url))
@@ -27,5 +27,9 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*', '/blog/admin/:path*', '/blog/manage/:path*'],
+  matcher: [
+    '/admin/:path*',
+    '/blog/admin/:path*',
+    '/blog/manage/:path*',
+  ],
 }

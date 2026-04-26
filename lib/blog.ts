@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import type { BlogPost } from '@/types/blog'
+import type { BlogPost, BlogLang } from '@/types/blog'
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'blog')
 
@@ -16,7 +16,7 @@ export function getAllPosts(includeUnpublished = false): BlogPost[] {
   const posts: BlogPost[] = files
     .map((file) => {
       try {
-        const raw = fs.readFileSync(path.join(DATA_DIR, file), 'utf-8')
+        const raw = fs.readFileSync(path.join(DATA_DIR, file), 'utf-8').replace(/^﻿/, '')
         return JSON.parse(raw) as BlogPost
       } catch {
         return null
@@ -30,12 +30,17 @@ export function getAllPosts(includeUnpublished = false): BlogPost[] {
   )
 }
 
+export function getPostsByLang(lang: BlogLang, includeUnpublished = false): BlogPost[] {
+  const all = getAllPosts(includeUnpublished)
+  return all.filter((p) => (p.lang ?? 'ja') === lang)
+}
+
 export function getPostBySlug(slug: string): BlogPost | null {
   ensureDataDir()
   const filePath = path.join(DATA_DIR, `${slug}.json`)
   if (!fs.existsSync(filePath)) return null
   try {
-    const raw = fs.readFileSync(filePath, 'utf-8')
+    const raw = fs.readFileSync(filePath, 'utf-8').replace(/^﻿/, '')
     return JSON.parse(raw) as BlogPost
   } catch {
     return null

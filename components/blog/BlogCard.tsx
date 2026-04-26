@@ -7,22 +7,32 @@ const CATEGORY_COLORS: Record<string, string> = {
   '目元整形': 'bg-emerald-50 text-emerald-700',
   '肌・リフティング': 'bg-purple-50 text-purple-700',
   'クリニック情報': 'bg-amber-50 text-amber-700',
+  'Breast Surgery': 'bg-brand/10 text-brand',
+  'Eye Surgery': 'bg-emerald-50 text-emerald-700',
+  'Skin & Lifting': 'bg-purple-50 text-purple-700',
+  'Clinic Info': 'bg-amber-50 text-amber-700',
 }
 
 interface BlogCardProps {
   post: BlogPost
+  lang?: 'ja' | 'en'
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
-  const date = new Date(post.publishedAt).toLocaleDateString('ja-JP', {
+export default function BlogCard({ post, lang = 'ja' }: BlogCardProps) {
+  const locale = lang === 'en' ? 'en-US' : 'ja-JP'
+  const date = new Date(post.publishedAt).toLocaleDateString(locale, {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   })
+  const readMore = lang === 'en' ? 'Read more →' : '続きを読む →'
+  const readTime = lang === 'en'
+    ? `${post.readingTime} min read`
+    : `${post.readingTime}分で読める`
 
   return (
     <Link
-      href={`/blog/${post.slug}`}
+      href={lang === 'en' ? `/en/blog/${post.slug}` : `/blog/${post.slug}`}
       className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-border-default hover:shadow-lg transition-shadow duration-300"
     >
       <div className="relative h-48 bg-bg-sub overflow-hidden">
@@ -50,7 +60,7 @@ export default function BlogCard({ post }: BlogCardProps) {
             {post.category}
           </span>
           {post.readingTime && (
-            <span className="text-xs text-text-sub">{post.readingTime}分で読める</span>
+            <span className="text-xs text-text-sub">{readTime}</span>
           )}
         </div>
 
@@ -63,7 +73,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         <div className="flex items-center justify-between pt-2 border-t border-border-default">
           <time className="text-xs text-text-sub">{date}</time>
           <span className="text-xs font-medium text-brand group-hover:underline">
-            続きを読む →
+            {readMore}
           </span>
         </div>
       </div>

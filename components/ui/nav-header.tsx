@@ -72,7 +72,7 @@ const Tab = ({
       <a
         href={href}
         className={`block px-3 py-1.5 text-[0.72rem] font-medium tracking-tight whitespace-nowrap md:px-4 md:py-2 md:text-[0.78rem] no-underline transition-colors ${
-          isActive || isHovered ? "text-white" : "text-gray-900"
+          isHovered ? "text-white" : "text-black"
         }`}
       >
         {children}

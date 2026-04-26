@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getAllPosts } from '@/lib/blog'
+import { getPostsByLang } from '@/lib/blog'
 import BlogCard from '@/components/blog/BlogCard'
 import type { BlogCategory } from '@/types/blog'
 
@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     '韓国江南SM美容外科の公式ブログ。豊胸手術・目元整形・肌治療に関する最新情報、患者様の声、手術解説記事をお届けします。',
   alternates: {
     canonical: `${SITE_URL}/blog`,
+    languages: {
+      ja: `${SITE_URL}/blog`,
+      en: `${SITE_URL}/en/blog`,
+      'x-default': `${SITE_URL}/blog`,
+    },
   },
   openGraph: {
     title: 'ブログ | SM美容外科医院',
@@ -28,7 +33,7 @@ interface PageProps {
 }
 
 export default function BlogPage({ searchParams }: PageProps) {
-  const posts = getAllPosts()
+  const posts = getPostsByLang('ja')
   const activeCategory = searchParams.category as BlogCategory | undefined
 
   const filtered = activeCategory
@@ -79,7 +84,7 @@ export default function BlogPage({ searchParams }: PageProps) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map((post) => (
-            <BlogCard key={post.id} post={post} />
+            <BlogCard key={post.id} post={post} lang="ja" />
           ))}
         </div>
       )}
