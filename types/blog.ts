@@ -18,5 +18,5 @@ export interface BlogPost {
   thumbnail?: string
   seoKeywords: string[]
   readingTime?: number
-  sourceType?: 'original' | 'ameba-rewrite'
+  sourceType?: 'original' | 'ameba-rewrite' | 'blog-generated'
 }
