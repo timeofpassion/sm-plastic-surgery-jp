@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { marked } from 'marked'
 import type { BlogPost, BlogCategory } from '@/types/blog'
 import dynamic from 'next/dynamic'
-import AmebaRewriter from '@/components/admin/AmebaRewriter'
+import AmebaRewriter from './AmebaRewriter'
 import BlogGenerator from './BlogGenerator'
 
 const RichEditor = dynamic(() => import('./RichEditor'), { ssr: false })
