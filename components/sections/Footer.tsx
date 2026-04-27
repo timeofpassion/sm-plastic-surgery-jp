@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="w-full max-w-content px-6">
         <div className="grid md:grid-cols-[2fr_1fr_1fr] gap-10 mb-14">
           <div>
-            <h5 className="text-[0.75rem] text-[#2B9FE8] uppercase mb-3 font-semibold tracking-wider">
+            <h5 className="text-[0.75rem] text-[#7EC8E3] uppercase mb-3 font-semibold tracking-wider">
               Address
             </h5>
             <p className="text-[0.9rem] text-white/80 leading-[1.8] keep-all">
@@ -14,7 +14,7 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h5 className="text-[0.75rem] text-[#2B9FE8] uppercase mb-3 font-semibold tracking-wider">
+            <h5 className="text-[0.75rem] text-[#7EC8E3] uppercase mb-3 font-semibold tracking-wider">
               Hours
             </h5>
             <p className="text-[0.9rem] text-white/80 leading-[1.8]">
@@ -26,7 +26,7 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h5 className="text-[0.75rem] text-[#2B9FE8] uppercase mb-3 font-semibold tracking-wider">
+            <h5 className="text-[0.75rem] text-[#7EC8E3] uppercase mb-3 font-semibold tracking-wider">
               Clinic
             </h5>
             <p className="text-[0.9rem] text-white/80 leading-[1.8]">

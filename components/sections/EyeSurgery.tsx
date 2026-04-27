@@ -86,7 +86,7 @@ export default function EyeSurgery() {
           에스엠성형외과는 가슴수술뿐만 아니라
           <br />
           대한민국에서{" "}
-          <span className="inline-block bg-brand text-white px-3 py-1">
+          <span className="inline-block bg-brand text-white px-3 py-1 rounded-lg">
             눈 수술로도 No.1
           </span>{" "}
           입니다.
@@ -95,7 +95,7 @@ export default function EyeSurgery() {
           가슴 수술 날, 눈 수술도 같이 끝내주세요.
         </p>
 
-        <div className="grid lg:grid-cols-2 gap-0 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-0 items-stretch overflow-hidden rounded-2xl shadow-md">
           {/* Left: crossfade image */}
           <div className="relative overflow-hidden aspect-[4/5] lg:aspect-auto lg:min-h-[520px] bg-bg-sub-alt">
             {EYE.map((item, i) => (

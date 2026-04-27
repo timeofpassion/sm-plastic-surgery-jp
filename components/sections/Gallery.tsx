@@ -110,7 +110,7 @@ export default function Gallery() {
           {STANDARDS.map((s, i) => (
             <div
               key={s.title}
-              className="p-6 lg:p-8 bg-brand text-white flex flex-col gap-3 transition-all hover:bg-brand-hover hover:shadow-xl hover:shadow-brand/30 hover:-translate-y-0.5"
+              className="p-6 lg:p-8 bg-brand text-white flex flex-col gap-3 transition-all hover:bg-brand-hover hover:shadow-xl hover:shadow-brand/30 hover:-translate-y-0.5 rounded-2xl"
             >
               <div className="flex items-center gap-2.5 mb-1">
                 <span className="text-[0.75rem] font-bold tracking-[0.15em] text-white bg-white/15 px-2 py-0.5 rounded-sm">
@@ -150,7 +150,7 @@ export default function Gallery() {
         {/* Featured */}
         {selected && (
           <div className="mb-16">
-            <div className="relative w-full bg-bg-sub-alt border border-border-default overflow-hidden">
+            <div className="relative w-full bg-bg-sub-alt border border-border-default overflow-hidden rounded-2xl shadow-md">
               <div className="grid grid-cols-2">
                 <img
                   src={selected.before}
@@ -220,7 +220,7 @@ export default function Gallery() {
               <button
                 key={`${c.before}-${i}`}
                 onClick={() => setSelectedIdx(i)}
-                className={`text-left flex flex-col transition-all ${
+                className={`text-left flex flex-col transition-all rounded-xl overflow-hidden ${
                   isActive
                     ? "ring-2 ring-text-main"
                     : "hover:ring-1 hover:ring-border-default"

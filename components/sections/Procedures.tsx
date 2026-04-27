@@ -147,7 +147,7 @@ export default function Procedures() {
               onClick={scrollPrev}
               disabled={!canScrollPrev}
               aria-label="이전"
-              className={`w-10 h-10 border flex items-center justify-center transition-all ${
+              className={`w-10 h-10 border rounded-lg flex items-center justify-center transition-all ${
                 canScrollPrev
                   ? "border-text-main text-text-main hover:bg-text-main hover:text-white"
                   : "border-border-default text-text-sub opacity-40 cursor-not-allowed"
@@ -159,7 +159,7 @@ export default function Procedures() {
               onClick={scrollNext}
               disabled={!canScrollNext}
               aria-label="다음"
-              className={`w-10 h-10 border flex items-center justify-center transition-all ${
+              className={`w-10 h-10 border rounded-lg flex items-center justify-center transition-all ${
                 canScrollNext
                   ? "border-text-main text-text-main hover:bg-text-main hover:text-white"
                   : "border-border-default text-text-sub opacity-40 cursor-not-allowed"
@@ -177,7 +177,7 @@ export default function Procedures() {
           {CARDS.map((card, i) => (
             <div
               key={i}
-              className="flex-[0_0_85%] md:flex-[0_0_46%] xl:flex-[0_0_31%] relative h-[480px] lg:h-[540px] overflow-hidden group shrink-0"
+              className="flex-[0_0_85%] md:flex-[0_0_46%] xl:flex-[0_0_31%] relative h-[480px] lg:h-[540px] overflow-hidden rounded-2xl shadow-lg group shrink-0"
             >
               {/* Background image */}
               <img

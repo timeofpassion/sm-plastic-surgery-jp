@@ -24,7 +24,7 @@ export default function Stats() {
     <section
       className="relative py-14 lg:py-20 flex justify-center text-white"
       style={{
-        background: "linear-gradient(135deg, #0A2859 0%, #1253A6 60%, #0D3D6E 100%)",
+        background: "linear-gradient(135deg, #2B5891 0%, #5B9BD5 60%, #1A4070 100%)",
       }}
     >
       <div className="absolute inset-0 bg-[rgba(10,12,15,0.65)] z-[1]" />
@@ -41,7 +41,7 @@ export default function Stats() {
           {STATS.map((stat, i) => (
             <div
               key={stat.label}
-              className="bg-white py-10 lg:py-12 px-6 rounded-sm shadow-2xl text-text-main flex flex-col items-center opacity-0"
+              className="bg-white py-10 lg:py-12 px-6 rounded-2xl shadow-2xl text-text-main flex flex-col items-center opacity-0"
               style={{
                 animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
                   0.4 + i * 0.1

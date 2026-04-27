@@ -34,7 +34,7 @@ export default function Principles() {
           {PRINCIPLES.map((p, i) => (
             <div
               key={p.num}
-              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:border-[#2B9FE8] hover:shadow-xl hover:shadow-[#2B9FE8]/15 hover:bg-[#F8FBFF]"
+              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:border-[#7EC8E3] hover:shadow-xl hover:shadow-[#7EC8E3]/15 hover:bg-[#F8FBFF] rounded-2xl"
               style={{
                 animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
                   i * 0.1

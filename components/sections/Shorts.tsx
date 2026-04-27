@@ -65,7 +65,7 @@ export default function Shorts() {
               href={`https://www.youtube.com/shorts/${id}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative w-full aspect-[9/16] bg-neutral-100 overflow-hidden group cursor-pointer"
+              className="relative w-full aspect-[9/16] bg-neutral-100 overflow-hidden rounded-xl group cursor-pointer"
             >
               <img
                 src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
@@ -81,7 +81,7 @@ export default function Shorts() {
                       borderStyle: "solid",
                       borderWidth: "7px 0 7px 11px",
                       borderColor:
-                        "transparent transparent transparent #1253A6",
+                        "transparent transparent transparent #5B9BD5",
                     }}
                   />
                 </div>

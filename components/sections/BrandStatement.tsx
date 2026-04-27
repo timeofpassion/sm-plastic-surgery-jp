@@ -38,11 +38,11 @@ export default function BrandStatement() {
 
         <div>
           <h2 className="font-serif-display font-bold text-[1.75rem] sm:text-[2.3rem] lg:text-[3.4rem] leading-[1.25] text-text-main keep-all mb-6 lg:mb-8">
-            가슴성형을{" "}
-            <span className="text-brand">&lsquo;시술&rsquo;</span>이 아닌
+            모든 절개선에는 <span className="text-brand">이유</span>가 있습니다.
             <br />
-            <span className="text-brand">&lsquo;의학&rsquo;</span>으로
-            설계합니다.
+            트렌드가 아닌 <span className="text-brand">해부학</span>으로 결정합니다.
+            <br />
+            예쁨보다 <span className="text-brand">근거</span>를 먼저 설계합니다.
           </h2>
 
           <p className="text-[0.95rem] lg:text-[1.05rem] text-text-main/80 leading-[1.9] keep-all mb-10 max-w-[520px]">

@@ -23,7 +23,7 @@ export default function Media() {
         </p>
 
         <div className="grid lg:grid-cols-[2fr_1fr] gap-12 mb-20 items-center">
-          <div className="relative w-full aspect-video bg-black overflow-hidden">
+          <div className="relative w-full aspect-video bg-black overflow-hidden rounded-2xl shadow-lg">
             <iframe
               src={`https://www.youtube.com/embed/${MAIN_VIDEO_ID}?rel=0`}
               title="에스엠 성형외과 메인 영상"
@@ -45,7 +45,7 @@ export default function Media() {
               href="https://www.youtube.com/@smplasticsurgery"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 py-4 px-6 bg-brand text-white text-[0.9rem] font-semibold inline-flex items-center justify-center gap-3 transition-opacity hover:opacity-90 self-start"
+              className="mt-3 py-4 px-6 bg-brand text-white text-[0.9rem] font-semibold inline-flex items-center justify-center gap-3 transition-opacity hover:opacity-90 self-start rounded-xl"
             >
               에스엠 성형외과 공식 유튜브 보러가기 →
             </a>
@@ -61,7 +61,7 @@ export default function Media() {
               rel="noopener noreferrer"
               className="no-underline text-inherit flex flex-col gap-3 group"
             >
-              <div className="w-full aspect-video bg-black relative overflow-hidden">
+              <div className="w-full aspect-video bg-black relative overflow-hidden rounded-xl">
                 <img
                   src={`https://img.youtube.com/vi/${v.id}/hqdefault.jpg`}
                   alt=""
@@ -75,7 +75,7 @@ export default function Media() {
                         borderStyle: "solid",
                         borderWidth: "8px 0 8px 14px",
                         borderColor:
-                          "transparent transparent transparent #1253A6",
+                          "transparent transparent transparent #5B9BD5",
                       }}
                     />
                   </div>

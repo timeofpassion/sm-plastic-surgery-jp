@@ -87,7 +87,7 @@ export default function SkinLifting() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border-default border border-border-default">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border-default border border-border-default rounded-2xl overflow-hidden shadow-md">
           {SKIN.map((item) => (
             <div
               key={item.title}
@@ -100,7 +100,7 @@ export default function SkinLifting() {
                   alt={item.title}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="absolute top-4 left-4 font-serif-display text-[0.75rem] tracking-[0.2em] text-white bg-black/40 px-2.5 py-1">
+                <span className="absolute top-4 left-4 font-serif-display text-[0.75rem] tracking-[0.2em] text-white bg-black/40 px-2.5 py-1 rounded">
                   {item.num}
                 </span>
               </div>

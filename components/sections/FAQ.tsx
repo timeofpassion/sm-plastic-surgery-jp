@@ -363,11 +363,11 @@ export default function FAQ() {
           ))}
         </div>
 
-        <div className="flex flex-col border-t-0">
+        <div className="flex flex-col gap-2 mt-4 border-t-0">
           {items.map((item, i) => {
             const isOpen = open === i;
             return (
-              <div key={i} className="border-b border-border-default transition-colors">
+              <div key={i} className="rounded-xl bg-white shadow-sm overflow-hidden transition-all">
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full py-8 bg-transparent border-none flex items-center justify-between cursor-pointer text-left outline-none gap-4"
@@ -390,7 +390,7 @@ export default function FAQ() {
                   </div>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-400 bg-bg-sub-alt ${
+                  className={`overflow-hidden transition-all duration-400 bg-bg-sub ${
                     isOpen ? "max-h-[800px] pb-10" : "max-h-0"
                   }`}
                 >

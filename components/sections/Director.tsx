@@ -16,8 +16,8 @@ export default function Director() {
         {/* Top row: photo + intro */}
         <div className="grid lg:grid-cols-[4.5fr_5.5fr] gap-12 lg:gap-24 items-start mb-16 lg:mb-20">
           <div className="relative opacity-0 animate-fade-up">
-            <div className="hidden lg:block absolute -top-5 -left-5 w-full h-full border border-border-default z-[1]" />
-            <div className="relative w-full aspect-[3/4.2] overflow-hidden border border-border-default bg-gray-200 z-[2]">
+            <div className="hidden lg:block absolute -top-5 -left-5 w-full h-full border border-border-default z-[1] rounded-2xl" />
+            <div className="relative w-full aspect-[3/4.2] overflow-hidden border border-border-default bg-gray-200 z-[2] rounded-2xl">
               <img
                 src="/doctor_white.png"
                 alt="이무영 대표원장"
@@ -37,7 +37,7 @@ export default function Director() {
             </h2>
 
             <div className="mb-8">
-              <span className="inline-block bg-brand text-white px-4 py-2 text-[1.1rem] sm:text-[1.25rem] lg:text-[1.4rem] font-semibold leading-tight">
+              <span className="inline-block bg-brand text-white px-4 py-2 text-[1.1rem] sm:text-[1.25rem] lg:text-[1.4rem] font-semibold leading-tight rounded-lg">
                 Global 자랑스런 한국인 선정!
               </span>
             </div>
@@ -79,7 +79,7 @@ export default function Director() {
           </div>
 
           {/* Right: Academic Activities */}
-          <div className="p-8 lg:p-10 bg-bg-sub border-l-[3px] border-brand">
+          <div className="p-8 lg:p-10 bg-bg-sub border-l-[3px] border-brand rounded-2xl">
             <h3 className="font-serif-display text-[1.15rem] lg:text-[1.3rem] font-semibold mb-6 flex items-center gap-3">
               학술 활동 (Academic Activities)
             </h3>

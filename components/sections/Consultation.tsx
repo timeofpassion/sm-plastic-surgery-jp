@@ -16,13 +16,13 @@ export default function Consultation() {
       style={{ background: "linear-gradient(160deg, #071830 0%, #0A2458 55%, #0F3170 100%)" }}
     >
       <div className="w-full max-w-content px-6 text-center">
-        <span className="font-serif-display italic text-[0.95rem] text-[#2B9FE8] tracking-wider block mb-5">
+        <span className="font-serif-display italic text-[0.95rem] text-[#7EC8E3] tracking-wider block mb-5">
           상담 예약
         </span>
 
         <h2 className="font-serif-display text-[1.6rem] sm:text-[2rem] lg:text-[3rem] font-medium leading-[1.25] mb-6 keep-all text-white">
           상담을 원하시면{" "}
-          <span className="inline-block bg-[#2B9FE8] text-white px-3 py-1">
+          <span className="inline-block bg-[#7EC8E3] text-white px-3 py-1">
             LINE
           </span>
           으로 문의해주세요.
@@ -49,7 +49,7 @@ export default function Consultation() {
         </a>
 
         {/* Checklist */}
-        <div className="max-w-[640px] mx-auto bg-white/8 border border-white/15 backdrop-blur-sm p-8 lg:p-10 mb-14">
+        <div className="max-w-[640px] mx-auto bg-white/8 border border-white/15 backdrop-blur-sm p-8 lg:p-10 mb-14 rounded-2xl">
           <h3 className="font-serif-display text-[1.1rem] font-semibold text-white mb-5">
             상담 전 준비하시면 좋아요
           </h3>
@@ -57,7 +57,7 @@ export default function Consultation() {
             {CHECKLIST.map((item) => (
               <li
                 key={item}
-                className="relative pl-5 text-[0.95rem] text-white/70 before:content-[''] before:absolute before:left-0 before:top-[11px] before:w-2.5 before:h-px before:bg-[#2B9FE8]"
+                className="relative pl-5 text-[0.95rem] text-white/70 before:content-[''] before:absolute before:left-0 before:top-[11px] before:w-2.5 before:h-px before:bg-[#7EC8E3]"
               >
                 {item}
               </li>

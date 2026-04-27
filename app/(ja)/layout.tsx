@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import "./globals.css";
+import "../globals.css";
 
 const GA_ID = "G-RLYZKLQSTR";
 const SITE_URL = "https://www.smpsjp.com";
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     languages: {
       ja: SITE_URL,
       en: `${SITE_URL}/en/`,
-      'x-default': SITE_URL,
+      "x-default": SITE_URL,
     },
   },
   category: "healthcare",
@@ -113,7 +113,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Structured Data: MedicalBusiness + LocalBusiness
 const structuredData = {
   "@context": "https://schema.org",
   "@type": ["MedicalBusiness", "LocalBusiness", "Physician"],
@@ -188,70 +187,22 @@ const structuredData = {
     "https://line.me/R/ti/p/@952nqpbr",
   ],
   availableService: [
-    {
-      "@type": "MedicalProcedure",
-      name: "하이브리드 가슴성형 (Hybrid Breast Augmentation)",
-      procedureType: "SurgicalProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "가슴 확대 (Breast Augmentation)",
-      procedureType: "SurgicalProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "가슴 재수술 (Breast Revision Surgery)",
-      procedureType: "SurgicalProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "쌍꺼풀 수술 (Double Eyelid Surgery)",
-      procedureType: "SurgicalProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "상안검 수술 (Upper Blepharoplasty)",
-      procedureType: "SurgicalProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "하안검 수술 (Lower Blepharoplasty)",
-      procedureType: "SurgicalProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "안검하수 교정 (Ptosis Correction)",
-      procedureType: "SurgicalProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "보톡스 (Botox)",
-      procedureType: "TherapeuticProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "필러 (Filler)",
-      procedureType: "TherapeuticProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "물광주사",
-      procedureType: "TherapeuticProcedure",
-    },
-    {
-      "@type": "MedicalProcedure",
-      name: "텐쎄라·텐써마 리프팅 (Ulthera & Thermage)",
-      procedureType: "TherapeuticProcedure",
-    },
+    { "@type": "MedicalProcedure", name: "하이브리드 가슴성형 (Hybrid Breast Augmentation)", procedureType: "SurgicalProcedure" },
+    { "@type": "MedicalProcedure", name: "가슴 확대 (Breast Augmentation)", procedureType: "SurgicalProcedure" },
+    { "@type": "MedicalProcedure", name: "가슴 재수술 (Breast Revision Surgery)", procedureType: "SurgicalProcedure" },
+    { "@type": "MedicalProcedure", name: "쌍꺼풀 수술 (Double Eyelid Surgery)", procedureType: "SurgicalProcedure" },
+    { "@type": "MedicalProcedure", name: "상안검 수술 (Upper Blepharoplasty)", procedureType: "SurgicalProcedure" },
+    { "@type": "MedicalProcedure", name: "하안검 수술 (Lower Blepharoplasty)", procedureType: "SurgicalProcedure" },
+    { "@type": "MedicalProcedure", name: "안검하수 교정 (Ptosis Correction)", procedureType: "SurgicalProcedure" },
+    { "@type": "MedicalProcedure", name: "보톡스 (Botox)", procedureType: "TherapeuticProcedure" },
+    { "@type": "MedicalProcedure", name: "필러 (Filler)", procedureType: "TherapeuticProcedure" },
+    { "@type": "MedicalProcedure", name: "물광주사", procedureType: "TherapeuticProcedure" },
+    { "@type": "MedicalProcedure", name: "텐쎄라·텐써마 리프팅 (Ulthera & Thermage)", procedureType: "TherapeuticProcedure" },
   ],
   knowsLanguage: ["ko", "ja", "en"],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function JaRootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
       <body>{children}</body>
@@ -281,42 +232,25 @@ export default function RootLayout({
                 window.gtag('event', name, params || {});
               }
             }
-
-            // Click tracking (delegated)
             document.addEventListener('click', function(e) {
               var target = e.target;
               if (!target || !target.closest) return;
-
-              // LINE 클릭
               var lineLink = target.closest('a[href*="line.me/R/ti/p"]');
               if (lineLink) {
-                track('click_line', {
-                  button_location: lineLink.getAttribute('data-track-location') || 'other',
-                });
+                track('click_line', { button_location: lineLink.getAttribute('data-track-location') || 'other' });
               }
-
-              // Social 채널 클릭 (플로팅)
               var socialLink = target.closest('a[data-social]');
               if (socialLink) {
-                track('click_social', {
-                  platform: socialLink.getAttribute('data-social'),
-                });
+                track('click_social', { platform: socialLink.getAttribute('data-social') });
               }
-
-              // YouTube 채널 링크 클릭
               var ytLink = target.closest('a[href*="youtube.com"], a[href*="youtu.be"]');
               if (ytLink && !socialLink) {
-                track('click_youtube', {
-                  url: ytLink.getAttribute('href') || '',
-                });
+                track('click_youtube', { url: ytLink.getAttribute('href') || '' });
               }
             }, true);
-
-            // Scroll depth (25 / 50 / 75 / 90)
             var thresholds = [25, 50, 75, 90];
             var fired = {};
             var ticking = false;
-
             function onScroll() {
               if (ticking) return;
               ticking = true;
@@ -335,7 +269,6 @@ export default function RootLayout({
                 ticking = false;
               });
             }
-
             window.addEventListener('scroll', onScroll, { passive: true });
           })();
         `}

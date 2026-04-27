@@ -16,7 +16,7 @@
     content: "";
     display: block;
     height: 3px;
-    background: linear-gradient(90deg, #0A2859 0%, #1253A6 40%, #2B9FE8 75%, #1253A6 100%);
+    background: linear-gradient(90deg, #2B5891 0%, #5B9BD5 40%, #7EC8E3 75%, #5B9BD5 100%);
     position: fixed;
     top: 0;
     left: 0;
@@ -100,7 +100,7 @@
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #1253A6;
+  border-bottom: 2px solid #5B9BD5;
 }
 .blog-content h3 {
   font-size: 1.125rem;
@@ -109,7 +109,7 @@
   margin-top: 2rem;
   margin-bottom: 0.75rem;
   padding-left: 0.75rem;
-  border-left: 3px solid #1253A6;
+  border-left: 3px solid #5B9BD5;
 }
 .blog-content p {
   margin-bottom: 1.25rem;
@@ -125,10 +125,10 @@
 .blog-content li { margin-bottom: 0.4rem; }
 .blog-content strong { font-weight: 700; color: #111111; }
 .blog-content em { font-style: italic; color: #555555; }
-.blog-content a { color: #1253A6; text-decoration: underline; }
-.blog-content a:hover { color: #0E3E7E; }
+.blog-content a { color: #5B9BD5; text-decoration: underline; }
+.blog-content a:hover { color: #4A87C0; }
 .blog-content blockquote {
-  border-left: 4px solid #1253A6;
+  border-left: 4px solid #5B9BD5;
   background: #F3F7FD;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
@@ -154,7 +154,7 @@
   font-size: 0.9rem;
 }
 .blog-content th {
-  background: #1253A6;
+  background: #5B9BD5;
   color: white;
   padding: 0.6rem 1rem;
   text-align: left;
