@@ -124,7 +124,7 @@ export default function Procedures() {
   const scrollTo = useCallback((i: number) => emblaApi?.scrollTo(i), [emblaApi]);
 
   return (
-    <section id="procedures" className="py-12 lg:py-20 bg-[#EEF4FC]">
+    <section id="procedures" className="py-12 lg:py-20 bg-[#F8FAFD]">
 
       {/* Section header */}
       <div className="w-full max-w-content mx-auto px-6 mb-8 lg:mb-10">
@@ -147,10 +147,10 @@ export default function Procedures() {
               onClick={scrollPrev}
               disabled={!canScrollPrev}
               aria-label="이전"
-              className={`w-10 h-10 border rounded-lg flex items-center justify-center transition-all ${
+              className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all ${
                 canScrollPrev
-                  ? "border-text-main text-text-main hover:bg-text-main hover:text-white"
-                  : "border-border-default text-text-sub opacity-40 cursor-not-allowed"
+                  ? "bg-neutral-100 text-text-main hover:bg-neutral-200"
+                  : "bg-neutral-50 text-text-sub opacity-40 cursor-not-allowed"
               }`}
             >
               <ArrowLeft className="w-4 h-4" />
@@ -177,7 +177,7 @@ export default function Procedures() {
           {CARDS.map((card, i) => (
             <div
               key={i}
-              className="flex-[0_0_85%] md:flex-[0_0_46%] xl:flex-[0_0_31%] relative h-[480px] lg:h-[540px] overflow-hidden rounded-2xl shadow-lg group shrink-0"
+              className="flex-[0_0_85%] md:flex-[0_0_46%] xl:flex-[0_0_31%] relative h-[480px] lg:h-[540px] overflow-hidden rounded-2xl shadow-sm group shrink-0"
             >
               {/* Background image */}
               <img

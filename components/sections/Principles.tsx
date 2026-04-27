@@ -21,7 +21,7 @@ const PRINCIPLES = [
 
 export default function Principles() {
   return (
-    <section id="why-sm" className="py-12 lg:py-[70px] flex justify-center bg-[#EEF4FC]">
+    <section id="why-sm" className="py-10 lg:py-16 flex justify-center bg-white">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           WHY SM — 에스엠의 세 가지 원칙
@@ -34,7 +34,7 @@ export default function Principles() {
           {PRINCIPLES.map((p, i) => (
             <div
               key={p.num}
-              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:border-[#7EC8E3] hover:shadow-xl hover:shadow-[#7EC8E3]/15 hover:bg-[#F8FBFF] rounded-2xl"
+              className="group relative flex flex-col bg-white border border-border-default overflow-hidden opacity-0 transition-all duration-500 cursor-pointer hover:-translate-y-1 hover:border-[#7EC8E3] hover:shadow-md hover:shadow-[#7EC8E3]/10 hover:bg-[#F8FBFF] rounded-2xl"
               style={{
                 animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
                   i * 0.1

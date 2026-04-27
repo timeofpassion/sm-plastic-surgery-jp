@@ -9,7 +9,7 @@ const VIDEOS = [
 
 export default function Media() {
   return (
-    <section id="media" className="py-12 lg:py-[70px] flex justify-center">
+    <section id="media" className="py-10 lg:py-16 flex justify-center">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           YouTube — 영상으로 만나는 에스엠
@@ -23,7 +23,7 @@ export default function Media() {
         </p>
 
         <div className="grid lg:grid-cols-[2fr_1fr] gap-12 mb-20 items-center">
-          <div className="relative w-full aspect-video bg-black overflow-hidden rounded-2xl shadow-lg">
+          <div className="relative w-full aspect-video bg-black overflow-hidden rounded-2xl shadow-sm">
             <iframe
               src={`https://www.youtube.com/embed/${MAIN_VIDEO_ID}?rel=0`}
               title="에스엠 성형외과 메인 영상"

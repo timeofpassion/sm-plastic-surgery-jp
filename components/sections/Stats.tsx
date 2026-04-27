@@ -24,10 +24,10 @@ export default function Stats() {
     <section
       className="relative py-14 lg:py-20 flex justify-center text-white"
       style={{
-        background: "linear-gradient(135deg, #2B5891 0%, #5B9BD5 60%, #1A4070 100%)",
+        background: "linear-gradient(135deg, #3D6E9E 0%, #6BAED6 60%, #2B5891 100%)",
       }}
     >
-      <div className="absolute inset-0 bg-[rgba(10,12,15,0.65)] z-[1]" />
+      <div className="absolute inset-0 bg-[rgba(10,12,15,0.25)] z-[1]" />
 
       <div className="relative z-[2] w-full max-w-content px-6 text-center">
         <p className="text-[1rem] font-light tracking-[0.2em] mb-3 opacity-90">
@@ -41,14 +41,14 @@ export default function Stats() {
           {STATS.map((stat, i) => (
             <div
               key={stat.label}
-              className="bg-white py-10 lg:py-12 px-6 rounded-2xl shadow-2xl text-text-main flex flex-col items-center opacity-0"
+              className="bg-white py-10 lg:py-12 px-6 rounded-2xl shadow-md text-text-main flex flex-col items-center opacity-0"
               style={{
                 animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
                   0.4 + i * 0.1
                 }s forwards`,
               }}
             >
-              <span className="bg-neutral-800 text-white text-[0.75rem] py-1 px-4 rounded-full mb-6 tracking-wider">
+              <span className="bg-white/20 text-white text-[0.75rem] py-1 px-4 rounded-full mb-6 tracking-wider">
                 {stat.label}
               </span>
               <div className="flex items-baseline gap-1 mb-4">

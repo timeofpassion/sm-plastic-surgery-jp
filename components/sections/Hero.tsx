@@ -68,8 +68,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden border-b border-border-default"
-      style={{ background: "linear-gradient(135deg, #EEF4FC 0%, #F3F7FD 55%, #ffffff 100%)" }}
+      className="relative overflow-hidden bg-white"
     >
       {/* Decorative circles — desktop only */}
       <div className="pointer-events-none select-none absolute right-0 top-0 w-[55%] h-full hidden lg:block overflow-hidden">

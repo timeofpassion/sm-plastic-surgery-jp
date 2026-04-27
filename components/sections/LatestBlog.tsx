@@ -8,7 +8,7 @@ export default function LatestBlog() {
   if (posts.length === 0) return null
 
   return (
-    <section className="py-20 bg-bg-sub" id="blog">
+    <section className="py-20 bg-white" id="blog">
       <div className="max-w-content mx-auto px-6">
         <div className="text-center mb-12">
           <p className="text-sm font-medium text-brand tracking-widest uppercase mb-3">Blog</p>

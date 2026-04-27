@@ -10,11 +10,11 @@ export default function Director() {
   return (
     <section
       id="director"
-      className="py-12 lg:py-[70px] flex justify-center bg-[#EEF4FC] lg:bg-[linear-gradient(to_left,#ffffff_60%,#EEF4FC_60%)]"
+      className="py-10 lg:py-16 flex justify-center bg-white"
     >
       <div className="w-full max-w-content px-6">
         {/* Top row: photo + intro */}
-        <div className="grid lg:grid-cols-[4.5fr_5.5fr] gap-12 lg:gap-24 items-start mb-16 lg:mb-20">
+        <div className="grid lg:grid-cols-[4.5fr_5.5fr] gap-10 lg:gap-16 items-start mb-16 lg:mb-20">
           <div className="relative opacity-0 animate-fade-up">
             <div className="hidden lg:block absolute -top-5 -left-5 w-full h-full border border-border-default z-[1] rounded-2xl" />
             <div className="relative w-full aspect-[3/4.2] overflow-hidden border border-border-default bg-gray-200 z-[2] rounded-2xl">
@@ -79,7 +79,7 @@ export default function Director() {
           </div>
 
           {/* Right: Academic Activities */}
-          <div className="p-8 lg:p-10 bg-bg-sub border-l-[3px] border-brand rounded-2xl">
+          <div className="p-8 lg:p-10 bg-bg-sub border-l-2 border-brand rounded-2xl">
             <h3 className="font-serif-display text-[1.15rem] lg:text-[1.3rem] font-semibold mb-6 flex items-center gap-3">
               학술 활동 (Academic Activities)
             </h3>

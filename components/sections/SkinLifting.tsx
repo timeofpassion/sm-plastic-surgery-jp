@@ -70,7 +70,7 @@ const SKIN: SkinItem[] = [
 
 export default function SkinLifting() {
   return (
-    <section id="skin" className="py-12 lg:py-[70px] flex justify-center bg-bg-sub">
+    <section id="skin" className="py-10 lg:py-16 flex justify-center bg-bg-sub">
       <div className="w-full max-w-content px-6">
         <div className="text-center mb-12 lg:mb-16">
           <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-4">
@@ -87,7 +87,7 @@ export default function SkinLifting() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border-default border border-border-default rounded-2xl overflow-hidden shadow-md">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border-default border border-border-default rounded-2xl overflow-hidden shadow-sm">
           {SKIN.map((item) => (
             <div
               key={item.title}

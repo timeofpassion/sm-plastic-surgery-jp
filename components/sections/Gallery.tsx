@@ -91,7 +91,7 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-12 lg:py-[70px] flex justify-center bg-[#F3F7FD]">
+    <section id="gallery" className="py-10 lg:py-16 flex justify-center bg-white">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.9rem] text-accent-gold tracking-widest block mb-4">
           Before &amp; After
@@ -110,7 +110,7 @@ export default function Gallery() {
           {STANDARDS.map((s, i) => (
             <div
               key={s.title}
-              className="p-6 lg:p-8 bg-brand text-white flex flex-col gap-3 transition-all hover:bg-brand-hover hover:shadow-xl hover:shadow-brand/30 hover:-translate-y-0.5 rounded-2xl"
+              className="p-6 lg:p-8 bg-brand text-white flex flex-col gap-3 transition-all hover:bg-brand-hover hover:shadow-md hover:shadow-brand/20 hover:-translate-y-0.5 rounded-2xl"
             >
               <div className="flex items-center gap-2.5 mb-1">
                 <span className="text-[0.75rem] font-bold tracking-[0.15em] text-white bg-white/15 px-2 py-0.5 rounded-sm">
@@ -150,7 +150,7 @@ export default function Gallery() {
         {/* Featured */}
         {selected && (
           <div className="mb-16">
-            <div className="relative w-full bg-bg-sub-alt border border-border-default overflow-hidden rounded-2xl shadow-md">
+            <div className="relative w-full bg-bg-sub-alt border border-border-default overflow-hidden rounded-2xl shadow-sm">
               <div className="grid grid-cols-2">
                 <img
                   src={selected.before}

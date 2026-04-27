@@ -39,7 +39,7 @@ export default function GangnamReviews() {
   return (
     <section
       id="gangnam-reviews"
-      className="pt-8 pb-12 lg:pt-10 lg:pb-[70px] flex justify-center bg-bg-sub-alt"
+      className="pt-8 pb-12 lg:pt-10 lg:pb-[70px] flex justify-center bg-white"
     >
       <div className="w-full max-w-content px-6">
         <div className="flex items-center gap-3 mb-3">

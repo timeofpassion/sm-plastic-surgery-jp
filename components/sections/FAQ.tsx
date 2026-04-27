@@ -325,7 +325,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-12 lg:py-[70px] flex justify-center bg-[#EEF4FC]">
+    <section id="faq" className="py-10 lg:py-16 flex justify-center bg-[#F8FAFD]">
       <div className="w-full max-w-content px-6">
         <span className="font-serif-display italic text-[0.95rem] text-accent-gold tracking-wider block mb-5">
           Information & Support
@@ -370,7 +370,7 @@ export default function FAQ() {
               <div key={i} className="rounded-xl bg-white shadow-sm overflow-hidden transition-all">
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="w-full py-8 bg-transparent border-none flex items-center justify-between cursor-pointer text-left outline-none gap-4"
+                  className="w-full py-5 bg-transparent border-none flex items-center justify-between cursor-pointer text-left outline-none gap-4"
                 >
                   <div className="flex gap-4 lg:gap-6 items-start">
                     <span className="font-serif-display text-[1.1rem] text-accent-gold font-medium min-w-[40px]">
