@@ -4,17 +4,17 @@ import { useState, useEffect, useRef } from "react";
 import NavHeader from "@/components/ui/nav-header";
 
 const NAV_LINKS = [
-  { label: "홈페이지", href: "#top" },
-  { label: "가슴수술", href: "#procedures" },
-  { label: "Before&After", href: "#gallery" },
-  { label: "눈성형", href: "#eye" },
-  { label: "피부·리프팅", href: "#skin" },
+  { label: "ホーム", href: "#top" },
+  { label: "豊胸手術", href: "#procedures" },
+  { label: "Before & After", href: "#gallery" },
+  { label: "目元整形", href: "#eye" },
+  { label: "肌・リフティング", href: "#skin" },
   { label: "FAQ", href: "#faq" },
-  { label: "마케팅채널", href: "#media" },
-  { label: "대표원장 소개", href: "#director" },
-  { label: "SMPS 철학", href: "#why-sm" },
-  { label: "안전마취센터", href: "#safety" },
-  { label: "오시는 길", href: "#location" },
+  { label: "院長紹介", href: "#director" },
+  { label: "SMの哲学", href: "#why-sm" },
+  // _hidden: { label: "マーケティング", href: "#media" },
+  // _hidden: { label: "安全麻酔センター", href: "#safety" },
+  // _hidden: { label: "アクセス", href: "#location" },
 ];
 
 export default function Navigation() {
