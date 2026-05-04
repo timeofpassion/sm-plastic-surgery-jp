@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic'
 
-import Navigation from "@/components/Navigation";
+// _hidden: import Navigation from "@/components/Navigation";
 import SocialFloat from "@/components/SocialFloat";
 import Hero from "@/components/sections/Hero";
 import Principles from "@/components/sections/Principles";
@@ -25,7 +25,7 @@ export default function HomePage() {
   return (
     <main id="top" className="relative">
       <SocialFloat />
-      <Navigation />
+      {/* _hidden: <Navigation /> */}
 
       {/* 1. HERO */}
       <Hero />

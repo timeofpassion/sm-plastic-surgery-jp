@@ -14,7 +14,7 @@ export default function Footer() {
             className="h-8 mb-3"
             style={{ filter: "brightness(0) invert(1)", opacity: 0.85 }}
           />
-          <p className="text-white/40 text-[0.78rem] tracking-wide">SM美容外科医院</p>
+          <p className="text-white/40 text-[0.78rem] tracking-wide">에스엠성형외과</p>
         </div>
 
         {/* 3열 그리드 */}
@@ -23,11 +23,10 @@ export default function Footer() {
             <h5 className="text-[0.72rem] text-[#7EC8E3] uppercase mb-3 font-semibold tracking-[0.2em]">
               Access
             </h5>
-            {/* [JA-REVIEW][서울시 서초구 강남대로 435 주류성빌딩 9층]ソウル特別市瑞草区江南大路435 주류성ビル9F（빌딩명 한자 표기 未確定）[/JA-REVIEW] */}
             <p className="text-[0.9rem] text-white/70 leading-[1.8]">
-              ソウル特別市瑞草区江南大路435 주류성ビル9F
+              서울시 서초구 강남대로 435 주류성빌딩 9층
               <br />
-              <span className="text-white/45 text-[0.82rem]">（江南駅3番出口 徒歩3分）</span>
+              <span className="text-white/45 text-[0.82rem]">(강남역 3번 출구 도보 3분)</span>
             </p>
             <a
               href={MAP_LINK}
@@ -35,7 +34,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 mt-3 text-[0.78rem] text-[#7EC8E3] hover:underline"
             >
-              Google マップで確認 →
+              Google 지도로 확인 →
             </a>
           </div>
           <div>
@@ -43,11 +42,11 @@ export default function Footer() {
               Hours
             </h5>
             <p className="text-[0.9rem] text-white/70 leading-[1.8]">
-              平日 10:00–19:00
+              평일 10:00–19:00
               <br />
-              土曜 10:00–16:00
+              토요일 10:00–16:00
               <br />
-              日曜・祝日 休診
+              일요일·공휴일 휴진
             </p>
           </div>
           <div>
@@ -55,9 +54,9 @@ export default function Footer() {
               Clinic
             </h5>
             <p className="text-[0.9rem] text-white/70 leading-[1.8]">
-              院長 イ・ムヨン
+              원장 이무영
               <br />
-              SM美容外科医院
+              에스엠성형외과
             </p>
           </div>
         </div>
@@ -75,21 +74,21 @@ export default function Footer() {
               LINE: @952nqpbr
             </a>
           </p>
-          {/* [JA-REVIEW][서울시 서초구 강남대로 435 주류성빌딩 9층]ソウル特別市瑞草区江南大路435 주류성ビル9F[/JA-REVIEW] */}
           <p>
-            代表者: イ・ムヨン　｜　事業者登録番号: [TBD_BUSINESS_REG]　｜　住所: ソウル特別市瑞草区江南大路435 주류성ビル9F
+            대표자: 이무영　｜　사업자등록번호: [TBD_BUSINESS_REG]　｜　주소: 서울시 서초구 강남대로 435 주류성빌딩 9층
           </p>
         </div>
 
         {/* 의료고지 + Copyright */}
         <div className="pt-6 border-t border-white/10">
+          {/* [REVIEW_LEGAL] 한국 의료광고법 표기 기준 검토 필요 - 라이브 머지 전 확정 */}
           <p className="text-[0.78rem] text-white/35 leading-[1.8] mb-4">
-            施術結果には個人差があります。出血・感染・非対称・血腫・インプラント関連合併症等の副作用が生じる場合があります。詳細はカウンセリング時にご説明します。
+            시술 결과는 개인차가 있습니다. 출혈·감염·비대칭·혈종·보형물 관련 합병증 등의 부작용이 발생할 수 있습니다. 자세한 내용은 상담 시 설명드립니다.
             <br />
-            本ページは医療広告ガイドラインに基づき作成されています。
+            본 페이지는 의료광고 가이드라인에 따라 제작되었습니다.
           </p>
           <p className="text-[0.72rem] text-white/25">
-            © 2013-2026 SM美容外科医院 All rights reserved.
+            © 2013-2026 에스엠성형외과 All rights reserved.
           </p>
         </div>
 

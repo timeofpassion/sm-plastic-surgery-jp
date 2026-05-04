@@ -6,13 +6,13 @@ import { useCallback } from "react";
 const BA_PAIRS = [
   {
     id: 1,
-    label: "豊胸拡大 / 症例1",
+    label: "가슴 확대 / 증례1",
     before: "/ba_가슴_01_before.png",
     after: "/ba_가슴_01_after.png",
   },
   {
     id: 2,
-    label: "ハイブリッド豊胸 / 症例1",
+    label: "하이브리드 가슴성형 / 증례1",
     before: "/ba_가슴_02_before.png",
     after: "/ba_가슴_02_after.png",
   },
@@ -45,11 +45,11 @@ export default function Gallery() {
               Before &amp; After
             </span>
             <h2 className="text-[1.8rem] sm:text-[2.2rem] lg:text-[2.8rem] font-bold text-white leading-[1.35] keep-all">
-              SM美容外科の
+              에스엠성형외과의
               <br />
-              ビフォー・アフターは、
+              비포·애프터는
               <br />
-              過剰な加工や演出を控えます。
+              과장된 가공·연출을 지양합니다.
             </h2>
           </div>
 
@@ -128,13 +128,13 @@ export default function Gallery() {
           {/* 하단 본문 */}
           <div className="w-full max-w-content mx-auto px-6 text-center">
             <p className="text-white/70 text-[0.9rem] lg:text-[0.95rem] leading-[2] keep-all">
-              すべての結果は
+              모든 결과는
               <br />
-              実際の手術過程と回復をもとにし、
+              실제 수술 과정과 회복을 바탕으로 하며,
               <br />
-              患者の体型による差を十分に説明します。
+              환자 체형에 따른 차이를 충분히 설명합니다.
               <br />
-              結果は写真より診断と過程が重要だと考えています。
+              결과는 사진보다 진단과 과정이 중요합니다.
             </p>
           </div>
 

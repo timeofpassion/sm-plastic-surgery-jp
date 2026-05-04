@@ -5,17 +5,17 @@ import { useRef } from "react";
 const LINE_URL = "https://line.me/R/ti/p/@952nqpbr";
 
 const CHECKLIST = [
-  "現在の胸の状態とお悩み",
-  "ご希望のイメージ（参考写真歓迎）",
-  "以前の手術経験（ある場合）",
-  "ご来院可能な時期",
-  "ご予算の目安",
+  "현재 가슴 상태와 고민",
+  "원하는 이미지 (참고 사진 환영)",
+  "이전 수술 경험 (있는 경우)",
+  "내원 가능한 시기",
+  "예산 범위",
 ];
 
 const TREATMENTS = [
-  "ハイブリッド豊胸",
-  "豊胸拡大（インプラント）",
-  "豊胸再手術",
+  "하이브리드 가슴성형",
+  "가슴 확대 (보형물)",
+  "가슴 재수술",
 ];
 
 export default function Consultation() {
@@ -31,31 +31,31 @@ export default function Consultation() {
         <div className="text-center mb-16">
           <span className="label-en block mb-6">Contact</span>
           <h2 className="text-[1.8rem] sm:text-[2.2rem] lg:text-[2.6rem] font-bold text-text-main leading-[1.3] mb-10 keep-all">
-            カウンセリング・
+            상담 및
             <br />
-            お問い合わせのご案内
+            문의 안내
           </h2>
           <div className="text-[0.95rem] lg:text-[1rem] text-text-sub leading-[2] max-w-[640px] mx-auto keep-all">
             <p className="mb-5">
-              SM美容外科は
+              에스엠성형외과는
               <br />
-              韓国国内の患者様だけではなく、
+              국내 환자뿐만 아니라,
               <br />
-              海外の患者様のためのカウンセリング及び
+              해외 환자를 위한 상담 및
               <br />
-              手術システムを運営しています。
+              수술 시스템을 운영합니다.
             </p>
             <p className="mb-5">
-              手術前に十分なカウンセリングを通じて
+              수술 전 충분한 상담을 통해
               <br />
-              体型と手術方針を説明し、
+              체형과 수술 방향을 설명하며,
               <br />
-              無理な施術は勧めません。
+              무리한 시술은 권하지 않습니다.
             </p>
             <p>
-              胸成形は急いで選択することではなく、
+              가슴성형은 서둘러 선택하는 것이 아니라,
               <br />
-              正しい判断から始まるべきです。
+              올바른 판단에서 시작해야 합니다.
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function Consultation() {
           style={{ background: "#f3f7f9" }}
         >
           <h3 className="text-[0.85rem] font-semibold text-text-main mb-5">
-            ご相談時にお伝えいただきたい内容
+            상담 시 알려주시면 좋은 내용
           </h3>
           <ul className="space-y-3">
             {CHECKLIST.map((item) => (
@@ -81,7 +81,7 @@ export default function Consultation() {
         {/* LINE CTA 블록 */}
         <div className="max-w-[640px] mx-auto mb-16">
           <p className="text-center text-[0.82rem] text-text-sub mb-3">
-            日本語専任スタッフが、LINEにて1対1でご対応します。
+            전담 스태프가 LINE으로 1:1 응대합니다.
           </p>
           <a
             href={LINE_URL}
@@ -97,7 +97,7 @@ export default function Consultation() {
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0">
               <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738C5.384.566 0 4.935 0 10.304c0 4.811 4.27 8.843 10.035 9.608.39.084.922.258 1.057.592.122.302.079.775.038 1.085l-.164 1.026c-.045.303-.24 1.186 1.049.647 1.291-.54 6.957-4.098 9.489-7.016 1.749-1.918 2.496-3.862 2.496-5.942z" />
             </svg>
-            LINEでのご相談はこちら →
+            LINE 상담하기 →
           </a>
         </div>
 
@@ -109,24 +109,24 @@ export default function Consultation() {
           {/* action: [TBD_FORM_HANDLER] — replace with actual form endpoint before launch */}
           <form action="" method="post" className="space-y-7">
 
-            {/* お名前 */}
+            {/* 이름 */}
             <div>
               <label className="block text-[0.85rem] font-medium text-text-main mb-2">
-                お名前 <span className="text-red-500 ml-0.5">*</span>
+                이름 <span className="text-red-500 ml-0.5">*</span>
               </label>
               <input
                 type="text"
                 name="name"
                 required
-                placeholder="山田 太郎"
+                placeholder="홍길동"
                 className="w-full border border-border-default rounded-lg px-4 py-3 text-[0.9rem] text-text-main placeholder:text-text-sub/40 focus:outline-none focus:border-brand transition-colors"
               />
             </div>
 
-            {/* ご連絡先 — 3분할 자동 */}
+            {/* 연락처 — 3분할 자동 */}
             <div>
               <label className="block text-[0.85rem] font-medium text-text-main mb-2">
-                ご連絡先（電話番号） <span className="text-red-500 ml-0.5">*</span>
+                연락처 (전화번호) <span className="text-red-500 ml-0.5">*</span>
               </label>
               <div className="flex items-center gap-2">
                 <input
@@ -167,10 +167,10 @@ export default function Consultation() {
               </div>
             </div>
 
-            {/* ご関心のある治療 */}
+            {/* 관심 있는 시술 */}
             <div>
               <label className="block text-[0.85rem] font-medium text-text-main mb-3">
-                ご関心のある治療 <span className="text-red-500 ml-0.5">*</span>
+                관심 있는 시술 <span className="text-red-500 ml-0.5">*</span>
               </label>
               <div className="space-y-3">
                 {TREATMENTS.map((t) => (
@@ -189,16 +189,16 @@ export default function Consultation() {
               </div>
             </div>
 
-            {/* お問い合わせ内容 */}
+            {/* 문의 내용 */}
             <div>
               <label className="block text-[0.85rem] font-medium text-text-main mb-2">
-                お問い合わせ内容
-                <span className="text-[0.78rem] text-text-sub font-normal ml-2">（任意）</span>
+                문의 내용
+                <span className="text-[0.78rem] text-text-sub font-normal ml-2">(선택)</span>
               </label>
               <textarea
                 name="message"
                 rows={5}
-                placeholder="ご質問・ご希望などをご自由にご記入ください。"
+                placeholder="질문·요청사항을 자유롭게 입력해주세요."
                 className="w-full border border-border-default rounded-lg px-4 py-3 text-[0.9rem] text-text-main placeholder:text-text-sub/40 focus:outline-none focus:border-brand transition-colors resize-none"
               />
             </div>
@@ -209,21 +209,22 @@ export default function Consultation() {
                 className="h-44 overflow-y-auto border border-border-default rounded-lg px-5 py-4 mb-4 text-[0.78rem] text-text-sub leading-[1.85]"
                 style={{ background: "#fafafa" }}
               >
-                <p className="font-semibold text-text-main mb-2">個人情報の取り扱いについて</p>
+                {/* [REVIEW_LEGAL] 한국 의료광고법 표기 기준 검토 필요 - 라이브 머지 전 확정 */}
+                <p className="font-semibold text-text-main mb-2">개인정보 처리방침</p>
                 <p className="mb-3">
-                  SM美容外科医院（以下「当院」）は、個人情報の保護に関する法律（個人情報保護法）および医療広告ガイドラインに基づき、お預かりした個人情報を適切に管理いたします。
+                  에스엠성형외과(이하 '본원')는 개인정보 보호법 및 의료광고 가이드라인에 따라 수집된 개인정보를 적절히 관리합니다.
                 </p>
-                <p className="font-medium text-text-main mb-1">【利用目的】</p>
+                <p className="font-medium text-text-main mb-1">【이용 목적】</p>
                 <p className="mb-3">
-                  ご入力いただいた氏名・連絡先・お問い合わせ内容は、カウンセリングのご案内および当院からのご連絡のみに使用いたします。法令に定める場合を除き、第三者への提供は行いません。
+                  입력하신 성명·연락처·문의 내용은 상담 안내 및 본원으로부터의 연락에만 사용합니다. 법령에 정한 경우를 제외하고 제3자에게 제공하지 않습니다.
                 </p>
-                <p className="font-medium text-text-main mb-1">【保管・管理】</p>
+                <p className="font-medium text-text-main mb-1">【보관·관리】</p>
                 <p className="mb-3">
-                  個人情報は適切なセキュリティ対策を講じたうえで管理し、利用目的の達成後は速やかに削除いたします。
+                  개인정보는 적절한 보안 대책을 강구하여 관리하며, 이용 목적 달성 후 지체 없이 삭제합니다.
                 </p>
-                <p className="font-medium text-text-main mb-1">【開示・訂正・削除のご請求】</p>
+                <p className="font-medium text-text-main mb-1">【열람·정정·삭제 요청】</p>
                 <p>
-                  個人情報の開示・訂正・削除等をご希望の場合は、当院窓口（jp@sm-ps.co.kr）までご連絡ください。
+                  개인정보 열람·정정·삭제 등을 원하시는 경우 본원 창구(jp@sm-ps.co.kr)로 연락해 주세요.
                 </p>
               </div>
               <label className="flex items-start gap-3 cursor-pointer">
@@ -234,7 +235,7 @@ export default function Consultation() {
                   className="w-4 h-4 mt-0.5 rounded border-border-default accent-brand shrink-0"
                 />
                 <span className="text-[0.85rem] text-text-sub leading-[1.6]">
-                  個人情報の取り扱いに同意します <span className="text-red-500">*</span>
+                  개인정보 처리에 동의합니다 <span className="text-red-500">*</span>
                 </span>
               </label>
             </div>
@@ -245,7 +246,7 @@ export default function Consultation() {
               className="w-full py-4 rounded-full text-white font-semibold text-[1rem] transition-all hover:opacity-90 hover:-translate-y-0.5"
               style={{ background: "#1b499c" }}
             >
-              お問い合わせ
+              문의하기
             </button>
 
           </form>

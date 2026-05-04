@@ -13,19 +13,19 @@ export default function LatestBlog() {
         <div className="text-center mb-12">
           <p className="text-sm font-medium text-brand tracking-widest uppercase mb-3">Blog</p>
           <h2 className="text-2xl md:text-3xl font-bold text-text-main mb-4">
-            クリニックブログ
+            클리닉 블로그
           </h2>
           <p className="text-text-sub max-w-md mx-auto text-sm">
-            豊胸・目元・肌治療に関する最新情報をお届けします
+            가슴성형·눈성형·피부 치료에 관한 최신 정보를 전달합니다.
           </p>
           <p className="text-text-sub max-w-md mx-auto text-sm mt-1">
-            このブログは、李武榮（イ・ムヨン）院長が直接執筆しています。
+            이 블로그는 이무영 원장이 직접 집필합니다.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {posts.map((post) => (
-            <BlogCard key={post.id} post={post} />
+            <BlogCard key={post.id} post={post} lang="ko" />
           ))}
         </div>
 
@@ -34,7 +34,7 @@ export default function LatestBlog() {
             href="/blog"
             className="inline-flex items-center gap-2 border border-brand text-brand hover:bg-brand hover:text-white font-medium px-6 py-3 rounded-full transition-colors"
           >
-            ブログ記事をもっと見る →
+            블로그 더 보기 →
           </Link>
         </div>
       </div>

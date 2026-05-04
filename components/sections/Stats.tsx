@@ -1,15 +1,15 @@
 const NUMBERS = [
   {
-    label: "累計手術件数",
-    value: "[TBD_SURGERY_COUNT]",
-    unit: "例",
-    note: "2026年5月現在",
+    label: "누적 수술 건수",
+    value: "확인 중",
+    unit: "건",
+    note: "2026년 5월 현재",
   },
   {
-    label: "開業から",
+    label: "개원",
     value: "12",
-    unit: "年",
-    note: "2013年6月開業",
+    unit: "년",
+    note: "2013년 6월 개원",
   },
 ];
 
@@ -30,9 +30,9 @@ export default function Stats() {
           The Proven Numbers
         </span>
         <p className="text-[0.95rem] lg:text-[1rem] text-text-sub leading-[1.85] mb-16 keep-all">
-          この数字は単純な経験の量ではなく
+          이 숫자는 단순한 경험의 양이 아닌
           <br />
-          <strong className="text-text-main font-semibold">判断が蓄積された結果です。</strong>
+          <strong className="text-text-main font-semibold">판단이 축적된 결과입니다.</strong>
         </p>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-[680px] mx-auto">

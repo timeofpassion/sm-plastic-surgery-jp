@@ -15,19 +15,21 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 interface BlogCardProps {
   post: BlogPost
-  lang?: 'ja' | 'en'
+  lang?: 'ja' | 'en' | 'ko'
 }
 
 export default function BlogCard({ post, lang = 'ja' }: BlogCardProps) {
-  const locale = lang === 'en' ? 'en-US' : 'ja-JP'
+  const locale = lang === 'en' ? 'en-US' : lang === 'ko' ? 'ko-KR' : 'ja-JP'
   const date = new Date(post.publishedAt).toLocaleDateString(locale, {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   })
-  const readMore = lang === 'en' ? 'Read more →' : '続きを読む →'
+  const readMore = lang === 'en' ? 'Read more →' : lang === 'ko' ? '더 보기 →' : '続きを読む →'
   const readTime = lang === 'en'
     ? `${post.readingTime} min read`
+    : lang === 'ko'
+    ? `${post.readingTime}분 소요`
     : `${post.readingTime}分で読める`
 
   return (
@@ -44,8 +46,8 @@ export default function BlogCard({ post, lang = 'ja' }: BlogCardProps) {
             className="object-cover group-hover:scale-105 transition-transform duration-500"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-4xl text-text-sub/30">
-            ✦
+          <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-[#c8ddf0] via-[#a8c4e0] to-[#6898c8]">
+            <span className="text-white/50 text-[0.65rem] font-medium tracking-[0.2em] uppercase">{post.category}</span>
           </div>
         )}
       </div>

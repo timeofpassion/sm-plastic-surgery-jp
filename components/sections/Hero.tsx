@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const TRUST = [
-  { label: "カンナム・オンニ 評価", value: "9.7 / 10" },
-  { label: "患者レビュー", value: "872件+" },
-  { label: "開業", value: "2013年" },
-  { label: "執刀専門医", value: "ソウル大出身" },
+  { label: "강남언니 평가", value: "9.7 / 10" },
+  { label: "환자 리뷰", value: "872건+" },
+  { label: "개원", value: "2013년" },
+  { label: "집도 전문의", value: "서울대 출신" },
 ];
 
 export default function Hero() {
@@ -44,24 +44,24 @@ export default function Hero() {
 
           {/* 영어 라벨 */}
           <span className="label-en block mb-6">
-            12年、同じ場所で。
+            12년, 같은 자리에서.
           </span>
 
           {/* 메인 헤딩 */}
           <h1 className="text-[2.4rem] sm:text-[3rem] lg:text-[3.8rem] font-bold text-text-main leading-[1.15] tracking-tight keep-all mb-8 opacity-0 animate-fade-up">
-            胸成形を
+            가슴성형을
             <br />
-            医学として
+            의학으로
             <br />
-            設計します
+            설계합니다
           </h1>
 
           {/* 보조 카피 */}
           <div className="text-[0.95rem] lg:text-[1rem] text-text-sub leading-[2] mb-10 opacity-0 animate-fade-up [animation-delay:0.15s]">
-            <p>韓国・江南で12年。</p>
-            <p>ソウル大医学部出身の李戊永院長が直接執刀。</p>
-            <p>流行ではなく、医学として</p>
-            <p>胸成形を設計します。</p>
+            <p>한국 강남 12년.</p>
+            <p>서울대 의대 출신 이무영 원장이 직접 집도합니다.</p>
+            <p>유행이 아닌, 의학으로</p>
+            <p>가슴성형을 설계합니다.</p>
           </div>
 
           {/* CTA */}
@@ -73,7 +73,7 @@ export default function Hero() {
               data-track-location="hero"
               className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-brand text-white text-[0.88rem] font-semibold rounded-full transition-all hover:bg-brand-hover hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/20"
             >
-              ご相談・お問い合わせ
+              상담·문의하기
             </a>
             <a
               href="https://line.me/R/ti/p/@952nqpbr"
@@ -85,7 +85,7 @@ export default function Hero() {
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 shrink-0">
                 <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738C5.384.566 0 4.935 0 10.304c0 4.811 4.27 8.843 10.035 9.608.39.084.922.258 1.057.592.122.302.079.775.038 1.085l-.164 1.026c-.045.303-.24 1.186 1.049.647 1.291-.54 6.957-4.098 9.489-7.016 1.749-1.918 2.496-3.862 2.496-5.942z" />
               </svg>
-              LINE 無料相談
+              LINE 무료 상담
             </a>
           </div>
 
