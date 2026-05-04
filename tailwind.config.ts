@@ -9,25 +9,32 @@ const config: Config = {
     extend: {
       colors: {
         "bg-base": "#ffffff",
-        "bg-sub": "#F3F7FD",
-        "bg-sub-alt": "#EEF4FC",
-        "text-main": "#111111",
+        "bg-sub": "#f3f7f9",        // SKINMEDI section tint (실측)
+        "bg-sub-alt": "#edf1f5",
+        "text-main": "#162030",     // SKINMEDI dark navy (실측)
         "text-sub": "#555555",
         brand: {
-          DEFAULT: "#5B9BD5",
-          hover: "#4A87C0",
+          DEFAULT: "#1b499c",       // SKINMEDI primary blue (실측)
+          hover: "#163978",         // SKINMEDI hover blue (실측)
+          dark: "#162030",          // SKINMEDI dark anchor
+          logo: "#313f76",          // SKINMEDI logo navy
         },
         "border-default": "#e5e7eb",
-        "accent-gold": "#7EC8E3",
+        "accent-gold": "#7EC8E3",   // 기존 컴포넌트 호환 유지
       },
       fontFamily: {
         sans: [
+          '"Noto Sans JP"',
           "Pretendard Variable",
           "Pretendard",
           "-apple-system",
           "BlinkMacSystemFont",
           "system-ui",
-          "Roboto",
+          "sans-serif",
+        ],
+        label: [
+          '"Montserrat"',
+          '"Raleway"',
           "sans-serif",
         ],
         serif: [
