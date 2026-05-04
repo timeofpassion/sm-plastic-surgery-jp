@@ -13,10 +13,9 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] flex items-center overflow-hidden"
     >
-      {/* TODO: 향후 가슴성형 전문 + SKINMEDI 톤에 맞는 이미지로 교체 예정 (사용자 작업) */}
       <div className="absolute inset-0 lg:left-[38%]">
         <Image
-          src="/herosection.png"
+          src="/space.png"
           alt=""
           fill
           priority

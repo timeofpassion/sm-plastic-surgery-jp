@@ -7,18 +7,11 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 
 const BA_PAIRS = [
-  {
-    id: 1,
-    label: "가슴 확대 / 증례1",
-    before: "/ba_가슴_01_before.png",
-    after: "/ba_가슴_01_after.png",
-  },
-  {
-    id: 2,
-    label: "하이브리드 가슴성형 / 증례1",
-    before: "/ba_가슴_02_before.png",
-    after: "/ba_가슴_02_after.png",
-  },
+  { id: 1, label: "가슴 확대 / 증례1", before: "/ba_가슴_01_before.png", after: "/ba_가슴_01_after.png" },
+  { id: 2, label: "하이브리드 가슴성형 / 증례1", before: "/ba_가슴_02_before.png", after: "/ba_가슴_02_after.png" },
+  { id: 3, label: "가슴 확대 / 증례2", before: "/ba_가슴_01_before.png", after: "/ba_가슴_01_after.png" },
+  { id: 4, label: "하이브리드 가슴성형 / 증례2", before: "/ba_가슴_02_before.png", after: "/ba_가슴_02_after.png" },
+  { id: 5, label: "가슴 확대 / 증례3", before: "/ba_가슴_01_before.png", after: "/ba_가슴_01_after.png" },
 ];
 
 export default function Gallery() {
@@ -26,24 +19,18 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="bg-white pt-0">
-      {/* Swiper 슬라이드 스케일 효과 */}
       <style>{`
         .ba-swiper .swiper-slide {
-          width: 92%;
           transition: transform 0.4s ease, opacity 0.4s ease;
-          transform: scale(0.94);
-          opacity: 0.8;
-        }
-        @media (min-width: 768px) {
-          .ba-swiper .swiper-slide {
-            width: 62%;
-            transform: scale(0.82);
-            opacity: 0.7;
-          }
+          transform: scale(0.82);
+          opacity: 0.65;
         }
         .ba-swiper .swiper-slide-active {
           transform: scale(1) !important;
           opacity: 1 !important;
+        }
+        .ba-swiper .swiper-wrapper {
+          align-items: center;
         }
       `}</style>
 
@@ -71,20 +58,25 @@ export default function Gallery() {
           </div>
 
           {/* Swiper 슬라이더 */}
-          <div className="mb-10" style={{ paddingTop: "12px", paddingBottom: "12px" }}>
+          <div className="mb-10" style={{ padding: "20px 0" }}>
             <Swiper
               className="ba-swiper"
               modules={[Autoplay]}
               centeredSlides={true}
-              slidesPerView="auto"
-              spaceBetween={20}
+              slidesPerView={1}
+              spaceBetween={12}
               loop={true}
               autoplay={{ delay: 1500, disableOnInteraction: false, pauseOnMouseEnter: true }}
+              breakpoints={{
+                768: { slidesPerView: 3, spaceBetween: 20 },
+              }}
               onSwiper={(swiper) => { swiperRef.current = swiper; }}
             >
               {BA_PAIRS.map((pair) => (
                 <SwiperSlide key={pair.id}>
-                  <div className="border-4 border-white/80 rounded-2xl overflow-hidden">
+                  <div
+                    className="rounded-2xl overflow-hidden border-4 border-white/80"
+                  >
                     <div className="relative grid grid-cols-2">
                       {/* Before */}
                       <div className="relative" style={{ aspectRatio: "4/5" }}>
@@ -93,30 +85,32 @@ export default function Gallery() {
                           alt={`${pair.label} Before`}
                           className="absolute inset-0 w-full h-full object-cover object-top"
                         />
-                        <span className="absolute bottom-3 left-3 text-white text-[0.72rem] font-bold bg-black/50 px-2 py-0.5 rounded-sm z-[1]">
+                        <span className="absolute bottom-2 left-2 text-white text-[0.65rem] font-bold bg-black/55 px-1.5 py-0.5 rounded-sm z-[1]">
                           Before
                         </span>
                       </div>
+
                       {/* After */}
-                      <div className="relative" style={{ aspectRatio: "4/5" }}>
+                      <div className="relative border-l-4 border-white" style={{ aspectRatio: "4/5" }}>
                         <img
                           src={pair.after}
                           alt={`${pair.label} After`}
                           className="absolute inset-0 w-full h-full object-cover object-top"
                         />
-                        <span className="absolute bottom-3 left-3 text-white text-[0.72rem] font-bold bg-black/50 px-2 py-0.5 rounded-sm z-[1]">
+                        <span className="absolute bottom-2 left-2 text-white text-[0.65rem] font-bold bg-black/55 px-1.5 py-0.5 rounded-sm z-[1]">
                           After
                         </span>
                       </div>
+
                       {/* 가운데 화살표 */}
-                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-brand border-2 border-white flex items-center justify-center shadow-lg pointer-events-none z-[2]">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-brand border-2 border-white flex items-center justify-center shadow-lg pointer-events-none z-[2]">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
                           <polyline points="9 6 15 12 9 18" />
                         </svg>
                       </div>
                     </div>
                   </div>
-                  <p className="text-center text-white/60 text-[0.8rem] mt-4">{pair.label}</p>
+                  <p className="text-center text-white/60 text-[0.78rem] mt-3">{pair.label}</p>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -125,19 +119,19 @@ export default function Gallery() {
             <div className="flex justify-center gap-4 mt-8">
               <button
                 onClick={() => swiperRef.current?.slidePrev()}
-                className="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:border-white hover:bg-white/10 transition-all"
+                className="w-11 h-11 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:border-white hover:bg-white/10 transition-all"
                 aria-label="이전"
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="15 18 9 12 15 6" />
                 </svg>
               </button>
               <button
                 onClick={() => swiperRef.current?.slideNext()}
-                className="w-12 h-12 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:border-white hover:bg-white/10 transition-all"
+                className="w-11 h-11 rounded-full border-2 border-white/40 flex items-center justify-center text-white hover:border-white hover:bg-white/10 transition-all"
                 aria-label="다음"
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polyline points="9 6 15 12 9 18" />
                 </svg>
               </button>

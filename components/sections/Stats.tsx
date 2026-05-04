@@ -19,9 +19,9 @@ export default function Stats() {
       note: "2002년 의사면허 취득",
     },
     {
-      label: "누적 수술 건수",
-      value: "확인 중",
-      unit: "",
+      label: "수술 전후 사진 개수",
+      value: "1,234",
+      unit: "개",
       note: "2026년 5월 현재",
     },
     {
