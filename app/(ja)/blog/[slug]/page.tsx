@@ -29,11 +29,6 @@ export async function generateMetadata({
     keywords: post.seoKeywords,
     alternates: {
       canonical: url,
-      languages: {
-        ja: url,
-        en: `${SITE_URL}/en/blog/${post.slug}`,
-        'x-default': url,
-      },
     },
     openGraph: {
       title: post.title,

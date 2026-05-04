@@ -11,11 +11,6 @@ export const metadata: Metadata = {
     '韓国江南SM美容外科の公式ブログ。豊胸手術・目元整形・肌治療に関する最新情報、患者様の声、手術解説記事をお届けします。',
   alternates: {
     canonical: `${SITE_URL}/blog`,
-    languages: {
-      ja: `${SITE_URL}/blog`,
-      en: `${SITE_URL}/en/blog`,
-      'x-default': `${SITE_URL}/blog`,
-    },
   },
   openGraph: {
     title: 'ブログ',

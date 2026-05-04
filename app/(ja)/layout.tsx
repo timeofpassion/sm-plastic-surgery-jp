@@ -101,11 +101,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE_URL,
-    languages: {
-      ja: SITE_URL,
-      en: `${SITE_URL}/en/`,
-      "x-default": SITE_URL,
-    },
   },
   category: "healthcare",
   verification: {

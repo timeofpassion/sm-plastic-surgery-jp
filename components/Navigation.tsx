@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { usePathname, useRouter } from "next/navigation";
 import NavHeader from "@/components/ui/nav-header";
 
 const NAV_LINKS = [
@@ -19,9 +18,6 @@ const NAV_LINKS = [
 ];
 
 export default function Navigation() {
-  const pathname = usePathname();
-  const router = useRouter();
-  const currentLang = pathname?.startsWith('/en') ? 'en' : 'ja';
   const [activeSection, setActiveSection] = useState("#top");
   const tabBarRef = useRef<HTMLDivElement>(null);
   const linkRefs = useRef<Map<string, HTMLAnchorElement>>(new Map());
@@ -95,38 +91,6 @@ export default function Navigation() {
             </svg>
             LINE 相談
           </a>
-          <button
-            onClick={() => router.push('/')}
-            aria-label="日本語"
-            title="日本語"
-            className={`w-8 h-8 rounded-full overflow-hidden border transition-all flex items-center justify-center ${
-              currentLang === "ja"
-                ? "border-brand ring-2 ring-brand/30 scale-110"
-                : "border-border-default opacity-50 hover:opacity-100"
-            }`}
-          >
-            <img
-              src="https://flagcdn.com/w80/jp.png"
-              alt="JP"
-              className="w-full h-full object-cover"
-            />
-          </button>
-          <button
-            onClick={() => router.push('/en/')}
-            aria-label="English"
-            title="English"
-            className={`w-8 h-8 rounded-full overflow-hidden border transition-all flex items-center justify-center ${
-              currentLang === "en"
-                ? "border-brand ring-2 ring-brand/30 scale-110"
-                : "border-border-default opacity-50 hover:opacity-100"
-            }`}
-          >
-            <img
-              src="https://flagcdn.com/w80/us.png"
-              alt="EN"
-              className="w-full h-full object-cover"
-            />
-          </button>
         </div>
       </div>
 
