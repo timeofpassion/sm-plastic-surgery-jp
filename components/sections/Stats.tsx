@@ -1,67 +1,65 @@
-const STATS = [
+const NUMBERS = [
   {
-    label: "의료진 활동 연혁 년수",
-    value: "24",
-    unit: "years",
-    note: "2002년 의사면허 취득",
+    label: "累計手術件数",
+    value: "[TBD]",
+    unit: "例",
+    note: "2026年5月現在",
   },
   {
-    label: "수술 전후 사진 개수",
-    value: "1,234",
-    unit: "개",
-    note: "2026년 4월 기준",
-  },
-  {
-    label: "강남역 같은 자리에서",
-    value: "4,695",
-    unit: "days",
-    note: "2013년 6월 10일 개원",
+    label: "開業から",
+    value: "12",
+    unit: "年",
+    note: "2013年6月開業",
   },
 ];
 
 export default function Stats() {
   return (
-    <section
-      className="relative py-14 lg:py-20 flex justify-center text-white"
-      style={{
-        background: "linear-gradient(135deg, #3D6E9E 0%, #6BAED6 60%, #2B5891 100%)",
-      }}
-    >
-      <div className="absolute inset-0 bg-[rgba(10,12,15,0.25)] z-[1]" />
+    <section className="relative py-20 lg:py-32 flex justify-center overflow-hidden bg-[#f3f7f9]">
+      {/* 배경 추상 텍스처 워터마크 */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "radial-gradient(ellipse at 20% 50%, #1b499c0a 0%, transparent 55%), radial-gradient(ellipse at 80% 50%, #313f760a 0%, transparent 55%)",
+        }}
+      />
 
-      <div className="relative z-[2] w-full max-w-content px-6 text-center">
-        <p className="text-[1rem] font-light tracking-[0.2em] mb-3 opacity-90">
-          에스엠성형외과의
+      <div className="relative z-[1] w-full max-w-content px-6 text-center">
+        <span className="label-en block mb-5">
+          The Proven Numbers
+        </span>
+        <p className="text-[0.95rem] lg:text-[1rem] text-text-sub leading-[1.85] mb-16 keep-all">
+          この数字は単純な経験の量ではなく
+          <br />
+          <strong className="text-text-main font-semibold">判断が蓄積された結果です。</strong>
         </p>
-        <h2 className="font-serif-display text-[2.2rem] sm:text-[2.6rem] lg:text-[3.2rem] mb-16 lg:mb-20">
-          신뢰를 쌓은 시간
-        </h2>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {STATS.map((stat, i) => (
+        <div className="grid md:grid-cols-2 gap-6 max-w-[680px] mx-auto">
+          {NUMBERS.map((item) => (
             <div
-              key={stat.label}
-              className="bg-white py-10 lg:py-12 px-6 rounded-2xl shadow-md text-text-main flex flex-col items-center opacity-0"
+              key={item.label}
+              className="rounded-2xl p-10 lg:p-12"
               style={{
-                animation: `fadeUp 1.2s cubic-bezier(0.25, 1, 0.5, 1) ${
-                  0.4 + i * 0.1
-                }s forwards`,
+                background: "rgba(255,255,255,0.75)",
+                backdropFilter: "blur(4px)",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
               }}
             >
-              <span className="bg-white/20 text-white text-[0.75rem] py-1 px-4 rounded-full mb-6 tracking-wider">
-                {stat.label}
-              </span>
-              <div className="flex items-baseline gap-1 mb-4">
-                <span className="font-serif-display text-[3rem] lg:text-[3.8rem] font-bold text-brand leading-none">
-                  {stat.value}
+              <p className="text-[0.85rem] text-brand font-medium mb-6 tracking-wide">
+                {item.label}
+              </p>
+              <div className="flex items-baseline justify-center gap-2 mb-3">
+                <span className="text-[3.5rem] lg:text-[4.5rem] font-bold text-brand leading-none">
+                  {item.value}
                 </span>
-                <span className="text-[1.1rem] text-text-sub font-normal">
-                  {stat.unit}
+                <span className="text-[1.2rem] text-text-sub font-normal">
+                  {item.unit}
                 </span>
               </div>
-              <span className="text-[0.85rem] text-gray-500 font-light">
-                {stat.note}
-              </span>
+              <p className="text-[0.78rem] text-text-sub/60">
+                {item.note}
+              </p>
             </div>
           ))}
         </div>

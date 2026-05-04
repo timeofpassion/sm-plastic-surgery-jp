@@ -41,13 +41,29 @@
 }
 
 @layer utilities {
-  /* 섹션 레이블 — SKINMEDI 패턴: 영문 ALL CAPS wide-tracked */
+  /* 섹션 레이블 — SKINMEDI 패턴: 영문 ALL CAPS wide-tracked + 밑줄 */
   .label-en {
     font-family: "Montserrat", "Raleway", sans-serif;
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    color: #1b499c;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+  }
+
+  /* 알약형 배지 버튼 — 4번 커밋부터 사용 */
+  .label-pill {
+    display: inline-block;
+    background-color: #1b499c;
+    color: #ffffff;
+    border-radius: 9999px;
+    padding: 4px 16px;
+    font-family: "Montserrat", "Raleway", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
   }
 
   .font-serif-display {

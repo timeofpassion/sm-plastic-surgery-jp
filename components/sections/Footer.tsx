@@ -10,7 +10,7 @@ export default function Footer() {
               Access
             </h5>
             <p className="text-[0.9rem] text-white/70 leading-[1.8]">
-              ソウル市瑞草区江南大路435 主柳城ビル9F
+              [TBD_ADDRESS]
               <br />
               <span className="text-white/45 text-[0.82rem]">（江南駅3番出口 徒歩3分）</span>
             </p>
