@@ -4,15 +4,24 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
 
 const BA_PAIRS = [
-  { id: 1, label: "豊胸拡大 / 症例1" },
-  { id: 2, label: "ハイブリッド豊胸 / 症例1" },
-  { id: 3, label: "豊胸再手術 / 症例1" },
+  {
+    id: 1,
+    label: "豊胸拡大 / 症例1",
+    before: "/ba_가슴_01_before.png",
+    after: "/ba_가슴_01_after.png",
+  },
+  {
+    id: 2,
+    label: "ハイブリッド豊胸 / 症例1",
+    before: "/ba_가슴_02_before.png",
+    after: "/ba_가슴_02_after.png",
+  },
 ];
 
 export default function Gallery() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "center",
-    loop: false,
+    loop: true,
     containScroll: "keepSnaps",
   });
 
@@ -21,7 +30,6 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="bg-white pt-0">
-      {/* 상단 곡선 cutout — 흰 배경에서 블루로 자연스럽게 */}
       <div
         className="bg-brand overflow-hidden"
         style={{ borderRadius: "80px 80px 0 0" }}
@@ -54,31 +62,32 @@ export default function Gallery() {
                     key={pair.id}
                     className="flex-[0_0_80%] md:flex-[0_0_60%] shrink-0"
                   >
-                    {/* Before/After 카드 */}
                     <div className="border-4 border-white/80 rounded-2xl overflow-hidden">
                       <div className="relative grid grid-cols-2">
-                        {/* Before placeholder */}
-                        <div
-                          className="flex items-center justify-center bg-gray-200 relative"
-                          style={{ aspectRatio: "4/5" }}
-                        >
-                          <span className="text-gray-400 text-[0.72rem] font-medium">[TBD_BA_PHOTOS]</span>
-                          <span className="absolute bottom-3 left-3 text-white text-[0.72rem] font-bold bg-black/50 px-2 py-0.5 rounded-sm">
+                        {/* Before */}
+                        <div className="relative" style={{ aspectRatio: "4/5" }}>
+                          <img
+                            src={pair.before}
+                            alt={`${pair.label} Before`}
+                            className="absolute inset-0 w-full h-full object-cover object-top"
+                          />
+                          <span className="absolute bottom-3 left-3 text-white text-[0.72rem] font-bold bg-black/50 px-2 py-0.5 rounded-sm z-[1]">
                             Before
                           </span>
                         </div>
-                        {/* After placeholder */}
-                        <div
-                          className="flex items-center justify-center bg-gray-300 relative"
-                          style={{ aspectRatio: "4/5" }}
-                        >
-                          <span className="text-gray-500 text-[0.72rem] font-medium">[TBD_BA_PHOTOS]</span>
-                          <span className="absolute bottom-3 left-3 text-white text-[0.72rem] font-bold bg-black/50 px-2 py-0.5 rounded-sm">
+                        {/* After */}
+                        <div className="relative" style={{ aspectRatio: "4/5" }}>
+                          <img
+                            src={pair.after}
+                            alt={`${pair.label} After`}
+                            className="absolute inset-0 w-full h-full object-cover object-top"
+                          />
+                          <span className="absolute bottom-3 left-3 text-white text-[0.72rem] font-bold bg-black/50 px-2 py-0.5 rounded-sm z-[1]">
                             After
                           </span>
                         </div>
                         {/* 가운데 화살표 */}
-                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-brand border-2 border-white flex items-center justify-center shadow-lg pointer-events-none z-[1]">
+                        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-brand border-2 border-white flex items-center justify-center shadow-lg pointer-events-none z-[2]">
                           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
                             <polyline points="9 6 15 12 9 18" />
                           </svg>
@@ -119,9 +128,12 @@ export default function Gallery() {
           {/* 하단 본문 */}
           <div className="w-full max-w-content mx-auto px-6 text-center">
             <p className="text-white/70 text-[0.9rem] lg:text-[0.95rem] leading-[2] keep-all">
-              すべての結果は<br />
-              実際の手術過程と回復をもとにし、<br />
-              患者の体型による差を十分に説明します。<br />
+              すべての結果は
+              <br />
+              実際の手術過程と回復をもとにし、
+              <br />
+              患者の体型による差を十分に説明します。
+              <br />
               結果は写真より診断と過程が重要だと考えています。
             </p>
           </div>

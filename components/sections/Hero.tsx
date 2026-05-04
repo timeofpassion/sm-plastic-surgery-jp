@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const TRUST = [
   { label: "カンナム・オンニ 評価", value: "9.7 / 10" },
   { label: "患者レビュー", value: "872件+" },
@@ -11,9 +13,16 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] flex items-center overflow-hidden"
     >
-      {/* 우측 이미지 영역 placeholder — 추후 실제 영상/이미지로 교체 */}
+      {/* TODO: 향후 가슴성형 전문 + SKINMEDI 톤에 맞는 이미지로 교체 예정 (사용자 작업) */}
       <div className="absolute inset-0 lg:left-[38%]">
-        <div className="w-full h-full bg-gradient-to-br from-[#c8ddf0] via-[#a8c4e0] to-[#7aa8d0]" />
+        <Image
+          src="/herosection.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="(max-width: 1024px) 100vw, 62vw"
+        />
         <div
           className="absolute inset-0 opacity-30"
           style={{

@@ -23,8 +23,9 @@ export default function Footer() {
             <h5 className="text-[0.72rem] text-[#7EC8E3] uppercase mb-3 font-semibold tracking-[0.2em]">
               Access
             </h5>
+            {/* [JA-REVIEW][서울시 서초구 강남대로 435 주류성빌딩 9층]ソウル特別市瑞草区江南大路435 주류성ビル9F（빌딩명 한자 표기 未確定）[/JA-REVIEW] */}
             <p className="text-[0.9rem] text-white/70 leading-[1.8]">
-              [TBD_ADDRESS]
+              ソウル特別市瑞草区江南大路435 주류성ビル9F
               <br />
               <span className="text-white/45 text-[0.82rem]">（江南駅3番出口 徒歩3分）</span>
             </p>
@@ -74,8 +75,9 @@ export default function Footer() {
               LINE: @952nqpbr
             </a>
           </p>
+          {/* [JA-REVIEW][서울시 서초구 강남대로 435 주류성빌딩 9층]ソウル特別市瑞草区江南大路435 주류성ビル9F[/JA-REVIEW] */}
           <p>
-            代表者: イ・ムヨン　｜　事業者登録番号: [TBD_BUSINESS_REG]　｜　住所: [TBD_ADDRESS]
+            代表者: イ・ムヨン　｜　事業者登録番号: [TBD_BUSINESS_REG]　｜　住所: ソウル特別市瑞草区江南大路435 주류성ビル9F
           </p>
         </div>
 

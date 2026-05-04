@@ -1,7 +1,7 @@
 const NUMBERS = [
   {
     label: "累計手術件数",
-    value: "[TBD]",
+    value: "[TBD_SURGERY_COUNT]",
     unit: "例",
     note: "2026年5月現在",
   },
