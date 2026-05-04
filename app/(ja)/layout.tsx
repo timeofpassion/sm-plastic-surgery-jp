@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import LineFloat from "@/components/LineFloat";
 import "../globals.css";
 
 const GA_ID = "G-RLYZKLQSTR";
@@ -200,7 +201,10 @@ const structuredData = {
 export default function JaRootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        {children}
+        <LineFloat />
+      </body>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
