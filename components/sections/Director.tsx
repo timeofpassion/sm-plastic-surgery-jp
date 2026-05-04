@@ -42,11 +42,11 @@ export default function Director() {
             className="relative overflow-hidden cursor-pointer group focus:outline-none"
             style={{ width: "320px", aspectRatio: "4/5", borderRadius: "1rem" }}
             onClick={() => setModalOpen(true)}
-            aria-label="院長プロフィールを見る"
+            aria-label="원장 프로필 보기"
           >
             <img
               src="/doctor_white.png"
-              alt="代表院長 イ・ムヨン"
+              alt="대표원장 이무영"
               className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             />
             {/* 하단 오버레이 */}
@@ -98,7 +98,7 @@ export default function Director() {
             >
               <img
                 src="/doctor_white.png"
-                alt="代表院長 イ・ムヨン"
+                alt="대표원장 이무영"
                 className="w-full h-full object-cover object-top"
               />
             </div>

@@ -3,7 +3,7 @@ const LINE_URL = "https://line.me/R/ti/p/@952nqpbr";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-center" style={{ background: "#111111" }}>
+    <footer className="flex justify-center" style={{ background: "#162030" }}>
       <div className="w-full max-w-content px-6 pt-16 pb-10">
 
         {/* 로고 + 클리닉명 */}
