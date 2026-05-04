@@ -15,8 +15,10 @@ import FAQ from "@/components/sections/FAQ";
 import Consultation from "@/components/sections/Consultation";
 import Footer from "@/components/sections/Footer";
 // _hidden: import GangnamReviews from "@/components/sections/GangnamReviews";
+// _hidden: import Reviews from "@/components/sections/Reviews";
 // _hidden: import Media from "@/components/sections/Media";
 // _hidden: import Shorts from "@/components/sections/Shorts";
+// _hidden: import Safety from "@/components/sections/Safety";
 // _hidden: import Location from "@/components/sections/Location";
 
 export default function HomePage() {
@@ -53,12 +55,16 @@ export default function HomePage() {
 
       {/* 7. Contact */}
       <Consultation />
+
+      {/* Footer — Access (住所・地図) 統合済み */}
       <Footer />
 
       {/* _hidden: <GangnamReviews /> */}
+      {/* _hidden: <Reviews /> */}
       {/* _hidden: <Media /> */}
       {/* _hidden: <Shorts /> */}
-      {/* _hidden: <Location /> — 住所・地図は Footer に統合予定 */}
+      {/* _hidden: <Safety /> */}
+      {/* _hidden: <Location /> — 住所・地図は Footer に統合済み */}
     </main>
   );
 }
