@@ -7,8 +7,8 @@ import Principles from "@/components/sections/Principles";
 import Stats from "@/components/sections/Stats";
 import Director from "@/components/sections/Director";
 import Procedures from "@/components/sections/Procedures";
-import EyeSurgery from "@/components/sections/EyeSurgery";
-import SkinLifting from "@/components/sections/SkinLifting";
+// _hidden: import EyeSurgery from "@/components/sections/EyeSurgery";
+// _hidden: import SkinLifting from "@/components/sections/SkinLifting";
 import Gallery from "@/components/sections/Gallery";
 import LatestBlog from "@/components/sections/LatestBlog";
 import FAQ from "@/components/sections/FAQ";
@@ -41,8 +41,8 @@ export default function HomePage() {
 
       {/* 5. Services */}
       <Procedures />
-      <EyeSurgery />
-      <SkinLifting />
+      {/* _hidden: <EyeSurgery /> */}
+      {/* _hidden: <SkinLifting /> */}
 
       {/* 6. Before & After */}
       <Gallery />
