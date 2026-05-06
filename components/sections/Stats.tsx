@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 
 const OPEN_DATE = new Date("2013-06-10");
-const COUNT_DURATION = 1900; // ms — easeOutExpo
+const COUNT_DURATION = 1000; // ms — 빠른 다다다다 카운트, easeOutExpo로 부드럽게 멈춤
 
 // 자체 카운트업 hook — requestAnimationFrame 기반, 외부 의존성 없음
 function useCountUp(target: number, duration: number, start: boolean) {
@@ -143,7 +143,7 @@ export default function Stats() {
                 <span className="label-pill">{item.label}</span>
               </p>
               <div className="flex items-baseline justify-center gap-1.5 mb-3">
-                <span className="text-7xl lg:text-8xl font-extrabold text-brand leading-none tabular-nums">
+                <span className="text-4xl lg:text-5xl font-bold text-brand leading-none tabular-nums">
                   {item.value}
                 </span>
                 {item.unit && (

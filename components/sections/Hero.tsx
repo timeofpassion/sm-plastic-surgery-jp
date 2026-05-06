@@ -13,22 +13,38 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] flex items-center overflow-hidden bg-white"
     >
-      {/* 우측 인물 이미지 — doctor.png (인물 잘림 방지 위해 우측 80%로 이동) */}
-      <div className="absolute inset-0">
+      {/* 흰 배경 (좌측 텍스트 영역 기본) */}
+      <div className="absolute inset-0 bg-white" />
+
+      {/* 데스크탑: 우측 60% 회색 박스 + contain (사진 잘림 X, 상반신 전체 노출) */}
+      <div className="absolute inset-y-0 right-0 left-[40%] hidden lg:block bg-[#e5e5e5] overflow-hidden">
         <Image
           src="/doctor.png"
           alt=""
           fill
           priority
-          className="object-cover"
-          style={{ objectPosition: "80% center" }}
-          sizes="100vw"
+          sizes="60vw"
+          className="object-contain"
+          style={{ objectPosition: "center bottom" }}
         />
       </div>
 
-      {/* 데스크탑: 좌 40% 흰색 → 40~55% 페이드(15% 폭) → 55%부터 인물 풀 노출 */}
-      <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-white from-[0%] via-white via-[40%] to-transparent to-[55%]" />
-      {/* 모바일: 좌측 60%까지 흰 그라디언트 (텍스트 영역과 인물 영역 분리) */}
+      {/* 모바일: 풀스크린 cover, 얼굴 위쪽 노출 (object-position center 25%) */}
+      <div className="absolute inset-0 lg:hidden bg-[#e5e5e5]">
+        <Image
+          src="/doctor.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: "center 25%" }}
+        />
+      </div>
+
+      {/* 데스크탑 좌→우 부드러운 경계 (35~45% 페이드, 폭 10%) */}
+      <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-white from-[35%] via-white/95 via-[40%] to-transparent to-[45%]" />
+      {/* 모바일: 좌측 60%까지 흰 그라디언트 */}
       <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white/95 from-[0%] via-white/80 via-[60%] to-white/10" />
 
       {/* 텍스트 콘텐츠 */}
