@@ -64,11 +64,12 @@ export default function Gallery() {
               modules={[Autoplay]}
               centeredSlides={true}
               slidesPerView={1}
-              spaceBetween={12}
+              spaceBetween={16}
               loop={true}
               autoplay={{ delay: 1500, disableOnInteraction: false, pauseOnMouseEnter: true }}
               breakpoints={{
-                768: { slidesPerView: 3, spaceBetween: 20 },
+                768: { slidesPerView: 2.2, spaceBetween: 32 },
+                1280: { slidesPerView: 2.5, spaceBetween: 40 },
               }}
               onSwiper={(swiper) => { swiperRef.current = swiper; }}
             >

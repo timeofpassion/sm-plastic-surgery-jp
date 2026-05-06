@@ -34,17 +34,19 @@ export default function Stats() {
 
   return (
     <section className="relative py-20 lg:py-32 flex justify-center overflow-hidden bg-[#f3f7f9]">
-      {/* 배경: space 인테리어 이미지 — 매우 잔잔하게 */}
+      {/* 배경: space 인테리어 이미지 — blur 처리로 인테리어 디테일 흐림 */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: "url('/space.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          filter: "blur(10px)",
+          transform: "scale(1.1)",
         }}
       />
-      {/* 흰 오버레이 — 텍스트 가독성 보장 */}
-      <div className="absolute inset-0 pointer-events-none bg-white/88" />
+      {/* 흰 오버레이 — 가독성 (blur로 톤다운됐으니 75%까지 낮춤) */}
+      <div className="absolute inset-0 pointer-events-none bg-white/75" />
       {/* 배경 추상 텍스처 워터마크 (위에 얹힘) */}
       <div
         className="absolute inset-0 pointer-events-none"
