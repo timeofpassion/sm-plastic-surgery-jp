@@ -39,6 +39,9 @@ export default function HomePage() {
       {/* 4. Staff */}
       <Director />
 
+      {/* ブログ */}
+      <LatestBlog />
+
       {/* 5. Services */}
       <Procedures />
       {/* _hidden: <EyeSurgery /> */}
@@ -46,9 +49,6 @@ export default function HomePage() {
 
       {/* 6. Before & After */}
       <Gallery />
-
-      {/* ブログ */}
-      <LatestBlog />
 
       {/* FAQ */}
       <FAQ />

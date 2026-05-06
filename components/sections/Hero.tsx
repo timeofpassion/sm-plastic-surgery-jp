@@ -19,9 +19,11 @@ export default function Hero() {
           alt=""
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-center animate-kenburns"
           sizes="100vw"
         />
+        {/* SKINMEDI 잔잔 무드 — 약 18% 흰 워시로 정적 사진 톤다운 */}
+        <div className="absolute inset-0 bg-white/18" />
         <div
           className="absolute inset-0 opacity-30"
           style={{

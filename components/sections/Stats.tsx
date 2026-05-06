@@ -34,7 +34,18 @@ export default function Stats() {
 
   return (
     <section className="relative py-20 lg:py-32 flex justify-center overflow-hidden bg-[#f3f7f9]">
-      {/* 배경 추상 텍스처 워터마크 */}
+      {/* 배경: space 인테리어 이미지 — 매우 잔잔하게 */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/space.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+      {/* 흰 오버레이 — 텍스트 가독성 보장 */}
+      <div className="absolute inset-0 pointer-events-none bg-white/88" />
+      {/* 배경 추상 텍스처 워터마크 (위에 얹힘) */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
