@@ -13,39 +13,55 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] flex items-center overflow-hidden bg-white"
     >
-      {/* 흰 배경 (좌측 텍스트 영역 기본) */}
-      <div className="absolute inset-0 bg-white" />
+      {/* 데스크탑: 좌측 40% 흰 배경 */}
+      <div className="absolute inset-y-0 left-0 right-[60%] hidden lg:block bg-white" />
 
-      {/* 데스크탑: 우측 60% 회색 박스 + contain (사진 잘림 X, 상반신 전체 노출) */}
-      <div className="absolute inset-y-0 right-0 left-[40%] hidden lg:block bg-[#e5e5e5] overflow-hidden">
+      {/* 데스크탑: 우측 60% 회색 그라디언트 + 누끼 인물 (drop-shadow로 입체감) */}
+      <div
+        className="absolute inset-y-0 right-0 left-[40%] hidden lg:block overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(to right, #ffffff 0%, #f5f6f8 8%, #e0e3e8 35%, #c5cad2 100%)",
+        }}
+      >
         <Image
-          src="/doctor.png"
+          src="/doctor-removebg-preview.png"
           alt=""
           fill
           priority
           sizes="60vw"
           className="object-contain"
-          style={{ objectPosition: "center bottom" }}
+          style={{
+            objectPosition: "center bottom",
+            filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.12))",
+          }}
         />
       </div>
 
-      {/* 모바일: 풀스크린 cover, 얼굴 위쪽 노출 (object-position center 25%) */}
-      <div className="absolute inset-0 lg:hidden bg-[#e5e5e5]">
+      {/* 모바일: 풀스크린 회색 그라디언트 + 누끼 인물 (우측 75% bottom) */}
+      <div
+        className="absolute inset-0 lg:hidden overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(135deg, #f5f6f8 0%, #e0e3e8 45%, #c5cad2 100%)",
+        }}
+      >
         <Image
-          src="/doctor.png"
+          src="/doctor-removebg-preview.png"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: "center 25%" }}
+          className="object-contain"
+          style={{
+            objectPosition: "75% bottom",
+            filter: "drop-shadow(0 6px 18px rgba(0,0,0,0.12))",
+          }}
         />
       </div>
 
-      {/* 데스크탑 좌→우 부드러운 경계 (35~45% 페이드, 폭 10%) */}
-      <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-white from-[35%] via-white/95 via-[40%] to-transparent to-[45%]" />
-      {/* 모바일: 좌측 60%까지 흰 그라디언트 */}
-      <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white/95 from-[0%] via-white/80 via-[60%] to-white/10" />
+      {/* 모바일: 좌측 흰 그라디언트 오버레이 (텍스트 가독성) */}
+      <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white from-[0%] via-white via-[45%] to-transparent to-[70%]" />
 
       {/* 텍스트 콘텐츠 */}
       <div className="relative z-[2] w-full max-w-content mx-auto px-6 py-24 lg:py-32">
