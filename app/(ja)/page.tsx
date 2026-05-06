@@ -13,14 +13,14 @@ import Procedures from "@/components/sections/Procedures";
 import Gallery from "@/components/sections/Gallery";
 import LatestBlog from "@/components/sections/LatestBlog";
 import FAQ from "@/components/sections/FAQ";
-import Consultation from "@/components/sections/Consultation";
+// _hidden: import Consultation from "@/components/sections/Consultation"; — LINE 채널로 일원화
+import Location from "@/components/sections/Location";
 import Footer from "@/components/sections/Footer";
 // _hidden: import GangnamReviews from "@/components/sections/GangnamReviews";
 // _hidden: import Reviews from "@/components/sections/Reviews";
 // _hidden: import Media from "@/components/sections/Media";
 // _hidden: import Shorts from "@/components/sections/Shorts";
 // _hidden: import Safety from "@/components/sections/Safety";
-// _hidden: import Location from "@/components/sections/Location";
 
 export default function HomePage() {
   return (
@@ -57,10 +57,12 @@ export default function HomePage() {
       {/* FAQ */}
       <FAQ />
 
-      {/* 7. Contact */}
-      <Consultation />
+      {/* _hidden: <Consultation /> — 상담 채널은 LINE으로 일원화 (HERO CTA + SocialFloat + Footer LINE) */}
 
-      {/* Footer — Access (住所・地図) 統合済み */}
+      {/* 7. Access — 오시는 길 + 구글맵 */}
+      <Location />
+
+      {/* Footer */}
       <Footer />
 
       {/* _hidden: <GangnamReviews /> */}
