@@ -1,6 +1,7 @@
 export const dynamic = 'force-dynamic'
 
 // _hidden: import Navigation from "@/components/Navigation";
+import Header from "@/components/Header";
 import SocialFloat from "@/components/SocialFloat";
 import Hero from "@/components/sections/Hero";
 import Principles from "@/components/sections/Principles";
@@ -26,6 +27,9 @@ export default function HomePage() {
     <main id="top" className="relative">
       <SocialFloat />
       {/* _hidden: <Navigation /> */}
+
+      {/* sticky 미니멀 헤더 — 로고만, 클릭 시 최상단 */}
+      <Header />
 
       {/* 1. HERO */}
       <Hero />

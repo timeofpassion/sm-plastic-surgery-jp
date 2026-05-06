@@ -34,19 +34,19 @@ export default function Stats() {
 
   return (
     <section className="relative py-20 lg:py-32 flex justify-center overflow-hidden bg-[#f3f7f9]">
-      {/* 배경: space 인테리어 이미지 — blur 처리로 인테리어 디테일 흐림 */}
+      {/* 배경: space 인테리어 이미지 — 미세 blur (인테리어 윤곽 살짝 보이는 정도) */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage: "url('/space.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          filter: "blur(10px)",
-          transform: "scale(1.1)",
+          filter: "blur(4px)",
+          transform: "scale(1.05)",
         }}
       />
-      {/* 흰 오버레이 — 가독성 (blur로 톤다운됐으니 75%까지 낮춤) */}
-      <div className="absolute inset-0 pointer-events-none bg-white/75" />
+      {/* 흰 오버레이 — 60%로 완화 (인테리어 적당히 보이되 카드 숫자 또렷) */}
+      <div className="absolute inset-0 pointer-events-none bg-white/60" />
       {/* 배경 추상 텍스처 워터마크 (위에 얹힘) */}
       <div
         className="absolute inset-0 pointer-events-none"

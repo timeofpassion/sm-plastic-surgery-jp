@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const TRUST = [
   { label: "강남언니 평가", value: "9.7 / 10" },
   { label: "환자 리뷰", value: "872건+" },
@@ -9,32 +11,25 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] flex items-center overflow-hidden"
+      className="relative min-h-[100svh] flex items-center overflow-hidden bg-white"
     >
+      {/* 우측 인물 이미지 — doctor_white.png */}
       <div className="absolute inset-0">
-        {/* SKINMEDI 블루 톤 그라디언트 배경 — 영상/블루 추상 자산 부재로 옵션 C(CSS) */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at 75% 50%, #4a7bbf 0%, #1b499c 55%, #0e2d5c 100%)",
-          }}
-        />
-        {/* 빛 입자/광원 효과 — 부드러운 발광으로 정적 그라디언트 보강 */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 70% 35%, rgba(255,255,255,0.28) 0%, transparent 38%), radial-gradient(circle at 30% 70%, rgba(120,170,220,0.22) 0%, transparent 45%), radial-gradient(circle at 85% 80%, rgba(255,255,255,0.12) 0%, transparent 30%)",
-          }}
+        <Image
+          src="/doctor_white.png"
+          alt=""
+          fill
+          priority
+          className="object-cover"
+          style={{ objectPosition: "70% center" }}
+          sizes="100vw"
         />
       </div>
 
-      {/* 그라디언트 오버레이 */}
-      {/* 데스크탑: 좌측 텍스트 영역만 흰 → 35%부터 페이드 → 55%부터 풀 이미지 */}
-      <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-white from-[0%] via-white/85 via-[35%] to-transparent to-[55%]" />
-      {/* 모바일: 좌측 집중 오버레이 */}
-      <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white/96 from-[0%] via-white/80 via-[55%] to-white/10" />
+      {/* 데스크탑: 좌측 45% 흰색 → 45~55% 부드러운 페이드 → 55%부터 인물 노출 */}
+      <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-white from-[0%] via-white via-[45%] to-transparent to-[55%]" />
+      {/* 모바일: 좌측 65%까지 흰 오버레이 (인물은 우측에 살짝 비치게) */}
+      <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white/95 from-[0%] via-white/85 via-[60%] to-white/15" />
 
       {/* 텍스트 콘텐츠 */}
       <div className="relative z-[2] w-full max-w-content mx-auto px-6 py-24 lg:py-32">

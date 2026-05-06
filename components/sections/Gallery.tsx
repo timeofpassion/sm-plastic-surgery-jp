@@ -68,8 +68,8 @@ export default function Gallery() {
               loop={true}
               autoplay={{ delay: 1500, disableOnInteraction: false, pauseOnMouseEnter: true }}
               breakpoints={{
-                768: { slidesPerView: 2.2, spaceBetween: 32 },
-                1280: { slidesPerView: 2.5, spaceBetween: 40 },
+                640: { slidesPerView: 1, spaceBetween: 16 },
+                1024: { slidesPerView: 1.5, spaceBetween: 24 },
               }}
               onSwiper={(swiper) => { swiperRef.current = swiper; }}
             >
@@ -91,9 +91,9 @@ export default function Gallery() {
                       </span>
                     </div>
 
-                    {/* After: 50%, 강조 */}
+                    {/* After: 50%, 강조 (6px 테두리) */}
                     <div
-                      className="relative rounded-lg overflow-hidden border-4 border-white shadow-lg"
+                      className="relative rounded-lg overflow-hidden border-[6px] border-white shadow-lg"
                       style={{ flex: "0 0 50%" }}
                     >
                       <img
