@@ -74,40 +74,42 @@ export default function Gallery() {
             >
               {BA_PAIRS.map((pair) => (
                 <SwiperSlide key={pair.id}>
-                  <div
-                    className="rounded-2xl overflow-hidden border-4 border-white/80"
-                  >
-                    <div className="relative grid grid-cols-2">
-                      {/* Before */}
-                      <div className="relative" style={{ aspectRatio: "4/5" }}>
-                        <img
-                          src={pair.before}
-                          alt={`${pair.label} Before`}
-                          className="absolute inset-0 w-full h-full object-cover object-top"
-                        />
-                        <span className="absolute bottom-2 left-2 text-white text-[0.65rem] font-bold bg-black/55 px-1.5 py-0.5 rounded-sm z-[1]">
-                          Before
-                        </span>
-                      </div>
+                  <div className="relative flex items-center justify-center gap-3 sm:gap-4 px-2">
+                    {/* Before: 40%, 작게 */}
+                    <div
+                      className="relative rounded-lg overflow-hidden border-2 border-white shadow-md"
+                      style={{ flex: "0 0 40%" }}
+                    >
+                      <img
+                        src={pair.before}
+                        alt={`${pair.label} Before`}
+                        className="block w-full h-auto"
+                      />
+                      <span className="absolute bottom-1.5 left-1.5 text-white text-[0.65rem] font-bold bg-black/55 px-1.5 py-0.5 rounded-sm z-[1]">
+                        Before
+                      </span>
+                    </div>
 
-                      {/* After */}
-                      <div className="relative border-l-4 border-white" style={{ aspectRatio: "4/5" }}>
-                        <img
-                          src={pair.after}
-                          alt={`${pair.label} After`}
-                          className="absolute inset-0 w-full h-full object-cover object-top"
-                        />
-                        <span className="absolute bottom-2 left-2 text-white text-[0.65rem] font-bold bg-black/55 px-1.5 py-0.5 rounded-sm z-[1]">
-                          After
-                        </span>
-                      </div>
+                    {/* After: 50%, 강조 */}
+                    <div
+                      className="relative rounded-lg overflow-hidden border-4 border-white shadow-lg"
+                      style={{ flex: "0 0 50%" }}
+                    >
+                      <img
+                        src={pair.after}
+                        alt={`${pair.label} After`}
+                        className="block w-full h-auto"
+                      />
+                      <span className="absolute bottom-2 left-2 text-white text-[0.7rem] font-bold bg-black/65 px-1.5 py-0.5 rounded-sm z-[1]">
+                        After
+                      </span>
+                    </div>
 
-                      {/* 가운데 화살표 */}
-                      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-brand border-2 border-white flex items-center justify-center shadow-lg pointer-events-none z-[2]">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
-                          <polyline points="9 6 15 12 9 18" />
-                        </svg>
-                      </div>
+                    {/* 가운데 화살표 */}
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-brand border-2 border-white flex items-center justify-center shadow-lg pointer-events-none z-[2]">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
+                        <polyline points="9 6 15 12 9 18" />
+                      </svg>
                     </div>
                   </div>
                   <p className="text-center text-white/60 text-[0.78rem] mt-3">{pair.label}</p>

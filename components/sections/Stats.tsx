@@ -64,11 +64,11 @@ export default function Stats() {
                 boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
               }}
             >
-              <p className="text-[0.82rem] text-brand font-medium mb-5 tracking-wide">
-                {item.label}
+              <p className="mb-5">
+                <span className="label-pill">{item.label}</span>
               </p>
               <div className="flex items-baseline justify-center gap-1.5 mb-3">
-                <span className="text-[2.8rem] lg:text-[3.2rem] font-bold text-brand leading-none">
+                <span className="text-[3.2rem] lg:text-[3.6rem] font-bold text-brand leading-none">
                   {item.value}
                 </span>
                 {item.unit && (

@@ -13,14 +13,14 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] flex items-center overflow-hidden"
     >
-      <div className="absolute inset-0 lg:left-[38%]">
+      <div className="absolute inset-0">
         <Image
           src="/space.png"
           alt=""
           fill
           priority
           className="object-cover object-center"
-          sizes="(max-width: 1024px) 100vw, 62vw"
+          sizes="100vw"
         />
         <div
           className="absolute inset-0 opacity-30"
@@ -32,8 +32,8 @@ export default function Hero() {
       </div>
 
       {/* 그라디언트 오버레이 */}
-      {/* 데스크탑: 좌→우 페이드 */}
-      <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-white via-white/95 from-[20%] via-[38%] to-transparent" />
+      {/* 데스크탑: 좌측 텍스트 영역만 흰 → 35%부터 페이드 → 55%부터 풀 이미지 */}
+      <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-white from-[0%] via-white/85 via-[35%] to-transparent to-[55%]" />
       {/* 모바일: 좌측 집중 오버레이 */}
       <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white/96 from-[0%] via-white/80 via-[55%] to-white/10" />
 
