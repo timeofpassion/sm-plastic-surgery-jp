@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const TRUST = [
   { label: "강남언니 평가", value: "9.7 / 10" },
   { label: "환자 리뷰", value: "872건+" },
@@ -13,55 +11,26 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] flex items-center overflow-hidden bg-white"
     >
-      {/* 데스크탑: 좌측 40% 흰 배경 */}
-      <div className="absolute inset-y-0 left-0 right-[60%] hidden lg:block bg-white" />
+      {/* 풀 흰 배경 — 데스크탑/모바일 공통 (좌측 텍스트 + 우측 로고 미니멀) */}
+      <div className="absolute inset-0 bg-white" />
 
-      {/* 데스크탑: 우측 60% 회색 그라디언트 + 누끼 인물 (drop-shadow로 입체감) */}
-      <div
-        className="absolute inset-y-0 right-0 left-[40%] hidden lg:block overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(to right, #ffffff 0%, #f5f6f8 8%, #e0e3e8 35%, #c5cad2 100%)",
-        }}
-      >
-        <Image
-          src="/doctor-removebg-preview.png"
-          alt=""
-          fill
-          priority
-          sizes="60vw"
-          className="object-contain"
-          style={{
-            objectPosition: "center bottom",
-            filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.12))",
-          }}
-        />
+      {/* 데스크탑: 우측 60% 영역 가운데 SM 로고 (모바일은 sticky 헤더 로고로 충분, HERO 생략) */}
+      <div className="absolute inset-y-0 right-0 left-[40%] hidden lg:flex items-center justify-center pointer-events-none">
+        <div className="flex flex-col items-center gap-5">
+          <img
+            src="/logo_smps.png"
+            alt="SM 美容外科"
+            className="w-[220px] lg:w-[280px] h-auto"
+            style={{
+              filter:
+                "brightness(0.45) hue-rotate(208deg) saturate(2.2) contrast(1.1)",
+            }}
+          />
+          <span className="font-label uppercase tracking-[0.3em] text-[0.78rem] text-brand">
+            SM Plastic Surgery
+          </span>
+        </div>
       </div>
-
-      {/* 모바일: 풀스크린 회색 그라디언트 + 누끼 인물 (우측 75% bottom) */}
-      <div
-        className="absolute inset-0 lg:hidden overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(135deg, #f5f6f8 0%, #e0e3e8 45%, #c5cad2 100%)",
-        }}
-      >
-        <Image
-          src="/doctor-removebg-preview.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-contain"
-          style={{
-            objectPosition: "75% bottom",
-            filter: "drop-shadow(0 6px 18px rgba(0,0,0,0.12))",
-          }}
-        />
-      </div>
-
-      {/* 모바일: 좌측 흰 그라디언트 오버레이 (텍스트 가독성) */}
-      <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white from-[0%] via-white via-[45%] to-transparent to-[70%]" />
 
       {/* 텍스트 콘텐츠 */}
       <div className="relative z-[2] w-full max-w-content mx-auto px-6 py-24 lg:py-32">

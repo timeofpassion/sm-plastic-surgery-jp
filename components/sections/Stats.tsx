@@ -89,27 +89,14 @@ export default function Stats() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 lg:py-32 flex justify-center overflow-hidden bg-[#f3f7f9]"
+      className="relative py-20 lg:py-32 flex justify-center overflow-hidden"
     >
-      {/* 배경: space 인테리어 이미지 — 미세 blur (인테리어 윤곽 살짝 보이는 정도) */}
+      {/* 단순 하늘색 그라디언트 배경 — 인테리어 사진/blur 제거, SKINMEDI 톤 매칭 */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "url('/space.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "blur(4px)",
-          transform: "scale(1.05)",
-        }}
-      />
-      {/* 흰 오버레이 — 60%로 완화 */}
-      <div className="absolute inset-0 pointer-events-none bg-white/60" />
-      {/* 배경 추상 텍스처 워터마크 (위에 얹힘) */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(ellipse at 20% 50%, #1b499c0a 0%, transparent 55%), radial-gradient(ellipse at 80% 50%, #313f760a 0%, transparent 55%)",
+          background:
+            "linear-gradient(135deg, #f0f6fc 0%, #d9e8f5 50%, #b8d4ed 100%)",
         }}
       />
 
