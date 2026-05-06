@@ -13,23 +13,23 @@ export default function Hero() {
       id="hero"
       className="relative min-h-[100svh] flex items-center overflow-hidden bg-white"
     >
-      {/* 우측 인물 이미지 — doctor_white.png */}
+      {/* 우측 인물 이미지 — doctor.png (인물 잘림 방지 위해 우측 80%로 이동) */}
       <div className="absolute inset-0">
         <Image
-          src="/doctor_white.png"
+          src="/doctor.png"
           alt=""
           fill
           priority
           className="object-cover"
-          style={{ objectPosition: "70% center" }}
+          style={{ objectPosition: "80% center" }}
           sizes="100vw"
         />
       </div>
 
-      {/* 데스크탑: 좌측 45% 흰색 → 45~55% 부드러운 페이드 → 55%부터 인물 노출 */}
-      <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-white from-[0%] via-white via-[45%] to-transparent to-[55%]" />
-      {/* 모바일: 좌측 65%까지 흰 오버레이 (인물은 우측에 살짝 비치게) */}
-      <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white/95 from-[0%] via-white/85 via-[60%] to-white/15" />
+      {/* 데스크탑: 좌 40% 흰색 → 40~55% 페이드(15% 폭) → 55%부터 인물 풀 노출 */}
+      <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-white from-[0%] via-white via-[40%] to-transparent to-[55%]" />
+      {/* 모바일: 좌측 60%까지 흰 그라디언트 (텍스트 영역과 인물 영역 분리) */}
+      <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white/95 from-[0%] via-white/80 via-[60%] to-white/10" />
 
       {/* 텍스트 콘텐츠 */}
       <div className="relative z-[2] w-full max-w-content mx-auto px-6 py-24 lg:py-32">
