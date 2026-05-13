@@ -14,18 +14,9 @@ export default function Hero() {
       {/* 풀 흰 배경 — 데스크탑/모바일 공통 (좌측 텍스트 + 우측 로고 미니멀) */}
       <div className="absolute inset-0 bg-white" />
 
-      {/* 데스크탑: 우측 60% 영역 가운데 SM 로고 (모바일은 sticky 헤더 로고로 충분, HERO 생략) */}
+      {/* 데스크탑: 우측 60% 영역 가운데 SM 텍스트 (모바일은 sticky 헤더 로고로 충분, HERO 생략) */}
       <div className="absolute inset-y-0 right-0 left-[40%] hidden lg:flex items-center justify-center pointer-events-none">
         <div className="flex flex-col items-center gap-5">
-          <img
-            src="/logo_smps.png"
-            alt="SM 美容外科"
-            className="w-[220px] lg:w-[280px] h-auto"
-            style={{
-              filter:
-                "brightness(0.45) hue-rotate(208deg) saturate(2.2) contrast(1.1)",
-            }}
-          />
           <span className="font-label uppercase tracking-[0.3em] text-[0.78rem] text-brand">
             SM Plastic Surgery
           </span>
