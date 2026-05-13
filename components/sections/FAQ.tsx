@@ -96,9 +96,6 @@ const MEDICAL: FAQItem[] = [
         </p>
         <ul className="mt-3 space-y-2">
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-            <strong>근육 위(전근막하)</strong> — 회복 빠름. 피부·지방층이 얇으면 보형물 윤곽이 비칠 수 있음(리플링).
-          </li>
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
             <strong>근육 아래(완전 근육하)</strong> — 자연스럽지만 팔 움직임 시 '애니메이션 변형' 발생 가능. 회복 기간이 길어짐.
           </li>
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
@@ -154,7 +151,7 @@ const MEDICAL: FAQItem[] = [
         </p>
         <p className="mt-3">교체를 고려하는 경우:</p>
         <ul className="mt-2 space-y-1.5">
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">구형구축이 Baker Ⅲ~Ⅳ도로 진행된 경우</li>
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">진행된 구형구축</li>
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">보형물 파열(초음파·MRI로 확인)</li>
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">노화·출산 후 모양 재정비를 원하는 경우</li>
         </ul>
@@ -171,7 +168,7 @@ const PRACTICAL: FAQItem[] = [
     q: "일본어로 상담이 되나요? 통역 코디네이터가 항상 같이 있나요?",
     a: (
       <>
-        네. 일본 담당 <strong>서채우 팀장</strong>이 LINE·메일·전화로 일본어 상담을 진행합니다.
+        네. <strong>일본 담당자</strong>가 LINE·메일·전화로 일본어 상담을 진행합니다.
         수술 당일 입실부터 퇴원까지, 귀국 후 경과 체크까지 동일한 담당자가 응대합니다.
         상담·수술·회복 전 과정에서 일본어 소통이 가능합니다.
       </>
@@ -197,7 +194,7 @@ const PRACTICAL: FAQItem[] = [
     a: (
       <ul className="mt-3 space-y-2">
         <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-          <strong>가슴 확대 단독:</strong> 3박 4일 (수술 후 익일 체크 포함)
+          <strong>가슴 확대 단독:</strong> 최소 2박 3일 (수술 후 익일 체크 포함)
         </li>
         <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
           <strong>하이브리드(보형물+지방이식):</strong> 4~5박 권장
@@ -244,13 +241,14 @@ const PRACTICAL: FAQItem[] = [
     q: "비용은 얼마인가요? 수술별 대략적인 금액이 궁금합니다.",
     a: (
       <>
-        <ul className="mt-3 space-y-1 mb-3">
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">하이브리드 가슴성형: ○○만엔부터</li>
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">가슴 확대(보형물 단독): ○○만엔부터</li>
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">가슴 재수술: ○○만엔부터 (피막 절제 범위에 따라 변동)</li>
-        </ul>
-        보형물 종류와 수술 범위에 따라 달라집니다.
-        상담 후 정식 견적서를 드리며, 숨겨진 추가 비용은 없습니다.
+        <p>
+          보형물 종류·브랜드·수술 범위에 따라 달라집니다.
+          정확한 견적은 개인의 체형과 수술 설계를 바탕으로 한 후 안내해 드리고 있습니다.
+        </p>
+        <p className="mt-3">
+          숨겨진 추가 비용 없이 투명한 가격 정책을 유지하고 있으며,
+          <strong> LINE 상담</strong>에서 상세한 비용 정보를 받으실 수 있습니다.
+        </p>
       </>
     ),
   },
