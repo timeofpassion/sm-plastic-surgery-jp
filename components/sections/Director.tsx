@@ -33,7 +33,7 @@ export default function Director() {
         <h2 className="text-[1.8rem] sm:text-[2.2rem] lg:text-[2.6rem] font-bold text-text-main leading-[1.3] mb-14 keep-all">
           에스엠성형외과 대표원장은
           <br />
-          <strong>유방성형 전문의입니다.</strong>
+          <strong>가슴 성형 및 눈수술 전문입니다.</strong>
         </h2>
 
         {/* 단일 카드 */}

@@ -38,21 +38,17 @@ export default function BrandStatement() {
 
         <div>
           <h2 className="font-serif-display font-bold text-[1.75rem] sm:text-[2.3rem] lg:text-[3.4rem] leading-[1.25] text-text-main keep-all mb-6 lg:mb-8">
-            모든 절개선에는 <span className="text-brand">이유</span>가 있습니다.
-            <br />
-            트렌드가 아닌 <span className="text-brand">해부학</span>으로 결정합니다.
-            <br />
-            예쁨보다 <span className="text-brand">근거</span>를 먼저 설계합니다.
+            에스엠성형외과는 가슴과 눈성형에 <span className="text-brand">집중</span>하는 클리닉입니다.
           </h2>
 
           <p className="text-[0.95rem] lg:text-[1.05rem] text-text-main/80 leading-[1.9] keep-all mb-10 max-w-[520px]">
-            모든 수술이 서울대 의대 출신 이무영 원장의 직접 진단으로 시작됩니다.
+            에스엠성형외과는 2013년 개원 이후 강남역 동일 위치를 지키고 있습니다. 원장 이전·분원 없이, 개원 12년째 같은 원장이 같은 자리에서 환자를 맞이합니다. 1년 후, 5년 후에도 같은 문을 열면 같은 원장이 기다립니다.
             <br />
-            한 분 한 분의 흉곽·피부·생활 패턴을 읽고 그에 맞춰 설계하는 맞춤 수술.
             <br />
-            유행보다 본질을, 장비보다 원장의 12년 손기술을 중시하는
+            LINE 상담부터 예약·방한 안내·수술실 통역·귀국 후 문의사항 응대까지 일본 전담 통역이 전 과정을 담당합니다. '통역이 있는 병원'이 아닌 '끝까지 책임지는 전담 통역이 있는 병원'입니다.
             <br />
-            에스엠성형외과입니다.
+            <br />
+            흉곽·피부 상태·생활 패턴을 진단해 그 사람만의 방법을 설계합니다. '왜 이 환자에겐 이 방법이 최적인가'를 설명할 수 있습니다.
           </p>
 
           <a
