@@ -1,3 +1,8 @@
+'use client';
+
+import { useState, useRef } from 'react';
+import { Play, Pause } from 'lucide-react';
+
 const TRUST = [
   { label: "강남언니 평가", value: "9.7 / 10" },
   { label: "환자 리뷰", value: "872건+" },
@@ -6,25 +11,42 @@ const TRUST = [
 ];
 
 export default function Hero() {
+  const [isPlaying, setIsPlaying] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
     <section
       id="hero"
       className="relative min-h-[100svh] flex items-center overflow-hidden bg-white"
     >
-      {/* 풀 흰 배경 — 데스크탑/모바일 공통 (좌측 텍스트 + 우측 로고 미니멀) */}
-      <div className="absolute inset-0 bg-white" />
+      {/* 풀스크린 배경 영상 */}
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/smps_background.mp4" type="video/mp4" />
+      </video>
 
-      {/* 데스크탑: 우측 60% 영역 가운데 SM 텍스트 (모바일은 sticky 헤더 로고로 충분, HERO 생략) */}
-      <div className="absolute inset-y-0 right-0 left-[40%] hidden lg:flex items-center justify-center pointer-events-none">
-        <div className="flex flex-col items-center gap-5">
-          <span className="font-label uppercase tracking-[0.3em] text-[0.78rem] text-brand">
-            SM Plastic Surgery
-          </span>
-        </div>
-      </div>
+      {/* 흰 그라디언트 오버레이 (텍스트 가독성) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-transparent lg:from-white/60 lg:via-white/20 lg:to-transparent" />
 
       {/* 텍스트 콘텐츠 */}
-      <div className="relative z-[2] w-full max-w-content mx-auto px-6 py-24 lg:py-32">
+      <div className="relative z-[2] w-full max-w-content mx-auto px-6 py-32 lg:py-40">
         <div className="max-w-[520px]">
 
           {/* 영어 라벨 */}
@@ -90,6 +112,19 @@ export default function Hero() {
 
         </div>
       </div>
+
+      {/* 영상 일시정지 버튼 */}
+      <button
+        onClick={togglePlay}
+        className="absolute bottom-8 right-8 z-20 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-brand hover:shadow-xl transition-shadow"
+        aria-label="Toggle video playback"
+      >
+        {isPlaying ? (
+          <Pause size={24} />
+        ) : (
+          <Play size={24} />
+        )}
+      </button>
     </section>
   );
 }
