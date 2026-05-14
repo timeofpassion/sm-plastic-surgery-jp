@@ -5,8 +5,6 @@ import Header from "@/components/Header";
 import SocialFloat from "@/components/SocialFloat";
 import Hero from "@/components/sections/Hero";
 import Principles from "@/components/sections/Principles";
-import Stats from "@/components/sections/Stats";
-import Director from "@/components/sections/Director";
 import Procedures from "@/components/sections/Procedures";
 // _hidden: import EyeSurgery from "@/components/sections/EyeSurgery";
 // _hidden: import SkinLifting from "@/components/sections/SkinLifting";
@@ -36,12 +34,6 @@ export default function HomePage() {
 
       {/* 2. About / Philosophy */}
       <Principles />
-
-      {/* 3. Numbers */}
-      <Stats />
-
-      {/* 4. Staff */}
-      <Director />
 
       {/* ブログ */}
       <LatestBlog />

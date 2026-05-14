@@ -136,7 +136,7 @@ export default function Footer() {
             <h5 className="text-[0.72rem] text-[#7EC8E3] uppercase mb-3 font-semibold tracking-[0.2em]">
               Follow
             </h5>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex gap-2">
               {SOCIAL_LINKS.map((s) => (
                 <a
                   key={s.label}

@@ -3,13 +3,6 @@
 import { useState, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
 
-const TRUST = [
-  { label: "강남언니 평가", value: "9.7 / 10" },
-  { label: "환자 리뷰", value: "872건+" },
-  { label: "개원", value: "2013년" },
-  { label: "집도 전문의", value: "서울대 출신" },
-];
-
 export default function Hero() {
   const [isPlaying, setIsPlaying] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -39,23 +32,23 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/smps_background.mp4" type="video/mp4" />
+        <source src="/video/hero-bg.mp4" type="video/mp4" />
       </video>
 
-      {/* 흰 그라디언트 오버레이 (텍스트 가독성) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/30 to-transparent lg:from-white/60 lg:via-white/20 lg:to-transparent" />
+      {/* 어두운 오버레이 (텍스트 가독성) */}
+      <div className="absolute inset-0 bg-black/55" />
 
       {/* 텍스트 콘텐츠 */}
       <div className="relative z-[2] w-full max-w-content mx-auto px-6 py-32 lg:py-40">
         <div className="max-w-[520px]">
 
           {/* 영어 라벨 */}
-          <span className="label-en block mb-6">
+          <span className="block mb-6 !text-white text-lg font-bold drop-shadow-lg bg-black/60 px-4 py-2 rounded-lg w-fit">
             12년, 같은 자리에서.
           </span>
 
           {/* 메인 헤딩 */}
-          <h1 className="text-[2.4rem] sm:text-[3rem] lg:text-[3.8rem] font-bold text-text-main leading-[1.15] tracking-tight keep-all mb-8 opacity-0 animate-fade-up">
+          <h1 className="text-[2.4rem] sm:text-[3rem] lg:text-[3.8rem] font-bold text-white leading-[1.15] tracking-tight keep-all mb-8 opacity-0 animate-fade-up">
             가슴성형을
             <br />
             의학으로
@@ -64,7 +57,7 @@ export default function Hero() {
           </h1>
 
           {/* 보조 카피 */}
-          <div className="text-[0.95rem] lg:text-[1rem] text-text-sub leading-[2] mb-10 opacity-0 animate-fade-up [animation-delay:0.15s]">
+          <div className="text-[0.95rem] lg:text-[1rem] text-white/90 leading-[2] mb-10 opacity-0 animate-fade-up [animation-delay:0.15s]">
             <p>한국 강남 12년.</p>
             <p>서울대 의대 출신 이무영 원장이 직접 집도합니다.</p>
             <p>유행이 아닌, 의학으로</p>
@@ -72,16 +65,7 @@ export default function Hero() {
           </div>
 
           {/* CTA */}
-          <div className="flex flex-wrap items-center gap-4 mb-12 opacity-0 animate-fade-up [animation-delay:0.25s]">
-            <a
-              href="https://line.me/R/ti/p/@952nqpbr"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-track-location="hero"
-              className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-brand text-white text-[0.88rem] font-semibold rounded-full transition-all hover:bg-brand-hover hover:-translate-y-0.5 hover:shadow-lg hover:shadow-brand/20"
-            >
-              상담·문의하기
-            </a>
+          <div className="mb-12 opacity-0 animate-fade-up [animation-delay:0.25s]">
             <a
               href="https://line.me/R/ti/p/@952nqpbr"
               target="_blank"
@@ -94,20 +78,6 @@ export default function Hero() {
               </svg>
               LINE 무료 상담
             </a>
-          </div>
-
-          {/* Trust 배지 */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 pt-8 border-t border-brand/15 opacity-0 animate-fade-up [animation-delay:0.35s]">
-            {TRUST.map((item) => (
-              <div key={item.label} className="pl-3 border-l-2 border-brand/30">
-                <div className="text-[0.62rem] uppercase tracking-[0.1em] text-text-sub mb-1">
-                  {item.label}
-                </div>
-                <div className="text-[1rem] lg:text-[1.1rem] font-bold text-text-main">
-                  {item.value}
-                </div>
-              </div>
-            ))}
           </div>
 
         </div>
