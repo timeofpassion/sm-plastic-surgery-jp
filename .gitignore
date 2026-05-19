@@ -4,6 +4,7 @@ out/
 build/
 .env*.local
 .DS_Store
+Thumbs.db
 *.log
 next-env.d.ts
 
