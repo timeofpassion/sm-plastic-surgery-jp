@@ -18,9 +18,6 @@ export default function LatestBlog() {
           <p className="text-text-sub max-w-md mx-auto text-sm">
             가슴성형, 눈성형, 지방흡입 등 관한 원장님 수술에 필요한 정보를 전달합니다.
           </p>
-          <p className="text-text-sub max-w-md mx-auto text-sm mt-1">
-            이 블로그는 이무영 원장이 직접 집필합니다.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">

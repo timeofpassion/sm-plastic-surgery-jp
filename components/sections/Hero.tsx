@@ -38,6 +38,14 @@ export default function Hero() {
       {/* 어두운 오버레이 (텍스트 가독성) */}
       <div className="absolute inset-0 bg-black/55" />
 
+      {/* 우측 대형 로고 (휑함 해소, 데스크탑 전용 — 모바일 비노출) */}
+      <img
+        src="/logo_smps.png"
+        alt="SM Plastic Surgery"
+        className="hidden lg:block absolute z-[1] right-[12%] top-1/2 -translate-y-1/2 w-[38%] max-w-[560px] opacity-90 pointer-events-none select-none"
+        style={{ filter: "brightness(0) invert(1)" }}
+      />
+
       {/* 텍스트 콘텐츠 */}
       <div className="relative z-[2] w-full max-w-content mx-auto px-6 py-32 lg:py-40">
         <div className="max-w-[520px]">

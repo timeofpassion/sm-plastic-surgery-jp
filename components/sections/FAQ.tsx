@@ -9,20 +9,51 @@ const MEDICAL: FAQItem[] = [
     q: "모티바 vs 멘토 보형물, 차이가 뭔가요? 제 체형에 맞는 건 어떻게 결정하나요?",
     a: (
       <>
-        <p>
-          강남 가슴성형 시장에서 가장 많이 비교되는 두 브랜드입니다.
-        </p>
-        <ul className="mt-3 space-y-2">
+        <p>강남 가슴성형 시장에서 가장 많이 비교되는 두 브랜드입니다.</p>
+
+        <p className="mt-4 font-medium text-text-main">1. 임상 데이터와 신뢰성</p>
+        <ul className="mt-2 space-y-2">
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-            <strong>멘토(Mentor, J&amp;J)</strong> — 미국 FDA 승인, 가장 긴 임상 데이터 보유. 라운드·물방울 모두 제공. 코히시브겔의 안정성이 검증된 스탠다드 보형물.
+            <strong>멘토</strong> — 미국 FDA 승인을 받은 전통적인 브랜드입니다. 수십 년간의 방대한 임상 데이터를 보유하고 있어 장기적인 안정성이 입증된 '스탠다드' 보형물로 통합니다.
           </li>
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-            <strong>모티바(Motiva)</strong> — 마이크로텍스처드 표면으로 조직 유착과 스무스의 촉감을 절충. 충진률이 높아 리플링이 적고 자연스러운 움직임이 특징.
+            <strong>모티바</strong> — 비교적 최근에 등장한 프리미엄 보형물로, 최신 인체공학적 기술을 집약했습니다. 기존 보형물들의 단점을 보완하며 빠르게 시장 점유율을 높여온 차세대 보형물입니다.
           </li>
         </ul>
-        <p className="mt-3">
+
+        <p className="mt-4 font-medium text-text-main">2. 촉감의 스타일</p>
+        <ul className="mt-2 space-y-2">
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
+            <strong>멘토</strong> — 탄력 있고 '탱글탱글한' 느낌이 특징입니다. 가슴의 볼륨감을 탄탄하게 유지하고 싶어 하는 분들에게 선호도가 높습니다.
+          </li>
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
+            <strong>모티바</strong> — 실제 살성과 가장 흡사한 '말랑하고 부드러운' 느낌을 지향합니다. 보형물이 들어간 느낌을 최소화하고 싶은 마른 체형의 분들에게 유리합니다.
+          </li>
+        </ul>
+
+        <p className="mt-4 font-medium text-text-main">3. 모양과 움직임</p>
+        <ul className="mt-2 space-y-2">
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
+            <strong>멘토</strong> — 보형물 자체의 형태 유지력이 좋아 어느 자세에서든 일정한 볼륨감을 보여줍니다.
+          </li>
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
+            <strong>모티바</strong> — 중력에 반응하는 유동성이 뛰어납니다. 서 있을 때는 자연스러운 물방울 모양이 되고, 누웠을 때는 실제 가슴처럼 옆으로 자연스럽게 퍼지는 것이 가장 큰 차이점입니다.
+          </li>
+        </ul>
+
+        <p className="mt-4 font-medium text-text-main">4. 외피(Shell) 및 안전 기술</p>
+        <ul className="mt-2 space-y-2">
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
+            <strong>멘토 (블루실)</strong> — 보형물 외피 사이에 푸른색 층(Blue Seal)을 삽입하여, 내부 겔이 밖으로 새어 나가는 현상을 시각적으로 완벽히 차단하고 방지합니다.
+          </li>
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
+            <strong>모티바 (RFID 칩)</strong> — 보형물 내부에 인체 이식이 가능한 아주 작은 식별 칩이 들어 있습니다. 전용 스캐너를 통해 보증서 없이도 언제든 보형물의 정보를 확인할 수 있어 사후 관리가 용이합니다.
+          </li>
+        </ul>
+
+        <p className="mt-4">
           어느 쪽이 낫다고 단정할 수 없습니다. 흉곽 너비, 피부 두께, 원하는 촉감에 따라 결정이 달라집니다.
-          에스엠성형외과에서는 상담 시 <strong>초음파 진단</strong>과 실제 보형물 샘플 촉감 비교를 통해 함께 결정합니다.
+          에스엠성형외과에서는 상담 시 <strong>실제 보형물 샘플 촉감 비교</strong>를 통해 함께 결정합니다.
         </p>
       </>
     ),
@@ -39,13 +70,14 @@ const MEDICAL: FAQItem[] = [
         <p className="mt-3">에스엠성형외과의 예방 시스템:</p>
         <ul className="mt-2 space-y-1.5">
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-            <strong>켈러펀넬(Keller Funnel)</strong> 사용 — 보형물을 손으로 직접 만지지 않고 삽입해 세균 오염 최소화
+            <strong>켈러펀넬(Keller Funnel) 사용</strong> — 보형물을 손으로 직접 만지지 않고 삽입해 세균 오염 최소화
           </li>
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">무균 수술 시스템 — 포켓 내부 세척, 항생제 관주</li>
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">이중평면법으로 출혈·혈종 최소화</li>
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
+            <strong>이중평면법 수술</strong> — 출혈·혈종 최소화
+          </li>
         </ul>
         <p className="mt-3 text-[0.88rem] border-l-2 border-accent-gold pl-3">
-          최근 코히시브겔 보형물은 마사지가 불필요하거나 역효과가 날 수 있습니다. 수술 후 마사지 여부는 원장님과 상담 후 결정합니다.
+          에스엠은 수술 이후 가슴마사지를 권장하지 않습니다.
         </p>
       </>
     ),
@@ -54,18 +86,17 @@ const MEDICAL: FAQItem[] = [
     q: "겨드랑이 절개 vs 가슴 밑선(유방하주름) 절개, 흉터 차이가 있나요?",
     a: (
       <>
-        <p>한국 강남 가슴성형에서 가장 많이 선택되는 두 절개 방식입니다.</p>
+        <p>에스엠에서 가슴성형 시 가장 많이 선택되는 두 절개 방식입니다.</p>
         <ul className="mt-3 space-y-2">
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-            <strong>유방하주름 절개(IMF)</strong> — 가슴 아래 주름선에 절개. 수술 시야가 넓어 정밀한 박리 가능, 재수술 시 동일 절개선 활용. 흉터는 주름 안으로 숨겨짐.
+            <strong>가슴밑선 절개</strong> — 가슴 아래 주름선에 절개. 수술 시야가 넓어 정밀한 박리 가능, 재수술 시 동일 절개선 활용. 흉터는 주름 안으로 숨겨짐. 의료용 본드 사용이 가능하여 수술 후 다음날부터 일상생활 가능합니다.
           </li>
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-            <strong>겨드랑이 절개(Transaxillary)</strong> — 가슴에 흉터가 생기지 않는 장점. 다만 시야가 상대적으로 좁고, 재수술 시 다른 절개선이 필요할 수 있음.
+            <strong>겨드랑이 절개</strong> — 가슴에 흉터가 생기지 않는 장점. 다만 시야가 상대적으로 좁고, 재수술 시 다른 절개선이 필요할 수 있음. 하루정도 배액관 착용이 필요합니다.
           </li>
         </ul>
         <p className="mt-3">
-          수영복·비키니 착용 여부, 재수술 가능성 등 라이프스타일을 고려해 결정합니다.
-          상담 시 각 방식의 실제 흉터 사진을 보여드립니다.
+          절개 결정은 수영복·비키니 착용 여부, 재수술 가능성 등 라이프스타일을 고려해 최종 결정합니다.
         </p>
       </>
     ),
@@ -75,10 +106,9 @@ const MEDICAL: FAQItem[] = [
     a: (
       <>
         <p>
-          배액관(드레인)은 수술 후 삼출액을 빼내기 위한 튜브입니다.
-          에스엠성형외과에서는 정밀한 지혈과 박리로 출혈을 최소화해
-          <strong> 피통 없이 수술을 진행하는 경우가 많습니다.</strong>
-          재수술이나 광범위한 피막 절제 시에는 삽입이 필요할 수 있으며, 상담 시 안내합니다.
+          배액관(드레인)은 <strong>겨드랑이 절개 수술</strong> 후 삼출액을 빼내기 위한 튜브입니다.
+          하루정도의 착용이 필요하며, 실밥 제거가 필요합니다.
+          다만 <strong>가슴밑선으로 절개</strong> 시 배액관은 필요없습니다.
         </p>
         <p className="mt-3">
           압박복(압박 속옷)은 붓기 관리와 보형물 안정을 위해 <strong>4주간</strong> 착용을 권장합니다.
@@ -92,32 +122,15 @@ const MEDICAL: FAQItem[] = [
       <>
         <p>
           이중평면법은 현재 강남 가슴성형에서 가장 많이 사용되는 삽입 방식입니다.
-          보형물 상부는 대흉근 아래(근육하), 하부는 근막 위에 위치시켜 두 층을 동시에 활용합니다.
+          보형물 상부는 대흉근 근육 아래, 하부는 근막 위에 위치시켜 두 층을 동시에 활용합니다.
         </p>
         <ul className="mt-3 space-y-2">
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-            <strong>근육 아래(완전 근육하)</strong> — 자연스럽지만 팔 움직임 시 '애니메이션 변형' 발생 가능. 회복 기간이 길어짐.
+            <strong>근육 위(전근막하)</strong> — 회복 빠름. 피부·지방층이 얇으면 보형물 윤곽이 비칠 수 있음(리플링).
           </li>
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-            <strong>이중평면(Dual Plane) ★</strong> — 자연스러운 라인과 빠른 회복, 리플링 최소화를 동시에 추구. 에스엠에서 가장 많이 적용하는 방식.
+            <strong>이중평면(Dual Plane) ★</strong> — 자연스러운 라인과 빠른 회복, 리플링 최소화를 동시에 추구. 에스엠에서 진행하는 수술 방식.
           </li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    q: "보형물 사이즈(cc)는 어떻게 결정하나요? 본인이 원하는 크기로 선택 가능한가요?",
-    a: (
-      <>
-        <p>
-          보형물 사이즈는 희망 크기만으로 결정하지 않습니다.
-          <strong>흉곽 너비(Base Width)</strong>가 가장 중요한 기준이며, 이를 초과하는 보형물은 리플링·구형구축·변위 위험을 높입니다.
-        </p>
-        <ul className="mt-3 space-y-1.5">
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">흉곽 너비 측정 → 적합한 보형물 직경 범위 산출</li>
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">피부 두께·탄력 확인</li>
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">원하시는 결과 사진 지참 시 구체적 목표 공유 가능</li>
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">실제 보형물 샘플로 사이저(sizer) 시뮬레이션</li>
         </ul>
       </>
     ),
@@ -127,7 +140,7 @@ const MEDICAL: FAQItem[] = [
     a: (
       <>
         <p>
-          유방하주름·겨드랑이 절개 + 이중평면법 조합의 경우 유선 조직을 직접 건드리지 않아
+          유방하 절개 or 겨드랑이 절개 + 이중평면법 조합의 경우 유선 조직을 직접 건드리지 않아
           <strong> 모유수유 가능성이 높습니다.</strong>
           유륜주위 절개는 유관 손상 가능성이 있어 수유에 영향을 줄 수 있습니다.
         </p>
@@ -146,13 +159,12 @@ const MEDICAL: FAQItem[] = [
     a: (
       <>
         <p>
-          현재 코히시브겔 보형물은 <strong>"정해진 수명이 있는 소모품"이 아닙니다.</strong>
-          멘토 등 주요 브랜드는 파열 시 평생 무상 교체를 보증합니다.
+          보형물은 <strong>"정해진 수명이 있는 소모품"이 아닙니다.</strong>
         </p>
-        <p className="mt-3">교체를 고려하는 경우:</p>
+        <p className="mt-3">교체를 고려하는 경우 (재수술):</p>
         <ul className="mt-2 space-y-1.5">
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">진행된 구형구축</li>
-          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">보형물 파열(초음파·MRI로 확인)</li>
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">구형구축이 진행된 경우</li>
+          <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">보형물 파열의 경우</li>
           <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">노화·출산 후 모양 재정비를 원하는 경우</li>
         </ul>
         <p className="mt-3">
@@ -168,8 +180,8 @@ const PRACTICAL: FAQItem[] = [
     q: "일본어로 상담이 되나요? 통역 코디네이터가 항상 같이 있나요?",
     a: (
       <>
-        네. <strong>일본 담당자</strong>가 LINE·메일·전화로 일본어 상담을 진행합니다.
-        수술 당일 입실부터 퇴원까지, 귀국 후 경과 체크까지 동일한 담당자가 응대합니다.
+        네. <strong>일본 담당자 LINE</strong>을 통해 일본어 상담을 진행합니다.
+        수술 당일 입실부터 퇴원 체크까지 동일한 담당자가 응대합니다.
         상담·수술·회복 전 과정에서 일본어 소통이 가능합니다.
       </>
     ),
@@ -179,11 +191,9 @@ const PRACTICAL: FAQItem[] = [
     a: (
       <>
         <p>
-          가슴 확대 단독 수술의 경우 <strong>당일 퇴원이 가능</strong>합니다.
-          수술 후 회복실에서 2~3시간 안정을 취한 뒤 담당 코디네이터가 귀가를 도와드립니다.
+          <strong>당일 퇴원이 가능</strong>합니다. 수술 후 회복실에서 안정을 취한 뒤 귀가하시면 됩니다.
         </p>
         <p className="mt-3">
-          컨디션이 좋지 않거나 재수술·복수 시술의 경우 1박 입원을 권장하기도 합니다.
           일본에서 오시는 분들은 수술 다음 날 오전 체크(붓기·실밥 상태 확인) 후 귀국하시는 일정을 권장합니다.
         </p>
       </>
@@ -192,20 +202,9 @@ const PRACTICAL: FAQItem[] = [
   {
     q: "한국에 며칠 있어야 하나요? 최소 체류 일정을 알려주세요.",
     a: (
-      <ul className="mt-3 space-y-2">
-        <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-          <strong>가슴 확대 단독:</strong> 최소 2박 3일 (수술 후 익일 체크 포함)
-        </li>
-        <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-          <strong>하이브리드(보형물+지방이식):</strong> 4~5박 권장
-        </li>
-        <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-          <strong>재수술·피막 절제 포함:</strong> 5박 6일 권장
-        </li>
-        <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-          <strong>눈+가슴 복수 시술:</strong> 5박 이상 권장
-        </li>
-      </ul>
+      <>
+        <strong>2박 3일</strong> 정도 일정 잡으시는 걸 추천드립니다.
+      </>
     ),
   },
   {
@@ -213,42 +212,23 @@ const PRACTICAL: FAQItem[] = [
     a: (
       <ul className="mt-3 space-y-2">
         <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-          <strong>샤워(전신):</strong> 실밥 제거 후(수술 후 약 7일)
+          <strong>샤워(전신):</strong> 실밥 제거 후
         </li>
         <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
           <strong>가벼운 일상·출근:</strong> 2주차부터 (무거운 짐, 팔을 많이 쓰는 업무 제외)
         </li>
         <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-          <strong>하체 위주 운동:</strong> 4주차부터
-        </li>
-        <li className="pl-4 relative before:content-['-'] before:absolute before:left-0">
-          <strong>상체 운동·수영·사우나:</strong> 6주차 이후
+          <strong>운동·사우나:</strong> 6주차 이후 권장
         </li>
       </ul>
-    ),
-  },
-  {
-    q: "실밥은 일본에서 제거해도 되나요?",
-    a: (
-      <>
-        네. 에스엠성형외과의 실은 흡수성 실로, 별도의 제거가 필요하지 않습니다.
-        다만, 초기 안정화를 위해 수술 후 <strong>7일째 내원하여 상태 체크</strong>를 권장합니다.
-        이후 케어는 현지 의료기관에서 진행 가능하며, 상담 시 케어 방법을 상세히 안내합니다.
-      </>
     ),
   },
   {
     q: "비용은 얼마인가요? 수술별 대략적인 금액이 궁금합니다.",
     a: (
       <>
-        <p>
-          보형물 종류·브랜드·수술 범위에 따라 달라집니다.
-          정확한 견적은 개인의 체형과 수술 설계를 바탕으로 한 후 안내해 드리고 있습니다.
-        </p>
-        <p className="mt-3">
-          숨겨진 추가 비용 없이 투명한 가격 정책을 유지하고 있으며,
-          <strong> LINE 상담</strong>에서 상세한 비용 정보를 받으실 수 있습니다.
-        </p>
+        보형물 종류와 수술 범위에 따라 달라집니다.
+        상담 후 정식 견적서를 드리고 있어 <strong>LINE으로 문의</strong> 주시면 안내드리겠습니다.
       </>
     ),
   },
@@ -256,15 +236,9 @@ const PRACTICAL: FAQItem[] = [
     q: "보형물은 어떤 브랜드를 쓰나요? 직접 선택할 수 있나요?",
     a: (
       <>
-        <p>
-          주로 <strong>멘토(Mentor, Johnson &amp; Johnson)</strong>와
-          <strong> 모티바(Motiva)</strong>를 사용합니다.
-          흉곽 조건·피부 두께·원하는 촉감에 따라 상담 시 함께 결정하며,
-          실제 보형물 샘플을 직접 만져보실 수 있습니다.
-        </p>
-        <p className="mt-3">
-          특정 브랜드를 원하시는 경우 상담 시 말씀해 주시면 흉곽 조건에 적합한지 함께 검토합니다.
-        </p>
+        주로 <strong>멘토</strong>와 <strong>모티바</strong>를 사용합니다.
+        흉곽 조건·피부 두께·원하는 촉감에 따라 상담 시 함께 결정하며,
+        실제 보형물 샘플을 상담 시 직접 만져보실 수 있습니다.
       </>
     ),
   },
@@ -273,9 +247,17 @@ const PRACTICAL: FAQItem[] = [
     a: (
       <>
         <strong>이무영 원장 1인 집도</strong> 원칙입니다.
-        수술 기록지에 집도의 서명을 남기고,
-        보호자 동반 시 수술실 입·퇴실 시각을 직접 확인하실 수 있습니다.
-        에스엠성형외과는 개원 이래 단 한 건도 대리 수술 없이 운영해 왔습니다.
+        수술 기록지에 집도의 서명을 남기고, <strong>정품 인증</strong>도 함께 드립니다.
+        에스엠성형외과는 개원 이래 대리 수술 없이 운영해 왔습니다.
+      </>
+    ),
+  },
+  {
+    q: "실밥은 일본에서 제거해도 되나요?",
+    a: (
+      <>
+        네. 귀국 후 일본에서 제거하실 수 있도록 <strong>수술 확인서와 진료의뢰서</strong>를 드리니
+        지참하셔서 일본 병원에서 실밥을 제거하시면 됩니다.
       </>
     ),
   },
@@ -361,7 +343,7 @@ export default function FAQ() {
                 </button>
                 <div
                   className={`overflow-hidden transition-all duration-400 bg-bg-sub ${
-                    isOpen ? "max-h-[800px] pb-10" : "max-h-0"
+                    isOpen ? "max-h-[1600px] pb-10" : "max-h-0"
                   }`}
                 >
                   <div className="pl-0 lg:pl-16 pt-4 pr-4 text-text-sub text-[0.95rem] lg:text-[1rem] leading-[1.85] keep-all">
